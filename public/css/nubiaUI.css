@@ -1,0 +1,247 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+header .top-nav{
+	height: 30px;
+	background-color: #444;
+}
+header .top-nav ul{
+	margin-left: 30px;
+}
+header .top-nav ul li{
+	line-height: 30px;
+}
+header .top-nav ul li a{
+	color: #fff;
+	font-size: 12px;
+}
+header .top-nav p{
+	line-height: 30px;
+	margin-right: 50px;
+}
+header .top-nav p a{
+	color: #fff;
+	font-size: 12px;
+}
+header .bot-nav{
+	min-height: 145px;
+	background-color: #fff;
+}
+header .bot-nav .bot-nav-one{
+	min-height: 100px;
+	margin-top: -10px;
+}
+header .bot-nav .bot-nav-one img{
+	margin-top: 32px;
+}
+header .bot-nav .bot-nav-one .bot-nav-one-right{
+	margin-top: 32px;
+}
+header .bot-nav .bot-nav-one .bot-nav-one-right p{
+	font-size: 13px;
+	line-height: 25px;
+	color: #666666;
+	margin-right: 20px;
+}
+header .bot-nav .bot-nav-one .bot-nav-one-right input{
+	border: none;
+	background-color: #ebecf0;
+}
+header .bot-nav ul{
+	margin-top: 10px;
+}
+header .bot-nav ul li{
+	margin-left: 75px;
+}
+header .bot-nav ul li a{
+	font-size: 16px;
+	color: #4c4c4c;
+}
+header .bot-nav ul li a:hover{
+	color: #ff370e;
+}
+header .bot-nav ul li:first-child a{
+	color: #ff370e;
+}
+
+section .shenti{
+	min-height: 500px;
+	background-color: #f1f1f1;
+	border-top: 1px solid #e9eaee;
+}
+section .lunbotu{
+	width: 1047px;
+	height: 300px;
+	margin: 0px auto;
+	padding: 0px; 
+}
+section .lunbotu #xiantiao li{
+	float: right;
+	margin-left: 10px;
+	background-color: rgba(0,0,0,0.3);
+	border: none;
+}
+section .lunbotu #xiantiao .active{
+	background-color: rgba(255,255,255,0.6);
+}
+section .jinri{
+	width: 1047px;
+	margin: 10px auto;
+	min-height: 40px;
+}
+section .jinri .jinri-left{
+	width: 750px;
+	min-height: 40px;
+	background-color: #ffffff;
+}
+section .jinri .jinri-left ul li{
+	margin-top: 10px;
+	font-size: 14px;
+	color: #4c4c4c;
+	float: left;
+}
+section .jinri .jinri-left ul p{
+	margin-top: 9px;
+	color: #d5ccd5;
+}
+section .jinri .jinri-right{
+	width: 290px;
+	min-height: 40px;
+	background-color: #e98024;
+	float: right;
+	border-radius: 5px;
+}
+section .jinri .jinri-right .fabiao{
+	font-size: 20px;
+	margin-top: 8px;
+	color: #fff;
+}
+section .jinri #jinri-right:hover{
+	background-color: rgba(233,128,36,0.8);
+}
+section .jinri .jinri-left-one{
+	min-height: 425px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding: 0px;
+}
+section .jinri .jinri-left-one h4{
+	font-weight: bold;
+}
+section .jinri .jinri-left-one #nunuli a{
+	color: #4c4c4c;
+}
+section .jinri .jinri-left-one #nunuli a:hover{
+    color: #ff0036;
+}
+section .jinri .jinri-left-one span{
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+section .jinri .jinri-left-one p{
+	margin-top: 20px;
+}
+section .jinri .jinri-left-one .touxiang{
+	border-radius: 360px;
+	width: 25px;
+	height: 25px;
+}
+section .jinri .jinri-left-one ul{
+	margin-top: -5px;
+	margin-left: 5px;
+}
+section .jinri .jinri-right-one{
+	height: 50px;
+	background-color: #e94924;
+	padding: 0px;
+}
+section .jinri .jinri-right-one:hover{
+	background-color: rgba(233,73,36,0.8);
+}
+section .jinri .jinri-right-one p{
+	width: 165px;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	line-height: 50px;
+	float: left;
+}
+section .jinri .jinri-right-one ul{
+	width: 110px;
+	height: 44px;
+	background-color: #fff;
+	float: right;
+	margin-right: 3px;
+	margin-top: 3px;
+}
+section .jinri .jinri-right-one ul li{
+	text-align: center;
+	line-height: 22px;
+	color: #786060;
+}
+section .jinri .jinri-right-two{
+	min-height: 220px;
+	background-color: #ffffff;
+	margin-top: 10px;
+}
+section .jinri .jinri-right-two a:first-child{
+	color: #ff370e;
+	font-size: 18px;
+	background-color: #fff;
+}
+section .jinri .jinri-right-there{
+	min-height: 145px;
+}
+section .jinri .jinri-right-there .panel a{
+	color: #4c4c4c;
+	font-size: 14px;
+}
+section .jinri .jinri-right-there .panel a:hover{
+	color: #ff370e;
+}
+section .jinri .jinri-right-there .panel .panel-heading{
+	color: #ff370e;
+	font-size: 18px;
+	background-color: #fff;
+	border-bottom: 1px solid #ff370e;
+}
+section .jinri .jinri-right-there .bikan{
+	padding: 8px 8px;
+	font-size: 13px;
+	text-indent: 5px;
+}
+section .jinri .jinri-right-there .bikan:hover{
+	color: #ff370e;
+}
+section .jinri #jinri-four .panel-heading{
+    color: #ff370e;
+    background-color: #fff;
+    font-size: 18px;
+    border-bottom: 1px solid #ff370e;
+}
+section .jinri #jinri-four #xiaoya{
+	width: 50px;
+	height: 75px;
+	margin:11px;
+	float: left;
+	margin-bottom: 0px;
+}
+section .jinri #jinri-four #xiaoya li{
+	text-align: center;
+}
+section .jinri #jinri-four #xiaoya li a{
+    color: #4c4c4c;
+    font-size: 14px;
+}
+section .jinri #jinri-four #xiaoya li a:hover{
+	color: #ff370e;
+}
