@@ -245,3 +245,82 @@ section .jinri #jinri-four #xiaoya li a{
 section .jinri #jinri-four #xiaoya li a:hover{
 	color: #ff370e;
 }
+footer .banquan{
+	min-height: 305px;
+	/*background-color: orange;*/
+}
+footer .banquan .lianjie{
+	height: 100px;
+	width: 1050px;
+	background-color: #fff;
+	margin-top: 45px;
+	margin-left: 32px;
+}
+footer .banquan .lianjie h5{
+	text-indent: 15px;
+	line-height: 50px;
+	font-weight: bold;
+}
+footer .banquan .lianjie ul{
+	margin-left: 10px;
+}
+footer .banquan .lianjie ul li{
+	margin-right: 30px;
+}
+footer .banquan .lianjie ul li a{
+	color: #4c4c4c;
+	font-size: 13px;
+}
+footer .banquan .lianjie ul li a:hover{
+	color: #ff370e;
+}
+footer .banquan .guanyu{
+	width: 1050px;
+	height: 85px;
+	/*background-color: purple;*/
+	margin-left: 55px;
+	margin-top: 40px;
+}
+footer .banquan .guanyu ul li{
+	color: #e4d6ce;
+}
+footer .banquan .guanyu ul li a{
+	color: #999999;
+	font-size: 14px;
+}
+footer .banquan .guanyu ul li a:hover{
+	color: #000;
+}
+footer .banquan .guanyu a{
+	color: #979797;
+	font-size: 16px;
+}
+footer .banquan .guanyu p{
+	width: 30px;
+	height: 30px;
+	border: 1px solid #c6c6c6;
+	border-radius: 360px;
+	line-height: 28px;
+	text-align: center;
+	color: #d3d3d3;
+	margin-top: -5px;	
+	margin-right: 10px;
+}
+footer .banquan .guanyu p:hover{
+	color: #ff370e;
+	border: 1px solid #ff370e;
+}
+footer .banquan .guanyu span{
+	color: #9d9d9d;
+}
+footer .banquan .guanyu ol li{
+	font-size: 13px;
+	color: #cccccc;
+}
+footer .banquan .guanyu ol li a{
+	font-size: 13px;
+	color: #cccccc;
+}
+footer .banquan .guanyu ol li a:hover{
+	color: #000;
+}

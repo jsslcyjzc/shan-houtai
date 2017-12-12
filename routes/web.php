@@ -48,3 +48,12 @@ Route::get('/details','DetailsController@details');
 Route::get('/Homes','HomeController@index');
 Route::get('/index','HomeController@doindex');
 Route::get('/nubiaUI','HomeController@nubiaUI');
+
+
+
+//购物车
+Route::get('/Gouwu',"HomeController@gouwu");
+
+
+//手机配件
+Route::get('/Shouji',"HomeController@shouji");

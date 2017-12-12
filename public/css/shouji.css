@@ -1,0 +1,43 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+section .shouji{
+	min-height: 130px;
+	background-color: pink;
+}
+section .shouji ul{
+	margin-top: 20px;
+	margin-left: 160px;
+}
+section .shouji ul li{
+	margin-right: 70px;
+	position: relative;
+}
+section .shouji ul li:last-child{
+	margin-right: 0px;
+}
+section .shouji ul li p{
+	margin-top: 8px;
+	text-align: center;
+}
+section .shouji ul li img{
+	width: 50px;
+	height: 80px;
+}
+section .shouji ul li .span1{
+	width: 140px;
+	height: 2px;
+	background-color: red;
+	position: absolute;
+	bottom: -5px;
+	left: -33px;
+	display: none;
+}

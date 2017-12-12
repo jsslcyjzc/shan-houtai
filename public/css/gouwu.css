@@ -1,0 +1,195 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+section #gouwu{
+	min-height: 520px;
+	background-color: #fff;
+}
+section #gouwu .che{
+	width: 1200px;
+	height: 3px;
+	background-color: #cccccc;
+}
+section #gouwu ul{
+	margin-left: 245px;
+	margin-top: 58px;
+}
+section #gouwu ul li{
+	margin-right: 145px;
+	margin-bottom: 10px;
+}
+section #gouwu ul li a{
+	color: #b8b8b8;
+	font-size: 15px;
+}
+section #gouwu ul li .active{
+	color: #e8340e;
+}
+section #gouwu ul .active2{
+	background-color: #e8340e;
+}
+section #gouwu ul li{
+	position: relative;
+}
+section #gouwu ul li span{
+	display: inline-block;
+	position: absolute;
+	top: 35px;
+	left: 15px;
+	width: 15px;
+	height: 15px;
+	border-radius: 360px;
+	background-color: #cccccc;
+}
+section #gouwu table{
+	margin-top: 75px;
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+section #gouwu table tr th{
+	color: #666666;
+}
+section #gouwu table tr th span{
+	color: #ff0057;
+}
+section #gouwu table tr td{
+	text-align: center;
+}
+section #gouwu table tr:nth-child(2){
+	background-color: #f7f9f9;
+}
+section #gouwu table tr:nth-child(2) td{
+    height: 52px;
+    border: 1px solid #eef0f0;
+    text-align: center;
+}
+section #gouwu table tr:nth-child(2) td:first-child{
+	width: 175px;
+}
+section #gouwu table tr:nth-child(2) td:nth-child(2){
+	width: 450px;
+}
+section #gouwu table tr:nth-child(2) td:nth-child(3){
+	width: 130px;
+}
+section #gouwu table tr:nth-child(2) td:nth-child(4){
+	width: 190px;
+}
+section #gouwu table tr:nth-child(2) td:nth-child(5){
+	width: 145px;
+}
+section #gouwu table tr:nth-child(2) td:last-child{
+	width: 75px;
+}
+section #gouwu table tr:nth-child(3) td{
+	height: 120px;
+	border: 1px solid #eef0f0;
+}
+section #gouwu table tr:nth-child(3) td:nth-child(3){
+	color: #666666;
+}
+section #gouwu table tr:nth-child(3) td:nth-child(4) p{
+    width: 27px;
+    height: 27px;
+    border: 1px solid #cccccc;
+    line-height: 25px;
+    float: left;
+    border-radius: 5px 0 0 5px;
+}
+section #gouwu table tr:nth-child(3) td:nth-child(4) p:last-child{
+	border-radius: 0 5px 5px 0 ;
+}
+section #gouwu table tr:nth-child(3) td:nth-child(4) input{
+	float: left;
+	width: 50px;
+	height: 27px;
+	border: 1px solid #cccccc;
+	line-height: 27px;
+	text-align: center;
+}
+section #gouwu table tr:nth-child(4) td{
+	height: 105px;
+	border: 1px solid #eef0f0;
+}
+section #gouwu table tr:nth-child(4) td:first-child a{
+    color: #666666;
+    float: left;
+    margin-bottom: 15px;
+}
+section #gouwu table tr:nth-child(4) td:first-child input{
+	float: left;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+section #gouwu table tr:nth-child(4) td:nth-child(2) p{
+    text-align: right;
+    margin-right: 5px;
+    color: #666666;
+}
+section #gouwu table tr:nth-child(4) td:nth-child(2) p:first-child{
+	margin-top: 10px;
+}
+section #gouwu table tr:nth-child(4) td:last-child p{
+    text-align: left;
+    margin-left: 15px;
+    color: #666666;
+}
+section #gouwu table tr:nth-child(4) td:last-child p:first-child{
+	margin-top: 10px;
+}
+section #gouwu table tr:nth-child(4) td:last-child p:last-child{
+	color: #ff0000;
+}
+section #gouwu table tr:last-child td{
+	height: 75px;
+	border: 1px solid #eef0f0;
+}
+section #gouwu table tr:last-child td button{
+	border-radius: 25px;
+	border: none;
+	width: 100px;
+	height: 40px;
+	font-size: 14px;
+}
+section #gouwu table tr:last-child td button:first-child{
+	border: 1px solid #e8380d;
+	background-color: #fff;
+	color: #e8380d;
+	margin-right: 50px;
+}
+section #gouwu table tr:last-child td button:last-child{
+	color: #fff;
+	background-color:#e8380d; 
+}
+section #kong{
+	height: 400px;
+	background-color: #fff;
+}
+section #kong ul{
+	margin-top: 100px;
+	float: left;
+}
+section #kong ul li{
+    font-size: 25px;
+    margin-left: 40px;
+}
+section #kong ul li button{
+	width: 150px;
+	height: 35px;
+	border-radius: 30px;
+	border: none;
+	background-color: #e8380d;
+	color: #fff;
+	margin-top: 20px;
+}
+section #kong img{
+	margin-top: 30px;
+}

@@ -19,8 +19,8 @@
 	<div class="container-fluid top-nav">
 		<div class="container">
 			<ul class="list-unstyled list-inline pull-left">
-				<li><a href="">nubia商城</a></li>
-				<li><a href="">nubia官网</a></li>
+				<li><a href="/Homes">nubia商城</a></li>
+				<li><a href="/index">nubia官网</a></li>
 				<li><a href="">nubia微博</a></li>
 				<li><a href="">nubia UI</a></li>
 			</ul>
@@ -417,8 +417,76 @@
 	<!-- 身体 end -->
 	<!-- 版权 start -->
 	<footer>
-		<div class="container-fluid">
-			
+		<div class="container-fluid" style="height: 305px;background-color: #f1f1f1;">
+			<div class="container">
+				<div class="col-xs-12 banquan">
+					<div class="lianjie">
+						<h5>友情链接</h5>
+						<ul class="list-unstyled list-inline">
+							<li><a href="">努比亚官网</a></li>
+							<li><a href="">努比亚京东</a></li>
+							<li><a href="">努比亚天猫</a></li>
+							<li><a href="">努比亚社区</a></li>
+						</ul>
+					</div>
+					<div class="guanyu">
+					    <ul class="list-unstyled list-inline pull-left">
+					    	<li><a href="">关于我们</a></li>
+					    	<li>|</li>
+					    	<li><a href="">联系我们</a></li>
+					    	<li>|</li>
+					    	<li><a href="">新闻中心</a></li>
+					    	<li>|</li>
+					    	<li><a href="">加入我们</a></li>
+					    	<li>|</li>
+					    	<li><a href="">公益</a></li>
+					    	<li>|</li>
+					    	<li><a href="">星空之约</a></li>
+					    </ul>
+					    <a href="">
+					    <p class="glyphicon glyphicon-folder-close pull-left" style="margin-left: 170px;"></p>
+					    </a>
+					    <a href="">
+					    <p class="glyphicon glyphicon-tree-deciduous
+					    pull-left" style="font-size: 18px;"></p>
+					    </a>
+					    <a href="">
+					    <p class="glyphicon glyphicon-folder-close pull-left"></p>
+					    </a>
+					    <a href="">
+					    <p class="glyphicon glyphicon-folder-close pull-left"></p>
+					    </a>
+					    <a href="">
+					    <p class="glyphicon glyphicon-headphones pull-left"></p>
+					    </a>
+					    <span class="glyphicon glyphicon-earphone" style="margin-left: 10px;">
+					    	服务热线:<a href="">400-700-6600</a>
+					    </span>
+                        <ol style="clear: both;" class="list-unstyled list-inline">
+                        	<li>2012-2016 努比亚 版权所有 
+                        		<a href="">粤ICP备10006213号-2</a>
+                        	</li>
+                        	<li>ICP经营许可证编号：粤B2-20120688
+                        		<a href="">深圳市市场监督管理局企业主体身份公示</a>
+                        		努比亚技术有限公司
+                        	</li>
+                        </ol>
+                        <i>
+                        	<a href="">
+                        	<img src="/image/security.png" alt="">
+                        	&nbsp;
+                        	</a>
+                        </i>
+
+                        <i>
+                        	<a href="">
+                        	<img src="/image/toss_11.gif" alt="">
+                        	</a>
+                        </i>
+				    </div>
+				</div>
+				
+			</div>
 		</div>
 	</footer>
 	<!-- 版权 end -->

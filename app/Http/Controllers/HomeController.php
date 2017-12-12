@@ -23,4 +23,16 @@ class HomeController extends Controller
     public function nubiaUI(){
     	return view('home.nubiaUI.nubiaUI');
     }
+
+
+
+    public function gouwu(){
+        return view('home.gouwu.gouwu');
+    }
+
+
+
+    public function shouji(){
+        return view('home.shouji.shouji');
+    }
 }
