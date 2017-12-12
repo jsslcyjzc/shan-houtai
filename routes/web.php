@@ -54,13 +54,46 @@ Route::get('/Homes','HomeController@index');
 Route::get('/index','HomeController@doindex');
 //努比亚论坛
 Route::get('/nubiaUI','HomeController@nubiaUI');
+<<<<<<< HEAD
 //注册
+=======
+
+
+//登录
+Route::get('/Home/login','LoginsController@login');
+Route::get('/Home/login1','LoginsController@login1');
+
+//忘记密码
+Route::get('/Home/wangji','WangjiController@wangji');
+Route::get('/Home/wangji1','WangjiController@wangji1');
+
+//关于我们
+Route::get('/Home/guanyu','GuanyuController@guanyu');
+
+//公益基金会
+Route::get('/Home/jijin','JijinController@jijin');
+
+
+
+//购物车
+Route::get('/Gouwu',"HomeController@gouwu");
+
+
+//手机配件
+Route::get('/Shouji',"HomeController@shouji");
+
+>>>>>>> badc5c7d65dc93f9cf23dad7cad80f15a9548f1b
 Route::get('home/zhuce1','zhuceController@zhuce1');
 Route::get('home/index','ceshiController@index');
 //注册
 Route::get('home/zhuce','zhuceController@zhuce');
 //个人中心
 Route::get('home/gerenzhongxin','gerenController@gerenzhongxin');
+<<<<<<< HEAD
 //抢先布局
 //ht.com/article/304
 Route::get('home/qiangxianbuju','ArticleController@show');
+=======
+Route::get('home/qiangxianbuju','qiangxianbujuController@index');
+
+>>>>>>> badc5c7d65dc93f9cf23dad7cad80f15a9548f1b

@@ -24,4 +24,18 @@ class HomeController extends Controller
     	return view('home.nubiaUI.nubiaUI');
     }
 
+<<<<<<< HEAD
+=======
+
+
+    public function gouwu(){
+        return view('home.gouwu.gouwu');
+    }
+
+
+
+    public function shouji(){
+        return view('home.shouji.shouji');
+    }
+>>>>>>> badc5c7d65dc93f9cf23dad7cad80f15a9548f1b
 }
