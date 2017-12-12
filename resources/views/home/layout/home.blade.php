@@ -331,7 +331,7 @@
 				<a href="">
 				<div class="col-sm-9 gouwuche pull-right">
 					<p class="pull-left" style="text-indent: 15px;margin-right: 5px;">购物车</p>
-                    <i class="glyphicon glyphicon-shopping-cart"></i>
+                    <i class="glyphicon glyphicon-shopping-cart" style="margin-top: 27px;"></i>
 				</div>
 			    </a>
 			</div>

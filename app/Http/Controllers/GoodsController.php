@@ -103,7 +103,13 @@ class GoodsController extends Controller
      */
     public function show($id)
     {
-        //
+        ////读取商品的详细信息
+        $goods = DB::table('goods')->where('id',$id)->first();
+        //读取商品的图片信息
+        $goods_pic = DB::table('goods_pic')->where('goods_id', $id)->get();
+
+        return view('home.details', compact('goods','goods_pic'));// ['goods'=>$goods]
+
     }
 
     /**
@@ -150,4 +156,6 @@ class GoodsController extends Controller
             return back()->with('msg','删除失败!!');
         }
     }
+
+    
 }
