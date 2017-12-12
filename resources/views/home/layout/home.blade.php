@@ -435,6 +435,10 @@
 	</section>
 	@show
 
+
+    
+
+    @section('footer')
 	<!-- 脚步版权 start -->
 	<footer>
 		<div class="container-fluid" style="background-color: #efeeeb;">
@@ -529,6 +533,6 @@
 		</div>
 	</footer>
 	<!-- 脚步版权 end -->
-
+    @show
 </body>
 </html>

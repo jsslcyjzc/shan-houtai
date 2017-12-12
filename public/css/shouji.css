@@ -11,7 +11,6 @@ a:hover{
 }
 section .shouji{
 	min-height: 130px;
-	background-color: pink;
 }
 section .shouji ul{
 	margin-top: 20px;
@@ -27,6 +26,7 @@ section .shouji ul li:last-child{
 section .shouji ul li p{
 	margin-top: 8px;
 	text-align: center;
+	color: #999999;
 }
 section .shouji ul li img{
 	width: 50px;
@@ -35,9 +35,103 @@ section .shouji ul li img{
 section .shouji ul li .span1{
 	width: 140px;
 	height: 2px;
-	background-color: red;
+	background-color: #ff370e;
 	position: absolute;
-	bottom: -5px;
+	bottom: 0px;
 	left: -33px;
 	display: none;
+	z-index: 10;
+}
+section .tupian{
+	min-height: 145px;
+	margin-top: -10px;
+	padding: 0px;
+}
+section .tan{
+	min-height: 500px;
+	/*background-color: orange;*/
+	padding: 0px;
+}
+section .tan ul{
+	margin-top: 70px;
+	float: left;
+	margin-left: 30px;
+}
+section .tan ul:first-child{
+	margin-right: 10px;
+}
+section .tan ul li:first-child .fangda{
+    width: 525px;
+    height: 240px;
+    position: relative;
+}
+section .tan ul li:first-child .fangda img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+section .tan ul li ol li{
+    text-align: center;
+}
+section .tan ul li ol li:first-child{
+	font-size: 17px;
+	color: #333333;
+}
+section .tan ul li ol li:nth-child(2){
+    font-size: 13px;
+    color: #666666;
+}
+section .tan ul li ol li:last-child button{
+	margin-top: 15px;
+	width: 100px;
+	height: 30px;
+	border: 1px solid #e4e4e4;
+	color: #333333;
+	background-color: #fff;
+}
+section .tan ul li ol li:last-child button:hover{
+	border: 1px solid #ff370e;
+}
+section .fenlei{
+	min-height: 600px;
+}
+section .fenlei ul{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+section .fenlei ul li{
+	color: #cfdaed;
+}
+section .fenlei ul li a{
+	color: #999899;
+}
+section .fenlei ul li a:hover{
+	color: #e8340e;
+}
+section .fenlei .xian{
+	height: 1px;
+	background-color: #f1f1f1;
+	margin-bottom: 10px;
+}
+section .fenlei .tutu{
+	height: 260px;
+	/*background-color: purple;*/
+}
+section .fenlei .tutu .imgs{
+	width: 95px;
+	height: 185px;
+	/*background-color: blue;*/
+	margin: 0px auto;
+	position: relative;
+}
+section .fenlei .tutu .imgs img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+section .fenlei .tutu ul li{
+	text-align: center;
+	color: #666666;
+	line-height: 30px;
+	font-size: 15px;
 }
