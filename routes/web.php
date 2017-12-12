@@ -48,7 +48,7 @@ Route::get('/details','DetailsController@details');
 Route::get('/Homes','HomeController@index');
 Route::get('/index','HomeController@doindex');
 Route::get('/nubiaUI','HomeController@nubiaUI');
-<<<<<<< HEAD
+
 
 //登录
 Route::get('/Home/login','LoginsController@login');
@@ -63,8 +63,6 @@ Route::get('/Home/guanyu','GuanyuController@guanyu');
 
 //公益基金会
 Route::get('/Home/jijin','JijinController@jijin');
-=======
-<<<<<<< HEAD
 
 
 
@@ -74,11 +72,10 @@ Route::get('/Gouwu',"HomeController@gouwu");
 
 //手机配件
 Route::get('/Shouji',"HomeController@shouji");
-=======
+
 Route::get('home/zhuce1','zhuceController@zhuce1');
 Route::get('home/index','ceshiController@index');
 Route::get('home/zhuce','zhuceController@zhuce');
 Route::get('home/gerenzhongxin','gerenController@gerenzhongxin');
 Route::get('home/qiangxianbuju','qiangxianbujuController@index');
->>>>>>> 1376db3ce11c757f12ad321c0b7f75375ef69fe9
->>>>>>> c0e652e668758b74b8f9f9d1d991e4296983d9f4
+

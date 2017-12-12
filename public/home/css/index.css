@@ -474,20 +474,26 @@ html,body{
 
 /*公益基金会*/
 .news{
-	height: 2000px;
+	height: 3700px;
 }
 .news .ds{
 	padding-left: 0px;	
 }
+
+/*左侧页面*/
+.news .gong{
+	height: 3400px;
+	/*background: lightgreen;*/
+}
 .news .gong .lun{
     height: 400px;
-    background: red;
+    /*background: red;*/
     margin-top: 30px;
     border: 1px solid #f3f3f5;
 }
 .news .gong .new_box{
     height: 540px;
-    background: pink;
+    /*background: pink;*/
     margin-top: 30px;
     border: 1px solid #f3f3f5;
     margin-left: 40px;
@@ -505,7 +511,7 @@ html,body{
 }
 .news .gong .new_box .entry{
     height: 370px;
-    background: lightblue;
+    /*background: lightblue;*/
     margin-top: 20px;
 }
 .news .gong .new_box .biao{
@@ -513,5 +519,117 @@ html,body{
 	font-size: 17px;
 }
 .news .gong .new_box .biao a{
+	color: #e8340c;
+}
+.news .gong .pagelist_box{
+    height: 60px;
+    /*background: coral;*/
+    margin-top: 15px;
+    border: 1px solid #f3f3f5;
+    margin-left: 40px;
+}
+
+/*右侧页面*/
+.news_boxl{
+	height: 2120px;
+	/*background: red;*/
+}
+.news_boxl .boxls{
+	height: 330px;
+	/*background: lightyellow;*/
+	border: 1px solid #f3f3f5;
+    margin-top: 30px;
+} 
+.news_boxl .boxls h3{
+	color: #454e55;
+}
+.news_boxl .boxls .P{
+	font-size: 14px;
+	color: #454e55;
+	margin-top: 20px;
+    text-indent: 30px;
+}
+.news_boxl .oxls{
+	height: 1300px;
+	/*background: lightgreen;*/
+	border: 1px solid #f3f3f5;
+    margin-top: 30px;
+} 
+.news_boxl .oxls ul h3{
+	color: #454e55;
+}
+.news_boxl .oxls ul li{
+	margin-top: 20px;
+}
+.news_boxl .oxls ul li a{
+	color: #454e55;
+	font-size: 17px; 
+}
+.news_boxl .oxls ul li a:hover{
+	color: #e8340c;
+}
+.news_boxl .oxls ul li p{
+	color: #454e55;
+	font-size: 14px;
+}
+.news_boxl .oxls ul li p a{
+	font-size: 15px;
+	color: #e8340c;
+}
+.news_boxl .bxls{
+	height: 400px;
+	/*background: lightblue;*/
+	border: 1px solid #f3f3f5;
+    margin-top: 30px;
+}
+.news_boxl .bxls h3{
+	color: #454e55;
+}
+.news_boxl .bxls ul{
+	margin-top: 20px;
+	height: 60px;
+	/*background: pink;*/
+}
+.news_boxl .bxls ul li{
+    height: 30px;
+    /*background: purple;*/
+    line-height: 30px;
+    border-bottom: 1px dashed #bebebe;
+}
+.news_boxl .bxls ul .li1{
+	height: 30px;
+	/*background: coral;*/
+	line-height: 30px;
+	border-bottom: 1px dashed #bebebe;
+}
+.news_boxl .bxls ul li a{
 	text-decoration: none;
+    color: #454e55;
+}
+.news_boxl .bxls .meta{
+	width: 200px;
+	height: 260px;
+	line-height: 30px;
+	text-align: center;
+	/*background: khaki;*/
+	margin-left: 40px;
+}
+.news_boxl .bxls .meta .lians{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background: #e8340c;
+	margin-left: 50px;
+	margin-top: 10px;
+}
+.news_boxl .bxls .meta .lians a{
+	text-decoration: none;
+	color: #fff;
+}
+.news_boxl .bxls .meta .guanzhu{
+	height: 30px;
+	margin-top: 10px;
+	/*background: skyblue;*/
+	font-size: 13px;
 }
