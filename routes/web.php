@@ -39,12 +39,14 @@ Route::resource('cate','CateController');
 //商品管理
 Route::resource('goods','GoodsController');
 
+
 });
 
 
 
 //前台管理
 //详情
+//http://ht.com/goods/10
 Route::get('/details','DetailsController@details');
 //商城主页
 Route::get('/Homes','HomeController@index');
@@ -52,13 +54,13 @@ Route::get('/Homes','HomeController@index');
 Route::get('/index','HomeController@doindex');
 //努比亚论坛
 Route::get('/nubiaUI','HomeController@nubiaUI');
-<<<<<<< HEAD
-//手机配件在线购买
-// Route::get('/zxgm','HomeController@zxgm');
-=======
+//注册
 Route::get('home/zhuce1','zhuceController@zhuce1');
 Route::get('home/index','ceshiController@index');
+//注册
 Route::get('home/zhuce','zhuceController@zhuce');
+//个人中心
 Route::get('home/gerenzhongxin','gerenController@gerenzhongxin');
-Route::get('home/qiangxianbuju','qiangxianbujuController@index');
->>>>>>> 1376db3ce11c757f12ad321c0b7f75375ef69fe9
+//抢先布局
+//ht.com/article/304
+Route::get('home/qiangxianbuju','ArticleController@show');

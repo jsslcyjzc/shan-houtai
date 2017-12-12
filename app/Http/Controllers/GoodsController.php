@@ -103,7 +103,7 @@ class GoodsController extends Controller
      */
     public function show($id)
     {
-        ////读取商品的详细信息
+        //读取商品的详细信息
         $goods = DB::table('goods')->where('id',$id)->first();
         //读取商品的图片信息
         $goods_pic = DB::table('goods_pic')->where('goods_id', $id)->get();
