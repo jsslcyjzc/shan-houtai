@@ -6,6 +6,9 @@
 	<title>努比亚官网首页</title>
 	@show
         
+        @section('link')
+        
+        @show
         
 	    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
 		<script src="/bootstrap/js/jquery.js"></script>
@@ -27,10 +30,10 @@
 
              	$(".zuo_one > ul > li").hover(function(){
              		$(".zuo_one > ul > li > a").eq($(this).index()).css("color","#ff0036");
-             		$(".cebian").eq($(this).index()).show();
+             		$(".cebian").eq($(this).index()).stop(1000).show(500);
              	},function(){
              		$(".zuo_one > ul > li > a").eq($(this).index()).css("color","#333333");
-             		$(".cebian").eq($(this).index()).hide();
+             		$(".cebian").eq($(this).index()).stop(1000).hide(500);
              	})
 
 
@@ -90,18 +93,24 @@
 		@section('js')
 
 		@show
+		@section('css')
+
+		@show
 </head>
 <body>
+	@section('tou')
 	<!-- 头部导航  start -->
 	<header>
 	<div class="top-nav">
 		<div class="container">
 			<div class="col-sm-2" style="padding:0px;">
+				<a href="/index">
 				<img src="/image/logo.png" alt="" style="margin-top: 20px;" width="150" height="38">
+				</a>
 			</div>
 			<div class="col-sm-8">
 				<ul class="list-unstyled list-inline" style="margin-top: 25px;">
-					<li style="margin-left: 45px;"><a href="">商城</a></li>
+					<li style="margin-left: 45px;"><a href="/Homes">商城</a></li>
 					<li class="shangchang" >
 						<a href="">手机</a>
 						<div class="xialacaidan" id="xialacaidan">
@@ -268,7 +277,7 @@
 					<li><a href="">体验店</a></li>
 					<li><a href="">社区</a></li>
 					<li style="margin-right: none;" class="shangchang">
-						<a href="">nubia UI</a>
+						<a href="/nubiaUI">nubia UI</a>
                         <div class="xialacaidan" id="xialacaidan">
 					         <div class="container" role="listbox">
 
@@ -340,6 +349,7 @@
 	</div>
 	</header>
 	<!-- 头部导航  end -->
+	@show
 
 	@section('center')
 	<section>
@@ -357,17 +367,17 @@
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
 				    <div class="item active">
-					      <img src="holder.js/100px530" alt="...">
+					      <img src="holder.js/100px530" alt="">
 					      <div class="carousel-caption">
 					      </div>
 				    </div>
 				    <div class="item">
-				      <img src="holder.js/100px530?bg=#265" alt="...">
+				      <img src="holder.js/100px530?bg=#265" alt="">
 				      <div class="carousel-caption">
 				      </div>
 				    </div>
 				    <div class="item">
-				      <img src="holder.js/100px530?bg=#654" alt="...">
+				      <img src="holder.js/100px530?bg=#654" alt="">
 				      <div class="carousel-caption">
 				      </div>
 				    </div>
@@ -378,11 +388,11 @@
 				    </div>
 				  </div>
 				  <!-- Controls -->
-				  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				  <a class="left carousel-control" href="" role="button" data-slide="prev">
 				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 				    <span class="sr-only">Previous</span>
 				  </a>
-				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				  <a class="right carousel-control" href="" role="button" data-slide="next">
 				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				    <span class="sr-only">Next</span>
 				  </a>

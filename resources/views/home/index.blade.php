@@ -25,13 +25,13 @@
 			  <div class="carousel-inner" role="listbox" >
 				    <div class="item active">
 				    	<a href="">
-					      <img src="holder.js/1340x500" alt="" >
+					      <img src="holder.js/1340x500">
 					      <div class="carousel-caption">
 					      </div>
 					    </a>
 				    </div>
 				    <div class="item">
-				      <a href="#">
+				      <a href="">
 					      <img src="holder.js/1340x500?bg=#265" alt="">
 					      <div class="carousel-caption">
 					      </div>

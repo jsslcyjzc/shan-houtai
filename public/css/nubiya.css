@@ -58,7 +58,7 @@ a:hover{
 section .lunbotu{
 	width: 1340px;
 	height: inherit;
-	background-color: orange;
+	/*background-color: orange;*/
 	margin: 0px auto;
 	position: relative;
 }
