@@ -14,6 +14,7 @@ class BannerController extends Controller
     public function index()
     {
         //
+        echo "string";
     }
 
     /**

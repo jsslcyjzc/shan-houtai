@@ -57,6 +57,21 @@ Route::get('/nubiaUI','HomeController@nubiaUI');
 
 
 
+//登录
+Route::get('/Home/login','LoginsController@login');
+Route::get('/Home/login1','LoginsController@login1');
+
+//忘记密码
+Route::get('/Home/wangji','WangjiController@wangji');
+Route::get('/Home/wangji1','WangjiController@wangji1');
+
+//关于我们
+Route::get('/Home/guanyu','GuanyuController@guanyu');
+
+//公益基金会
+Route::get('/Home/jijin','JijinController@jijin');
+
+
 
 //购物车
 Route::get('/Gouwu',"HomeController@gouwu");
