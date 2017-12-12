@@ -48,3 +48,8 @@ Route::get('/details','DetailsController@details');
 Route::get('/Homes','HomeController@index');
 Route::get('/index','HomeController@doindex');
 Route::get('/nubiaUI','HomeController@nubiaUI');
+Route::get('home/zhuce1','zhuceController@zhuce1');
+Route::get('home/index','ceshiController@index');
+Route::get('home/zhuce','zhuceController@zhuce');
+Route::get('home/gerenzhongxin','gerenController@gerenzhongxin');
+Route::get('home/qiangxianbuju','qiangxianbujuController@index');

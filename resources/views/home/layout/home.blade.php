@@ -6,6 +6,9 @@
 	<title>努比亚官网首页</title>
 	@show
         
+        @section('link')
+        
+        @show
         
 	    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
 		<script src="/bootstrap/js/jquery.js"></script>
@@ -92,6 +95,7 @@
 		@show
 </head>
 <body>
+	@section('tou')
 	<!-- 头部导航  start -->
 	<header>
 	<div class="top-nav">
@@ -340,6 +344,7 @@
 	</div>
 	</header>
 	<!-- 头部导航  end -->
+	@show
 
 	@section('center')
 	<section>
