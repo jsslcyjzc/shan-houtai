@@ -325,7 +325,7 @@
 				
 			</div>
 			<div class="col-sm-2">
-				<a href="" class="yonghu">
+				<a href="/Home/login" class="yonghu">
 				<i class="glyphicon glyphicon-user" style="color:#fff;line-height: 70px;font-size: 16px;"></i>
 			    </a>
 				<a href="">
@@ -522,3 +522,8 @@
 
 </body>
 </html>
+
+
+
+@section('css')
+@show
