@@ -17,7 +17,7 @@ class ArticleTableSeeder extends Seeder
         	$d = [];
         	$d['title'] = str_random(10);
         	$d['content'] = str_random(100);
-        	$d['pic'] = $faker->imageUrl(200,200);
+        	$d['pic'] = $faker->imageUrl(500,300);
         	$data[] = $d;
         }
         

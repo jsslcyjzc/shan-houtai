@@ -8,13 +8,6 @@ a{
 a:hover{
 	text-decoration: none;
 }
-/*头部start*/
-.top-nav{
-	width: 100%;
-	height: 66px;
-	background-color: #282828;
-}
-/*头部end*/
 
 /*导航start*/
 .nav{
@@ -76,12 +69,15 @@ a:hover{
 	margin-left: 140px;
 }
 .sp .sp-l{
-	min-height: 1444px;
+	min-height: 500px;
 	/*background-color: lightgreen; */
+	position: fixed;
+	top: 250px;
+	left: 150px;
 }
 .sp .sp-l .sp-l-t{
 	width: 380px;
-	height: 550px;
+	height: 400px;
 	/*background:violet;*/
 	margin-left: -15px;
 }
@@ -129,6 +125,7 @@ a:hover{
 .sp .sp-r{
 	min-height: 1444px;
 	/*background-color: yellow;*/
+	float: right;
 }
 .sp .sp-r .sp-r-t{
 	min-width: 574px;
@@ -191,7 +188,7 @@ a:hover{
 	margin-left: 13px;
 }
 .sp .sp-r .bks{
-	margin-left: -13px;
+	/*margin-left: -13px;*/
 	border: 1px solid #FB1515;
 }
 
@@ -218,28 +215,38 @@ a:hover{
 	color: #FB1515;
 }
 .sp .sp-r .fw{
-	margin-left: -13px;
+	/*margin-left: 13px;*/
+	min-height: 73px;
+	border: 1px solid #E9E9E9;
+	text-align: center;
+	line-height: 73px;
+	font-size: 19px;
+	color: #000;
 }
-
+.sp .sp-r .fws{
+	border: 1px solid #FB1515;
+}
 .sp .sp-r .xz{
-	height: 320px;
+	min-height: 150px;
 	/*background: lightgreen;*/
 	margin-top: 58px;
 }
+.sp .sp-r .xz .xzsp{
+	margin-left: -15px;
+}
 .sp .sp-r .xz .xz1{
-	margin-left: -10px;
 	font-size: 20px;
 	color: #000;
+	/*background: pink;*/
+	margin-top: 15px;
 }
 .sp .sp-r .xz .p1{
-	margin-left: -10px;
 	font-size: 16px;
 	color: #000;
 }
 .sp .sp-r .xz .zj{
 	min-height: 30px;
 	/*background: violet;*/
-	margin-left: -10px;
 }
 .sp .sp-r .xz .zj p{
 	margin-left: -13px;
@@ -252,48 +259,51 @@ a:hover{
 	font-size: 25px;
 	color: #FB1515;
 }
-
-.sp .sp-r .xz .hb{
+.sp .sp-r .zc{
+	min-height: 80px;
+	/*background: pink;*/
+	margin-top: 20px;
+}
+.sp .sp-r .hb{
 	min-height: 10px;
 	/*background: pink;*/
-	margin-left: -10px;
 }
-.sp .sp-r .xz .hb p{
+.sp .sp-r .hb p{
 	margin-left: -13px;
 	color: #000;
+	font-size: 15px;
 }
-.sp .sp-r .xz .fq{
+.sp .sp-r .fq{
 	min-height: 65px;
 	/*background: violet;*/
-	margin-left: -10px;
 }
-.sp .sp-r .xz .fq p{
+.sp .sp-r .fq p{
 	text-align: center;
 	color: #000;
 	font-size: 17px;
 }
-.sp .sp-r .xz .fq .p1{
+.sp .sp-r .fq .p1{
 	margin-top: 5px;
 }
-.sp .sp-r .xz .fq .fq1{
+.sp .sp-r .fq .fq1{
 	min-height: 65px;
 	border: 1px solid #e9e9e9;
 	margin-left: -15px;
 }
-.sp .sp-r .xz .fq .fq2{
+.sp .sp-r .fq .fq2{
 	margin-left: 7px;
 }
-.sp .sp-r .xz .tj{
+.sp .sp-r .tj{
 	min-height: 76px;
 	/*background: blue;*/
 	margin-left: -10px;
 }
-.sp .sp-r .xz .tj .tj1{
+.sp .sp-r .tj .tj1{
 	min-height: 33px;
 	min-width: 126px;
 	background: #E8380D;
 	border: none;
-	margin-top: 40px;
+	/*margin-top: 40px;*/
 }
 /*商品介绍end*/
 
@@ -580,9 +590,6 @@ section{
 	border-bottom: none;
 }
 /*身体end*/
-/*脚部start*/
-
-/*脚部end*/
 /*上边导航start*/
 .sbdh{
 	min-width: 1366px;
@@ -596,11 +603,10 @@ section{
 
 }
 .sbdh .fk{
-	width: 410px;
+	min-width: 400px;
 	min-height: inherit;
 	/*background: lightblue;*/
 	/*float: right;*/
-	margin-left: 885px;
 }
 .sbdh .fk p{
 	line-height: 58px;

@@ -39,16 +39,30 @@ Route::resource('cate','CateController');
 //商品管理
 Route::resource('goods','GoodsController');
 
+
+//轮播图管理
+Route::resource('banner','BannerController');
+
+
 });
 
 
 
+
 //前台管理
+//详情
+//http://ht.com/goods/10
 Route::get('/details','DetailsController@details');
+//商城主页
 Route::get('/Homes','HomeController@index');
+
+//努比亚首页
+
 Route::get('/index','HomeController@doindex');
+//努比亚论坛
 Route::get('/nubiaUI','HomeController@nubiaUI');
 
+//注册
 
 //登录
 Route::get('/Home/login','LoginsController@login');
@@ -73,11 +87,18 @@ Route::get('/Gouwu',"HomeController@gouwu");
 
 
 //手机配件
-Route::get('/Shouji',"HomeController@shouji");
+Route::get('/Shouji',"GoodsController@glist");
 
 Route::get('home/zhuce1','zhuceController@zhuce1');
 Route::get('home/index','ceshiController@index');
+//注册
 Route::get('home/zhuce','zhuceController@zhuce');
+//个人中心
 Route::get('home/gerenzhongxin','gerenController@gerenzhongxin');
+
+//抢先布局
+//ht.com/article/304
+Route::get('home/qiangxianbuju','ArticleController@show');
+
 Route::get('home/qiangxianbuju','qiangxianbujuController@index');
 
