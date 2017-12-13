@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Hash;
-
+use yhd;
 class LoginController extends Controller
 {
     public function login()
