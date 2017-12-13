@@ -64,6 +64,8 @@ Route::get('/Home/guanyu','GuanyuController@guanyu');
 //公益基金会
 Route::get('/Home/jijin','JijinController@jijin');
 
+//福利会
+Route::get('Home/fuwu','FuwuController@fuwu');
 
 
 //购物车

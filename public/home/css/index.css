@@ -420,7 +420,7 @@ html,body{
 }
 /*右侧*/
 .jian{
-	height: 2230px;
+	height:auto;
 	margin-top: 50px;
 	/*background: lightblue;*/
 }
@@ -474,7 +474,7 @@ html,body{
 
 /*公益基金会*/
 .news{
-	height: 3700px;
+	height: auto;
 }
 .news .ds{
 	padding-left: 0px;	
@@ -482,7 +482,7 @@ html,body{
 
 /*左侧页面*/
 .news .gong{
-	height: 3400px;
+	height: auto;
 	/*background: lightgreen;*/
 }
 .news .gong .lun{
@@ -531,7 +531,7 @@ html,body{
 
 /*右侧页面*/
 .news_boxl{
-	height: 2120px;
+	height: auto;
 	/*background: red;*/
 }
 .news_boxl .boxls{
@@ -632,4 +632,244 @@ html,body{
 	margin-top: 10px;
 	/*background: skyblue;*/
 	font-size: 13px;
+}
+
+
+
+
+/*福利会*/
+.all{
+	height: auto;
+	background: #f5f5f5;
+}
+.all .fw{
+	padding: 0px;
+	/*background: pink;*/
+	position: relative;
+}
+.all .fw .nb_stitl{
+	position: absolute;
+	top: 170px;
+	left: 460px;
+}
+.all .fw .nb_stitl h3{
+	color: #fefefd;
+}
+.all .nb_content{
+    height: 880px;
+    margin-top: 20px;
+    /*background: lightblue;*/
+}
+.all .nb_content .nb_xection{
+	height: 290px;
+	/*background: lightyellow;*/
+}
+.all .nb_content .nb_xection .nb_stitle{
+	height: 30px;
+	line-height: 30px;
+	/*background: lightgreen;*/
+}
+.all .nb_content .nb_xection .nb_stitle h3{
+	color: #333;
+}
+.all .nb_content .nb_xection .nb_sbo{
+	height: 240px;
+	margin-top: 20px;
+	/*background: coral;*/
+}
+.all .nb_content .nb_xection .nb_sbo .sbo .sbo_aa{
+	height: 240px;
+	background: #fff;
+	margin-left: 50px;
+}
+.all .nb_content .nb_xection .nb_sbo .sbo .sbo_aa .aa_cl{
+    /*background: red;*/
+    height: 100px;
+	margin-top: 70px;
+	margin-left: 50px;
+}
+.all .nb_content .nb_xection .nb_sbo .sbo .sbo_aa .aa_cj{
+    /*background: red;*/
+    height: 125px;
+    margin-top: 70px;
+    margin-left: 20px;
+}
+.all .nb_content .nb_xection .nb_sbo .sbo .sbo_aa .aa_cj p{
+    text-indent: 30px;
+}
+.all .nb_content .nb_xection .nb_sbo .sbo .sbo_bb{
+	height: 240px;
+	background: #fff;
+	margin-left: 100px;
+}
+.all .nb_content .nb_xection .nb_sbo .sbo .sbo_bb .aa_cl{
+    /*background: red;*/
+    height: 100px;
+	margin-top: 70px;
+	margin-left: 50px;
+}
+.all .nb_content .nb_xection .nb_sbo .sbo .sbo_bb .aa_cj{
+    /*background: red;*/
+    height: 125px;
+    margin-top: 70px;
+    margin-left: 20px;
+}
+.all .nb_content .nb_xection .nb_sbo .sbo .sbo_bb .aa_cj p{
+    text-indent: 30px;
+}
+.all .nb_content .nb_xection1{
+	height: 450px;
+	/*background: khaki;*/
+	margin-top: 20px;
+}
+.all .nb_content .nb_xection1 .nb_stitle1{
+	height: 30px;
+	/*background: red;*/
+}
+.all .nb_content .nb_xection1 .nb_stitle1 h3{
+	color: #333;
+}
+.all .nb_content .nb_xection1 .nb_sbo1{
+	height: 400px; 
+	/*background: pink; */
+	margin-top: 20px;
+	position: relative;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t{
+	width: 295px;
+    height: 190px;
+    background: #fff;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t1 img{
+	position: absolute;
+	top: 25px;
+	left: 97px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t2 img{
+	position: absolute;
+	top: 25px;
+	left: 405px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t3 img{
+	position: absolute;
+	top: 25px;
+	left: 705px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t4 img{
+	position: absolute;
+	top: 25px;
+	left: 1010px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t5 img{
+	position: absolute;
+	top: 225px;
+	left: 97px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t6 img{
+	position: absolute;
+	top: 225px;
+	left: 405px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t7 img{
+	position: absolute;
+	top: 225px;
+	left: 705px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t8 img{
+	position: absolute;
+	top: 225px;
+	left: 1010px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t .zi{
+	width: 160px;
+	height: 30px;
+	/*background: maroon;*/
+	line-height: 30px;
+	text-align: center;
+	font-size: 17px;
+	color: #333;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t1 .zi{
+	position: absolute;
+	top: 160px;
+	left: 75px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t2 .zi{
+	position: absolute;
+	top: 160px;
+	left: 390px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t3 .zi{
+	position: absolute;
+	top: 160px;
+	left: 690px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t4 .zi{
+	position: absolute;
+	top: 160px;
+	left: 990px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t5 .zi{
+	position: absolute;
+	top: 360px;
+	left: 75px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t6 .zi{
+	position: absolute;
+	top: 360px;
+	left: 390px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t7 .zi{
+	position: absolute;
+	top: 360px;
+	left: 690px;
+}
+.all .nb_content .nb_xection1 .nb_sbo1 .t8 .zi{
+	position: absolute;
+	top: 360px;
+	left: 990px;
+}
+.all .nb_content .nb_sections{
+	height: 120px;
+	/*background: lightgreen;*/
+	margin-top: 20px;
+}
+.all .nb_content .nb_sections ul li{
+    width: 290px;
+    height: 120px;  
+    /*background: pink; */
+    float: left;
+    margin-left: 10px;
+}
+.all .nb_content .nb_sections ul .ll{
+	height: 100px;
+	width: 1px;
+	background: #dcdcdc;
+	margin-left: 6px;
+	margin-top: 7px;
+}
+.all .nb_content .nb_sections ul .s_a1 img{
+	float: left;
+    margin-left: 110px;
+    margin-top: 10px;
+}
+.all .nb_content .nb_sections ul .s_a1 a{
+	text-decoration: none;
+}
+.all .nb_content .nb_sections ul .s_a1 a .qi{
+	height: 20px;
+	width: 100px;
+	background: red;
+	color: #999;
+	float: left;
+	margin-top: 5px;
+	margin-left: 100px;
+	line-height: 20px;
+	text-align: center;
+}
+.all .nb_content .nb_sections ul .s_a1 a p:hover{
+	color: #e8340c;
 }

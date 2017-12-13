@@ -9,7 +9,7 @@
 <!-- 主体开始 -->
 <div class="col-md-12" style="background: #fff;">
 	<!-- 左侧 -->
-	<div class="col-md-2 services">
+	<div class="col-md-3 services">
 		<a href="#">首页</a>&nbsp;&nbsp;/&nbsp;
 		<a href="#">关于我们</a>&nbsp;&nbsp;/&nbsp;
 		<a href="#">了解努比亚</a>
