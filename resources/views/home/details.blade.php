@@ -164,44 +164,62 @@
           	</div>
           </div>
 
+          
+
+            <!-- 支持花呗分期 -->
+          <div class="col-md-12 zc">
+
+            <div class="col-md-12 hb">
+              <p>支持花呗分期 :</p>
+            </div>
+            <div class="col-md-12 fq">
+              <div class="col-md-4 fq1">
+                <p class="p1">￥1022.66*3</p>
+                <p>(含￥69.98手续费)</p>
+              </div>
+              <div class="col-md-4 fq1 fq2">
+                <p class="p1">￥499.83*6</p>
+                <p>(含￥0.00手续费)</p>
+              </div>
+              <div class="col-md-4 fq1 fq2">
+                <p class="p1">￥268.66*12</p>
+                <p>(含￥224.93手续费)</p>
+              </div>
+            </div>
+          </div>
           <!-- 您选择的商品 -->
           <div class="col-md-12 xz">
-          	<p class="xz1">您选择的商品:</p>
-          	<p class="p1">
-          		{!!$goods->title!!}
-          	</p>
-          	<div class="col-md-12 zj">
-          		<p>总计:<span>￥{!!$goods->price!!}</span></p>
-          	</div>
-
-          	<!-- 支持花呗分期 -->
-          	<div class="col-md-12 hb">
-          		<p>支持花呗分期 :</p>
-          	</div>
-          	<div class="col-md-12 fq">
-          		<div class="col-md-4 fq1">
-          			<p class="p1">￥1022.66*3</p>
-          			<p>(含￥69.98手续费)</p>
-          		</div>
-          		<div class="col-md-4 fq1 fq2">
-          			<p class="p1">￥499.83*6</p>
-          			<p>(含￥0.00手续费)</p>
-          		</div>
-          		<div class="col-md-4 fq1 fq2">
-          			<p class="p1">￥268.66*12</p>
-          			<p>(含￥224.93手续费)</p>
-          		</div>
-          	</div>
-          	<div class="col-md-8 tj">
-          		<button class="btn btn-primary tj1">
-          			立即购买
-          		</button>
-          	</div>
-            <div class="col-md-4" style="margin-top: 40px;">
-              <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
-              <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-              
+            <form class="add-to-cart" action="/cart" method="post">
+             <div class="col-md-12 sl">
+                <h4 style="float: left;margin-left: -10px;">数量:</h4>
+                <input type="text" placeholder="" name="num" value="1" style="float: left;width: 50px;height: 35px;text-align: center;">
+                <div class="clearfix"></div>
+                <input type="hidden" name="goods_id" value="{{$goods->id}}">
+            
             </div>
+
+              <div class="col-md-12 xzsp">
+              	<p class="xz1">您选择的商品:</p>
+              	<p class="p1">
+              		{!!$goods->title!!}
+              	</p>
+              </div>
+              
+              <!-- 分享 -->
+              <div class="col-md-12" style="margin-top: 20px;margin-left: -15px;margin-bottom: 10px;">
+                <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+                <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+                
+              </div>
+              <hr>
+
+            	<div class="col-md-8 tj">
+            		<button class="btn btn-primary tj1">
+            			立即购买
+            		</button>
+            	</div>
+              
+              </form>
           </div>
 	   </div>	
 	</div>
@@ -532,8 +550,8 @@
    
    <!-- 上边导航start -->
    <div class="sbdh">
-   	  <div class="fk">
-   	  	<p>Z17S 全面屏 黑金 6GB+64GB ￥2999.00</p>
+   	  <div class="fk" style="float: right;">
+   	  	<p>{{$goods->title}} ￥{{$goods->price}}</p>
    	  	<button class="btn btn-lg">立即购买</button>
    	  </div>
    </div>

@@ -215,7 +215,7 @@ a:hover{
 	color: #FB1515;
 }
 .sp .sp-r .fw{
-	margin-left: -13px;
+	/*margin-left: 13px;*/
 	min-height: 73px;
 	border: 1px solid #E9E9E9;
 	text-align: center;
@@ -227,24 +227,26 @@ a:hover{
 	border: 1px solid #FB1515;
 }
 .sp .sp-r .xz{
-	height: 320px;
+	min-height: 150px;
 	/*background: lightgreen;*/
 	margin-top: 58px;
 }
+.sp .sp-r .xz .xzsp{
+	margin-left: -15px;
+}
 .sp .sp-r .xz .xz1{
-	margin-left: -10px;
 	font-size: 20px;
 	color: #000;
+	/*background: pink;*/
+	margin-top: 15px;
 }
 .sp .sp-r .xz .p1{
-	margin-left: -10px;
 	font-size: 16px;
 	color: #000;
 }
 .sp .sp-r .xz .zj{
 	min-height: 30px;
 	/*background: violet;*/
-	margin-left: -10px;
 }
 .sp .sp-r .xz .zj p{
 	margin-left: -13px;
@@ -257,48 +259,51 @@ a:hover{
 	font-size: 25px;
 	color: #FB1515;
 }
-
-.sp .sp-r .xz .hb{
+.sp .sp-r .zc{
+	min-height: 80px;
+	/*background: pink;*/
+	margin-top: 20px;
+}
+.sp .sp-r .hb{
 	min-height: 10px;
 	/*background: pink;*/
-	margin-left: -10px;
 }
-.sp .sp-r .xz .hb p{
+.sp .sp-r .hb p{
 	margin-left: -13px;
 	color: #000;
+	font-size: 15px;
 }
-.sp .sp-r .xz .fq{
+.sp .sp-r .fq{
 	min-height: 65px;
 	/*background: violet;*/
-	margin-left: -10px;
 }
-.sp .sp-r .xz .fq p{
+.sp .sp-r .fq p{
 	text-align: center;
 	color: #000;
 	font-size: 17px;
 }
-.sp .sp-r .xz .fq .p1{
+.sp .sp-r .fq .p1{
 	margin-top: 5px;
 }
-.sp .sp-r .xz .fq .fq1{
+.sp .sp-r .fq .fq1{
 	min-height: 65px;
 	border: 1px solid #e9e9e9;
 	margin-left: -15px;
 }
-.sp .sp-r .xz .fq .fq2{
+.sp .sp-r .fq .fq2{
 	margin-left: 7px;
 }
-.sp .sp-r .xz .tj{
+.sp .sp-r .tj{
 	min-height: 76px;
 	/*background: blue;*/
 	margin-left: -10px;
 }
-.sp .sp-r .xz .tj .tj1{
+.sp .sp-r .tj .tj1{
 	min-height: 33px;
 	min-width: 126px;
 	background: #E8380D;
 	border: none;
-	margin-top: 40px;
+	/*margin-top: 40px;*/
 }
 /*商品介绍end*/
 
@@ -598,11 +603,10 @@ section{
 
 }
 .sbdh .fk{
-	width: 410px;
+	min-width: 400px;
 	min-height: inherit;
 	/*background: lightblue;*/
 	/*float: right;*/
-	margin-left: 885px;
 }
 .sbdh .fk p{
 	line-height: 58px;

@@ -157,5 +157,23 @@ class GoodsController extends Controller
         }
     }
 
-    
+    public function glist(){
+        //读取商品的详细信息
+        $goods = DB::table('goods')
+        ->where('status',1)
+        ->select('id','title','price')
+        ->orderBy('id','desc')
+        ->paginate(12);
+        // dd($goods);
+        //商品的图片加入
+        foreach ($goods as $key => &$value) {
+            $value->pic = DB::table('goods_pic')->where('goods_id',$value->id)->value('pic');
+        }
+
+        $cates = DB::table('cates');
+        // dd($goods);
+        //解析模板
+          return view('home.shouji.shouji',compact('goods'));
+    }
+
 }

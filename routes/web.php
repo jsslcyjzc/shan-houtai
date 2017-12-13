@@ -40,7 +40,12 @@ Route::resource('cate','CateController');
 Route::resource('goods','GoodsController');
 
 
+//轮播图管理
+Route::resource('banner','BannerController');
+
+
 });
+
 
 
 
@@ -50,11 +55,15 @@ Route::resource('goods','GoodsController');
 Route::get('/details','DetailsController@details');
 //商城主页
 Route::get('/Homes','HomeController@index');
+
 //努比亚首页
+
 Route::get('/index','HomeController@doindex');
 //努比亚论坛
 Route::get('/nubiaUI','HomeController@nubiaUI');
+
 //注册
+
 //登录
 Route::get('/Home/login','LoginsController@login');
 Route::get('/Home/login1','LoginsController@login1');
@@ -76,7 +85,7 @@ Route::get('/Gouwu',"HomeController@gouwu");
 
 
 //手机配件
-Route::get('/Shouji',"HomeController@shouji");
+Route::get('/Shouji',"GoodsController@glist");
 
 Route::get('home/zhuce1','zhuceController@zhuce1');
 Route::get('home/index','ceshiController@index');
