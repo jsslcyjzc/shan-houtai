@@ -120,13 +120,13 @@
         border-radius: 5px;
     }
     .am-table-striped>tbody>tr:nth-child(odd)>td, .am-table-striped>tbody>tr:nth-child(odd)>th{
-        font-size: 15px;
+        font-size: 14px;
     }
     .am-table>tbody>tr>td, .am-table>tbody>tr>th, .am-table>tfoot>tr>td, .am-table>tfoot>tr>th, .am-table>thead>tr>td, .am-table>thead>tr>th{
-        font-size: 15px;
+        font-size: 14px;
     }
     .am-btn-group>.am-btn:first-child:not(:last-child):not(.am-dropdown-toggle){
-        font-size: 15px;
+        font-size: 14px;
     }
     
 </style>

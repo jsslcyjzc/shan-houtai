@@ -53,7 +53,7 @@
 
                                 <div class="am-form-group">
                                     <label for="user-email" class="am-u-sm-3 am-form-label">文章内容</label>
-                                    <script id="editor" type="text/plain" name="content" style="width:800px;height:500px;"></script>
+                                    <script id="editor" type="text/plain" name="content" style="width:750px;height:500px;float: left;margin-left: 190px;margin-top: -20px;"></script>
                                 </div>
                                  
                                  {{csrf_field()}}

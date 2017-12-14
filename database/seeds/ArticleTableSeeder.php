@@ -21,6 +21,5 @@ class ArticleTableSeeder extends Seeder
         	$data[] = $d;
         }
         
-        DB::table('articles')->insert($data);
     }
 }

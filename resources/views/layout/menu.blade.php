@@ -48,14 +48,14 @@
                         </a>
                         <ul class="tpl-left-nav-sub-menu">
                             <li>
-                                <a href="">
+                                <a href="/banner/create">
                                         <i class="am-icon-angle-right"></i>
                                         <span>添加 Banner</span>
                                         <i class="tpl-left-nav-content tpl-badge-primary">
                                            5
                                         </i>
 
-                                <a href="">
+                                <a href="/banner">
                                     <i class="am-icon-angle-right"></i>
                                     <span>Banner 列表</span>
                                     <i class="tpl-left-nav-content tpl-badge-success">
@@ -139,15 +139,15 @@
                                         <i class="am-icon-angle-right"></i>
                                         <span>添加</span>
                                         <i class="tpl-left-nav-content tpl-badge-primary">
-               5
-             </i>
+                                           5
+                                        </i>
 
                                 <a href="/size">
                                     <i class="am-icon-angle-right"></i>
                                     <span>列表</span>
                                     <i class="tpl-left-nav-content tpl-badge-success">
-               18
-             </i>
+                                        18
+                                    </i>
                                  </a>
 
                             </li>
@@ -167,15 +167,15 @@
                                         <i class="am-icon-angle-right"></i>
                                         <span>添加</span>
                                         <i class="tpl-left-nav-content tpl-badge-primary">
-               5
-             </i>
+                                           5
+                                        </i>
 
                                 <a href="/goods">
                                     <i class="am-icon-angle-right"></i>
                                     <span>列表</span>
                                     <i class="tpl-left-nav-content tpl-badge-success">
-               18
-             </i>
+                                       18
+                                    </i>
                                  </a>
 
                             </li>
@@ -191,4 +191,5 @@
                         </a>
                     </li>
                 </ul>
+                
             </div>

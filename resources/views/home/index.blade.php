@@ -11,7 +11,7 @@
 	<section>
 	<!-- 轮播图 start -->
     <div class="container-fluid" style="height: 500px;">
-         <div class="lunbotu">
+         <div class="lunbotu" style="padding: 0px;">
          	 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 			  <!-- Indicators -->
 			  <ol class="carousel-indicators">
@@ -22,42 +22,46 @@
 			  </ol>
 
 			  <!-- Wrapper for slides -->
-			  <div class="carousel-inner" role="listbox" >
-				    <div class="item active">
+			  <div class="carousel-inner" role="listbox" style="margin-left: -10px;">
+				    <div class="active item">
 				    	<a href="">
-					      <img src="holder.js/1340x500">
+                          @foreach($banner as $k=>$v)
+					      <img src="{{$v->pic}}" width="1340" height="500" style=" top: 0px;left: 0px;">
+					      @endforeach
 					      <div class="carousel-caption">
 					      </div>
 					    </a>
-				    </div>
+				    </div><!-- 
 				    <div class="item">
 				      <a href="">
-					      <img src="holder.js/1340x500?bg=#265" alt="">
+					      <img src="holder.js/1340x500?bg=#265" width="1340" height="500">
 					      <div class="carousel-caption">
 					      </div>
 				       </a>
 				    </div>
-			    <div class="item">
-			    	<a href="">
-				      <img src="holder.js/1340x500?bg=#654" alt="">
-				      <div class="carousel-caption">
-				      </div>
-			        </a>
-			    </div>
-			    <div class="item">
-			    	<a href="">
-				      <img src="holder.js/1340x500?theme=sky" alt="">
-				      <div class="carousel-caption">
-				      </div>
-			        </a>
-			    </div>
+				    <div class="item">
+				    	<a href="">
+					      <img src="holder.js/1340x500?bg=#654" width="1340" height="500">
+					      <div class="carousel-caption">
+					      </div>
+				        </a>
+				    </div>
+				    <div class="item">
+				    	<a href="">
+					      <img src="holder.js/1340x500?theme=sky" width="1340" height="500">
+					      <div class="carousel-caption">
+					      </div>
+				        </a>
+				    </div> -->
+			    
 			  </div>
+			   
 			  <!-- Controls -->
-			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" style="margin-left: -10px;">
 			    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="margin-left:200px;"></span>
 			    <span class="sr-only">Previous</span>
 			  </a>
-			  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" style="margin-right: 10px;">
 			    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 			    <span class="sr-only">Next</span>
 			  </a>

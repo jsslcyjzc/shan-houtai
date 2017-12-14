@@ -129,7 +129,7 @@ $('.del').submit(function(e){
 @section('css')
 <style type="text/css">
       .am-table>caption+thead>tr:first-child>td, .am-table>caption+thead>tr:first-child>th, .am-table>colgroup+thead>tr:first-child>td, .am-table>colgroup+thead>tr:first-child>th, .am-table>thead:first-child>tr:first-child>td, .am-table>thead:first-child>tr:first-child>th{
-        font-size: 15px;
+        font-size: 14px;
       }
 </style>
 @endsection

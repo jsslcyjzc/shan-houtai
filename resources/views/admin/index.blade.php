@@ -4,7 +4,9 @@
 <head>
    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    @section('title')
     <title>1号店后台</title>
+    @show
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +21,7 @@
     <script src="/admins/assets/js/echarts.min.js"></script>
 
 
-    <link rel="stylesheet" href="/css1/common.css">
+   <link rel="stylesheet" href="/css1/common.css">
    <link rel="stylesheet" href="/css1/main.css">
    <script type="text/javascript" src="/js1/jquery.min.js"></script>
    <script type="text/javascript" src="/js1/colResizable-1.3.min.js"></script>
@@ -186,12 +188,15 @@
                 </div>
                 @endif
             @section('am')
+            
 
+            @section('dizhi')
             <ol class="am-breadcrumb">
                 <li><a href="#" class="am-icon-home">首页</a></li>
                 <li><a href="#">分类</a></li>
                 <li class="am-active">内容</li>
             </ol>
+            @show
             
             
 

@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	$banner =DB::table('banner')->where('path',1)->get();
+    return view('home.index',compact('banner'));
 });
 //后台
 //登录管理
@@ -42,7 +43,6 @@ Route::resource('goods','GoodsController');
 //轮播图管理
 Route::resource('banner','BannerController');
 
-
 });
 
 
@@ -50,7 +50,7 @@ Route::resource('banner','BannerController');
 
 //前台管理
 Route::get('/details','DetailsController@details');
-Route::get('/Homes','HomeController@index');
+
 
 Route::get('/index','HomeController@doindex');
 Route::get('/nubiaUI','HomeController@nubiaUI');

@@ -10,7 +10,7 @@ html, body {
 .fr{float: right;}
 .clear{clear: both;}
 .oh{overflow: hidden;}
-a{text-decoration: none;}
+a{text-decoration: none;font-size: 14px;}
 img{border:none;}
 input,img,select{border-style: none;vertical-align: middle;}
 select{*vertical-align: top;}
