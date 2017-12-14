@@ -81,10 +81,10 @@ html,body{
 	line-height: 1.5;
 	position: relative;
 }
-.zhu .ti .deng .loginForm .navCon .input-con{
+.zhu .ti .deng .loginForm .navCon dl .input-con{
 	margin-bottom: 20px;	
 }
-.zhu .ti .deng .loginForm .navCon .input-con input{
+.zhu .ti .deng .loginForm .navCon dl .input-con input{
 	width: 100%;
 	height: 50px;
 	line-height: 50px;
@@ -291,26 +291,26 @@ html,body{
 	width: 360px;
 	margin: 0px auto;
 }
-.shen .ti_s .zhao .wangjiForm .C .dls{
+.shen .ti_s .zhao .wangjiForm .C .c2 .dls{
 	line-height: 1.5;
 	position: relative;
 }
-.shen .ti_s .zhao .wangjiForm .C .dls .in_co{
+.shen .ti_s .zhao .wangjiForm .C .c2 .dls .in_co{
 	margin-bottom: 20px;	
 }
-.shen .ti_s .zhao .wangjiForm .C .dls .in_co input{
-	width: 340px;
+.shen .ti_s .zhao .wangjiForm .C .c2 .dls .in_co input{
+	width: 360px;
 	height: 50px;
 	line-height: 50px;
 	padding-left:10px;
 	border:1px solid #e0e4e7;
-	/*vertical-align: middle;*/
+	vertical-align: middle;
 	font-size: 13px;
 }
-.shen .ti_s .zhao .wangjiForm .C .dls .in_co .required{
-	width: 240px;
+.shen .ti_s .zhao .wangjiForm .C .c2 .dls .in_co .required{
+	width: 260px;
 }
-.shen .ti_s .zhao .wangjiForm .C .dls .in_co .mobile-code-btn{
+.shen .ti_s .zhao .wangjiForm .C .c2 .dls .in_co .mobile-code-btn{
 	width: 100px;
 	background: #FFFFFF;
     height: 50px;
@@ -319,11 +319,11 @@ html,body{
 	line-height: 49px;
 	margin-bottom: 10px;
 	position: absolute;
-	left: 230px;
+	left: 260px;
 	top: 0px;
 }
-.shen .ti_s .zhao .wangjiForm .C .buttons .btn{
-	width: 340px;
+.shen .ti_s .zhao .wangjiForm .C .c2 .buttons .btn{
+	width: 360px;
 	height: 50px;
 	text-align: center;
 	line-height: 35px;
@@ -379,7 +379,7 @@ html,body{
 
 
 
-/*关于我们*/
+/*了解努比亚*/
 /*左侧*/
 .services{
    height: 30px;
@@ -862,7 +862,7 @@ html,body{
 .all .nb_content .nb_sections ul .s_a1 a .qi{
 	height: 20px;
 	width: 100px;
-	background: red;
+	/*background: red;*/
 	color: #999;
 	float: left;
 	margin-top: 5px;
@@ -872,4 +872,251 @@ html,body{
 }
 .all .nb_content .nb_sections ul .s_a1 a p:hover{
 	color: #e8340c;
+}
+
+
+
+
+/*手机体验店 地图*/
+.alls{
+	height: auto;
+	background: #f5f5f5;
+}
+.alls .sss{
+    height: 450px;
+    /*background: pink;*/
+    position: relative;
+}
+.alls .sss .t_tle{
+   width: 500px;
+   height: 240px;
+   /*background: red;*/
+   position: absolute;
+   top: 40px;
+   left:370px; 
+}
+.alls .sss .t_tle .s_p{
+	height: 40px;
+	/*background: pink;*/
+	line-height: 40px;
+	text-align: center;
+	font-size: 30px;
+	color: #fff;
+}
+.alls .sss .t_tle .s_pp{
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	/*background: coral;*/
+	font-size: 17px;
+	color: #fff;
+}
+.alls .sss .t_tle .s_ppp{
+	width: 500px;
+	height: 140px;
+	/*background: maroon;*/
+	position: relative;
+}
+.alls .sss .t_tle .s_ppp ul li p{
+	margin-top: 5px;
+	height: 20px;
+	/*background: lightyellow;*/
+	font-size: 15px;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+}
+.alls .sss .t_tle .s_ppp ul .li{
+	height: 120px;
+	position: absolute;
+	top: 10px;
+	left: 70px;
+	/*background: lightblue;*/
+}
+.alls .sss .t_tle .s_ppp ul .li1{
+	height: 120px;
+	position: absolute;
+	top: 10px;
+	left: 205px;
+	/*background: lightblue;*/
+}
+.alls .sss .t_tle .s_ppp ul .li2{
+	height: 120px;
+	position: absolute;
+	top: 10px;
+	left:340px;
+	/*background: lightblue;*/
+}
+.alls .dt{
+	height: auto;
+	/*background: lightgreen;*/
+}
+.alls .dt .zs{
+	height: 100px;
+	/*background: skyblue;*/
+}
+.alls .dt .zs .shi{
+   	line-height: 100px;
+	text-align: center;
+	font-size: 35px;
+	color: #666;
+}
+.alls .dt .dit{
+	width: 1235px;
+	height: 800px;
+	/*background: red;*/
+}
+
+
+
+
+/*联系努比亚*/
+/*左侧*/
+.ser_con{
+   height: 30px;
+   /*background: pink;	*/
+}
+.ser_con a{
+	line-height: 30px;
+	color: #999;
+	text-decoration: none;
+}
+.ser_con a:hover{
+	color: #333;
+}
+.na{
+	height: 120px;
+	margin-top: 30px;
+	/*background: lightyellow;*/
+}
+.na ul  li{
+	height: 40px;
+	line-height: 40px;
+	/*background: lightgreen;*/
+	border-bottom: 1px solid #ddd;
+}
+.na ul .activ{
+	background: #fafafa;
+}
+.na ul .activ a{
+	color: #E8380D;
+}
+.na ul  li a{
+	color: #999;
+	font-size: 15px;
+	text-decoration: none;
+}
+.na ul  li a:hover{
+	color: #E8380D;
+}
+/*右侧*/
+.tab_content{
+	height: auto;
+	margin-top: 50px;
+	/*background: red;*/
+}
+.tab_content .kehu{
+	height: 30px;
+	line-height: 30px;
+	/*background: pink;*/
+	font-weight: bold;
+	font-size: 20px;
+	color: #606366; 
+}
+.tab_content .nei{
+	height: 80px;
+	line-height: 20px;
+	/*background: lightgreen;*/
+    font-size: 13px;
+    color: #606366;
+}
+.tab_content .hezuo{
+	height: 30px;
+	line-height: 30px;
+	/*background: pink;*/
+	font-weight: bold;
+	font-size: 20px;
+	color: #606366; 
+}
+.tab_content .xian{
+	height: 40px;
+	line-height: 20px;
+	/*background: lightgreen;*/
+    font-size: 13px;
+    color: #606366;
+}
+.tab_content .gongguan{
+	height: 30px;
+	line-height: 30px;
+	/*background: pink;*/
+	font-weight: bold;
+	font-size: 20px;
+	color: #606366; 
+}
+.tab_content .xiao{
+	height: 20px;
+	line-height: 20px;
+	/*background: lightgreen;*/
+    font-size: 13px;
+    color: #606366;
+}
+.tab_content .yewu{
+	height: 30px;
+	line-height: 30px;
+	/*background: pink;*/
+	font-weight: bold;
+	font-size: 20px;
+	color: #606366; 
+}
+.tab_content .b2c{
+	height: 20px;
+	line-height: 20px;
+	/*background: lightgreen;*/
+    font-size: 13px;
+    color: #606366;
+}
+.tab_content .kaifa{
+	height: 30px;
+	line-height: 30px;
+	/*background: pink;*/
+	font-weight: bold;
+	font-size: 20px;
+	color: #606366; 
+}
+.tab_content .shiwu{
+	height: 100px;
+	line-height: 20px;
+	/*background: lightgreen;*/
+    font-size: 13px;
+    color: #606366;
+}
+.tab_content .zhishi{
+	height: 30px;
+	line-height: 30px;
+	/*background: pink;*/
+	font-weight: bold;
+	font-size: 20px;
+	color: #606366; 
+}
+.tab_content .jubao{
+	height: 20px;
+	line-height: 20px;
+	/*background: lightgreen;*/
+    font-size: 13px;
+    color: #606366;
+}
+.tab_content .lianshi{
+	height: 30px;
+	line-height: 30px;
+	/*background: pink;*/
+	font-weight: bold;
+	font-size: 20px;
+	color: #606366; 
+}
+.tab_content .shenzhen{
+	height: 40px;
+	line-height: 20px;
+	/*background: lightgreen;*/
+    font-size: 13px;
+    color: #606366;
 }

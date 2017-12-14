@@ -206,5 +206,5 @@
 	<link rel="stylesheet" href="/Home/css/bootstrap.css" type="text/css"  media="all">
 	<link rel="stylesheet" href="/Home/css/bootstrap.min.css" type="text/css"  media="all">
 	<link rel="stylesheet" href="/Home/css/index.css" type="text/css"  media="all">
-	<script src="/Home/js/.min.js"></script>
+	<script src="/Home/js/holder.min.js"></script>
 @stop

@@ -57,9 +57,9 @@
 					    </div>
 					    @show
 					    <input type="hidden">
-                        <input type="button" style="margin-top:10px" id="login_btn_id" value="立即登录" class="btn-login">
+                        <a href="../index" style="text-decoration: none;"><input type="button" style="margin-top:10px" id="login_btn_id" value="立&nbsp;&nbsp;即&nbsp;&nbsp;登&nbsp;&nbsp;录" class="btn-login"></a>
                         <div class="register-now">
-					        <a href="" style="color:#e8380d">注册新账号</a>
+					        <a href="/home/zhuce" style="color:#e8380d">注册新账号</a>
 					        <span style="font-size: 18px;padding: 0 7px;color: #d5d5d5;">|</span>
 					        <a style="color:#34383d" href="/Home/wangji">忘记密码?</a>
 		                </div>
@@ -88,10 +88,9 @@
 	</footer>
 <!-- 底部结束 -->
 	
-    <script type="text/javascrip" src="/Home/js/bootstrap.js"></script>
-    <script type="text/javascrip" src="/Home/js/bootstrap.min.js"></script>
-    
-    <script src="/Home/js/collect.js"></script>
+    <script type="text/javascript" src="/Home/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/Home/js/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="/Home/js/holder.min.js"></script>
      <script>
      	 
      </script>

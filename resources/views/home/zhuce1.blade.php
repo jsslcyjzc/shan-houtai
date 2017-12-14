@@ -35,7 +35,7 @@
 					</div>
 			<div class="col-md-12 a_ac">
 				<div class="col-md-3"></div>
-				<div class="col-md-6"><input type="submit" value="立即注册" /></div>
+				<div class="col-md-6"><a href="/Home/login"><input type="submit" value="立即注册" /></a></div>
 				<div class="col-md-3"></div>
 			</div>
 		</div>

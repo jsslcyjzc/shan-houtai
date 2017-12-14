@@ -273,8 +273,8 @@
 					         </div>
 		                </div>
 					</li>
-					<li><a href="">服务</a></li>
-					<li><a href="">体验店</a></li>
+					<li><a href="/Home/fuwu">服务</a></li>
+					<li><a href="/Home/tiyan">体验店</a></li>
 					<li><a href="">社区</a></li>
 					<li style="margin-right: none;" class="shangchang">
 						<a href="/nubiaUI">nubia UI</a>
