@@ -47,7 +47,7 @@
                         		<dd>
                         			<div class="in_co">
                         				<input type="text" name="mobileValidateCode" id="mobileCode" class="text required validate-mobilecode" placeholder="请输入手机收到的验证码">
-                        				<input class="mobile-code-btn" type="button" id="sendEmailCode" value="获取验证码">
+                        				<input id="send" class="mobile-code-btn" type="button" value="获取验证码">
                         				<span class="check_tips error_tip" id="mobileCode_error_tag"></span>
 								        <span class="check_tips succ_tips" id="mobileCode_succ_tag"></span>
                         			</div>
@@ -74,12 +74,11 @@
                         	</dl>
                         	<div class="buttons">
 								<input type="hidden" name="back_url">
-								<input type="button" class="btn" value="提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交" name="regButton" id="regButton">
+								<a href="/Home/login"><input type="button" class="btn" value="提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交" name="regButton" id="regButton"></a>
 							</div>
                         </div>
 			        </div>
                     @show
-
 				</form>
 			</div>
 		</div>
@@ -99,38 +98,55 @@
 		</div>
 	</footer>
 <!-- 底部结束 -->
-    <script src="/Home/js/jquery.min.js"></script>
-    <script src="/Home/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Home/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/Home/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Home/js/jquery.js"></script>
+    <script type="text/javascript" src="/Home/js/holder.min.js"></script>
+    
+    @section('js') 
+    <script>
+        $('.in_co > #send').click(function(){
 
-    @section('js')
-    <!-- <script>
-    	$('#send').click(function(){
-    		//获取用户输入的手机号  name=phone
-    		var phone = $('input[name=phone]').val();
+            // alert(111);
+            //获取用户输入的手机号  name=mobile
+            var phone = $('input[name=mobile]').val();
+            // alert(phone);
+            //检测用户的手机号格式是否正确
+            var reg =  /1\d{10}/;
+            //检测
+            if(!reg.test(phone)) {
+                alert('手机号格式错误!!!');
+                return;
+            }
 
-    		//检测用户的手机号格式是否正确
-    		var reg =  /1\d{10}/;
-    		//检测
-    		if(!reg.test(phone)) {
-    			alert('手机号格式错误!!!');
-    			return;
-    		}
-
-    		$.ajax({
+            $.ajax({
                 type:'get',
                 data:{phone:phone},
                 url:'/message',
                 success:function(data){
-                	alert(data.data.vcode);
-                	console.log(data);
+                    alert(data.data.vcode);
+                    console.log(data);
                 }
-    		});
-    		//发送短信之后1分钟之内不能点击该按钮
-    		$(this).addClass('disabled');
-    		var t = 5;
-    		//加倒计时
-    	})
-    </script> -->
+            });
+            //发送短信之后1分钟之内不能点击该按钮
+            $(this).addClass('disabled');
+            var t = 5;
+            //加倒计时
+            var inte = setInterval(function(){
+                $('#send').html(t+'秒之后再重新发送');
+                t--;
+                if(t < 0) {
+                    //停止定时器
+                    clearInterval(inte);
+                    //使按钮可点
+                    $('#send').removeClass('disabled');
+                    //更换文字
+                    $('#send').html('发送验证码');
+                }
+
+            },1000);
+        });
+    </script>
     @show
 </body>
 </html>

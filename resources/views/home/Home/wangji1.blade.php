@@ -17,11 +17,10 @@
         	<dl class="dls">
         		<dd>
         			<div class="in_co">
-        				<input type="text" class="text validate-email" name="email" id="email" placeholder="请输入常用邮箱地址">
+        				<input type="text" class="text validate-email" name="email" id="email" placeholder="请输入邮箱地址">
         				<span class="succ_tips"></span>
         			</div>
         			<span class="check_tips succ_tips" id="mobile_succ_tag" style="display: none;"></span>
-
 				    <!-- <span class="check_tips error_tip" id="mobile_error_tag" style="display: none;">请输入邮箱地址</span> -->
         		</dd>
         	</dl>
@@ -56,7 +55,7 @@
         	</dl>
         	<div class="buttons">
 				<input type="hidden" name="back_url">
-				<input type="button" class="btn" value="提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交" name="regButton" id="regButton">
+				<a href="/Home/login"><input type="button" class="btn" value="提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交" name="regButton" id="regButton"></a>
 			</div>
         </div>
     </div>

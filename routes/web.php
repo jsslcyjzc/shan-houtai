@@ -57,29 +57,38 @@ Route::get('/details','DetailsController@details');
 Route::get('/Homes','HomeController@index');
 
 //努比亚首页
-
 Route::get('/index','HomeController@doindex');
 //努比亚论坛
 Route::get('/nubiaUI','HomeController@nubiaUI');
 
 //注册
 
+
 //登录
 Route::get('/Home/login','LoginsController@login');
 Route::get('/Home/login1','LoginsController@login1');
-
 //忘记密码
 Route::get('/Home/wangji','WangjiController@wangji');
 Route::get('/Home/wangji1','WangjiController@wangji1');
+Route::get('/message','CommonControlller@message');
 
-//关于我们
-Route::get('/Home/guanyu','GuanyuController@guanyu');
+//了解努比亚
+Route::get('/Home/liaojie','LiaojieController@liaojie');
+
+//联系努比亚
+Route::get('Home/lianxi','LianxiController@lianxi');
 
 //公益基金会
 Route::get('/Home/jijin','JijinController@jijin');
 
 //福利会
-Route::get('Home/fuwu','FuwuController@fuwu');
+Route::get('/Home/fuwu','FuwuController@fuwu');
+
+//手机体验店 地图
+Route::get('/Home/tiyan','TiyanController@tiyan');
+
+
+
 
 
 //购物车

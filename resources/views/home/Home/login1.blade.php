@@ -27,7 +27,7 @@
 					<dl>
 						<dd>
 							<div class="input-con">
-                                <input type="text" id="mobileValidateCode" name="mobileValidateCode" placeholder="请输入手机验证码" datatype="*">
+                                <input type="text" class="inpu" id="mobileValidateCode" name="mobileValidateCode" placeholder="请输入手机验证码" datatype="*" style="width: 260px;">
                                 <input type="button" value="获取验证码" class="btn-code" id="btn-code-mobile">
                             </div>
 							<div class="checktip"><span class="Validform_checktip"></span></div>
