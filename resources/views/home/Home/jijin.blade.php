@@ -12,7 +12,7 @@
 <div class="col-md-12 news" style="background: #fff;">
 	
 	<div class="col-xs-12 ds" style="height: 300px;">
-		<img src="holder.js/1349x300?bg=#654" alt="">
+		<img src="holder.js/1230x300?bg=#654" alt="">
 	</div>
 	<div class="clearfix"></div>
 	<!-- 左侧 -->
@@ -206,5 +206,5 @@
 	<link rel="stylesheet" href="/Home/css/bootstrap.css" type="text/css"  media="all">
 	<link rel="stylesheet" href="/Home/css/bootstrap.min.css" type="text/css"  media="all">
 	<link rel="stylesheet" href="/Home/css/index.css" type="text/css"  media="all">
-	<script src="/Home/js/.min.js"></script>
+	<script src="/Home/js/holder.min.js"></script>
 @stop

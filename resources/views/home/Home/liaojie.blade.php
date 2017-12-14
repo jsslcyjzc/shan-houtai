@@ -9,7 +9,7 @@
 <!-- 主体开始 -->
 <div class="col-md-12" style="background: #fff;">
 	<!-- 左侧 -->
-	<div class="col-md-2 services">
+	<div class="col-md-3 services">
 		<a href="#">首页</a>&nbsp;&nbsp;/&nbsp;
 		<a href="#">关于我们</a>&nbsp;&nbsp;/&nbsp;
 		<a href="#">了解努比亚</a>
@@ -90,5 +90,6 @@
 	<link rel="stylesheet" href="/Home/css/bootstrap.css" type="text/css"  media="all">
 	<link rel="stylesheet" href="/Home/css/bootstrap.min.css" type="text/css"  media="all">
 	<link rel="stylesheet" href="/Home/css/index.css" type="text/css"  media="all">
+	<script src="/Home/js/holder.min.js"></script>
 @stop
 
