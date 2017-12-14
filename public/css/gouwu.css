@@ -62,6 +62,7 @@ section #gouwu table tr th span{
 }
 section #gouwu table tr td{
 	text-align: center;
+	border: 1px solid #eef0f0;
 }
 section #gouwu table tr:nth-child(2){
 	background-color: #f7f9f9;
@@ -96,18 +97,18 @@ section #gouwu table tr:nth-child(3) td{
 section #gouwu table tr:nth-child(3) td:nth-child(3){
 	color: #666666;
 }
-section #gouwu table tr:nth-child(3) td:nth-child(4) p{
-    width: 27px;
+section #gouwu table tr td:nth-child(4) p{
+	width: 27px;
     height: 27px;
     border: 1px solid #cccccc;
     line-height: 25px;
     float: left;
     border-radius: 5px 0 0 5px;
 }
-section #gouwu table tr:nth-child(3) td:nth-child(4) p:last-child{
+section #gouwu table tr td:nth-child(4) p:last-child{
 	border-radius: 0 5px 5px 0 ;
 }
-section #gouwu table tr:nth-child(3) td:nth-child(4) input{
+section #gouwu table tr td:nth-child(4) input{
 	float: left;
 	width: 50px;
 	height: 27px;
@@ -119,33 +120,33 @@ section #gouwu table tr:nth-child(4) td{
 	height: 105px;
 	border: 1px solid #eef0f0;
 }
-section #gouwu table tr:nth-child(4) td:first-child a{
+section #gouwu table tr td:first-child a{
     color: #666666;
     float: left;
     margin-bottom: 15px;
 }
-section #gouwu table tr:nth-child(4) td:first-child input{
+section #gouwu table tr td:first-child input{
 	float: left;
 	margin-left: 15px;
 	margin-bottom: 15px;
 }
-section #gouwu table tr:nth-child(4) td:nth-child(2) p{
+section #gouwu table tr td:nth-child(2) p{
     text-align: right;
     margin-right: 5px;
     color: #666666;
 }
-section #gouwu table tr:nth-child(4) td:nth-child(2) p:first-child{
+section #gouwu table tr td:nth-child(2) p:first-child{
 	margin-top: 10px;
 }
-section #gouwu table tr:nth-child(4) td:last-child p{
+section #gouwu table tr td:last-child p{
     text-align: left;
     margin-left: 15px;
     color: #666666;
 }
-section #gouwu table tr:nth-child(4) td:last-child p:first-child{
+section #gouwu table tr td:last-child p:first-child{
 	margin-top: 10px;
 }
-section #gouwu table tr:nth-child(4) td:last-child p:last-child{
+section #gouwu table tr td:last-child p:last-child{
 	color: #ff0000;
 }
 section #gouwu table tr:last-child td{
@@ -193,3 +194,8 @@ section #kong ul li button{
 section #kong img{
 	margin-top: 30px;
 }
+
+
+
+
+

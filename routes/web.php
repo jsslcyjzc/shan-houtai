@@ -20,7 +20,7 @@ Route::get('/admin/login','LoginController@login');
 Route::post('/admin/login','LoginController@dologin');
 
 //后台路由组
-Route::group(['middlemware'=>'login'],function(){
+Route::group(['middleware'=>'login'],function(){
 //首页
 Route::get('/admin','AdminController@index');
 
@@ -43,6 +43,10 @@ Route::resource('goods','GoodsController');
 //轮播图管理
 Route::resource('banner','BannerController');
 
+//购物车加入成功
+Route::post('/cart','CartController@store');
+Route::get('/cart','CartController@indexa');
+Route::get('/cart/delete','CartController@delete');
 
 });
 

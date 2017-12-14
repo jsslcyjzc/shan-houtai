@@ -32,7 +32,6 @@
                     <div class="am-g">
                         <div class="am-u-sm-12">
                         	
-                            <form class="am-form">
                                 <table class="am-table am-table-striped am-table-hover table-main">
                                     <thead>
                                         <tr>
@@ -66,11 +65,11 @@
                                                        </a>
                                                         <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
 
-                                                         <form class="del" action="/user/{{$v->id}}" method="post" style="float: left;">
+                                                      <form class="del" action="/user/{{$v->id}}" method="post" style="float: left;">
                                                         {{method_field('DELETE')}}
                                                          {{csrf_field()}}
                                                         <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                                                    </form>
+                                                       </form>
                                                     </div>
                                                 </div>
                                             </td>
@@ -87,7 +86,6 @@
                                 			
                                 {{ $users->appends(['num'=>$num])->links() }}
 
-                            </form>                              
                         </div>
 
                     </div>

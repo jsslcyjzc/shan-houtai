@@ -214,9 +214,8 @@
               <hr>
 
             	<div class="col-md-8 tj">
-            		<button class="btn btn-primary tj1">
-            			立即购买
-            		</button>
+                  {{csrf_field()}}
+            		 <input type="submit" value="加入购物车" / style="width: 130px;height: 35px;border: none;background: #ccc;color: #fff;">
             	</div>
               
               </form>

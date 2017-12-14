@@ -32,7 +32,6 @@
                     <div class="am-g">
                         <div class="am-u-sm-12">
                         	
-                            <form class="am-form">
                                 <table class="am-table am-table-striped am-table-hover table-main">
                                     <thead>
                                         <tr>
@@ -80,13 +79,10 @@
                                 <hr>
                                 			
                                 {{ $articles->appends(['num'=>$num])->links() }}
-
-                            </form>                              
+                            
                         </div>
 
                     </div>
-
-
                 </div>
                 <div class="tpl-alert"></div>
             </div>
