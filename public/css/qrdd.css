@@ -69,17 +69,6 @@
 	background: violet;
 	margin-top: 20px;
 }
-.spqd .spqd_b input{
-	width: 25px;
-	height: 25px;
-	margin-left: 80px;
-	margin-top: 35px;
-	float: left;
-}
-.spqd .spqd_b span{
-	display: inline-block;
-	float: left;
-	margin-left: 8px;
-	line-height: 90px;
-	color: #666;
+.spqd .spqd_b table{
+	background: lightblue;
 }
