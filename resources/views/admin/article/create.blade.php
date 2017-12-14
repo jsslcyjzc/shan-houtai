@@ -52,7 +52,7 @@
 
 
                                 <div class="am-form-group">
-                                    <label for="user-email" class="am-u-sm-3 am-form-label">文章内容</label>
+                                    <label for="user-email" class="am-form-label" style="margin-left: 15px;">文章内容</label>
                                     <script id="editor" type="text/plain" name="content" style="width:800px;height:500px;"></script>
                                 </div>
                                  

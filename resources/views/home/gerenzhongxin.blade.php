@@ -114,3 +114,10 @@
 </div>
 @endsection
 
+@section('css')
+<style type="text/css">
+   .gouwuche .pull-left{
+        line-height: 75px;
+    }
+</style>
+@stop

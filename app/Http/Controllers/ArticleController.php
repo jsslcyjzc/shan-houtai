@@ -89,7 +89,9 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        //
+        //读取商品的详细信息
+        $articles = DB::table('articles')->where('id',$id)->first();
+        return view('home.qiangxianbuju',compact('articles'));
     }
 
     /**

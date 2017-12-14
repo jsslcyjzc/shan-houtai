@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>努比亚详情</title>
-	    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+@extends('home.layout.home')
+@section('title')
+  <title>努比亚详情</title>
+@endsection
+
 	    <link rel="stylesheet" href="/home/css/details.css">
-		<script src="/bootstrap/js/jquery.js"></script>
-		<script src="/bootstrap/js/bootstrap.js"></script>
-		<script src="/bootstrap/js/holder.min.js"></script>
+@section('js')
 		<script src="/home/js/datails.js"></script>
-</head>
-<body>
-	<!-- 头部start -->
-   <header>
-	<div class="top-nav">
-		<div class="container"></div>
-	</div>
-	<!-- 头部end -->
-   
+
+    
+@stop
+@section('center')
 	<!-- 导航start -->
 	<div class="nav">
 		<div class="container">
@@ -54,36 +46,30 @@
 	<!-- 导航end -->
    </header>
    <!-- 商品介绍start -->
+  <!-- 商品start -->
   <div class="sp" style="margin-top: 88px;">
    <div class="container sp1">
+     
 	   <div class="col-md-4 sp-l">
          <table border="0" cellpadding="20" cellspacing="0">
           <tr>
             <td colspan="5" class="new">
-              <iframe src="/images/2.jpg" frameborder="0" width="380" height="550" name="dt"></iframe>
+
+              <iframe src="/images/2.jpg" frameborder="0" width="380" height="400" name="dt" style="margin-left: -15px;"></iframe>
+
             </td>
           </tr>
           <tr class="xt">
+            @foreach($goods_pic as $k=>$v)
+            
             <td>
-              <a href="/images/1.jpg" target="dt">
-                <img src="holder.js/90x90" style="width: 90px;height: 90px;">
+              <a href="{{$v->pic}}" target="dt" style="width: 380px;height: 550px;">
+                <img src="{{$v->pic}}" style="width: 90px;height: 90px;margin-left: -14px;">
               </a>
             </td>
-            <td>
-              <a href="/images/2.jpg" target="dt">
-                <img src="holder.js/90x90" style="width: 90px;height: 90px;">
-              </a>
-            </td>
-            <td>
-              <a href="/images/1.jpg" target="dt">
-                <img src="holder.js/90x90" style="width: 90px;height: 90px;">
-              </a>
-            </td>
-            <td>
-              <a href="/images/2.jpg" target="dt">
-                <img src="holder.js/90x90" style="width: 90px;height: 90px;">
-              </a>
-            </td>
+            @endforeach
+           
+          
           </tr>
           </table>
          <div class="sp-l-sc">
@@ -95,12 +81,13 @@
          	</div>
          </div>
 	   </div>
+     
        <div class="col-md-1"></div>
 	   <div class="col-md-7 sp-r">
 	   	 <div class="sp-r-t">
 	   	 	<ul class="list-unstyled list-inline">
-	   	 		<li class="li1">购买Z17S 全面屏</li>
-	   	 		<li class="li2">2999.00</li>
+	   	 		<li class="li1">{!!$goods->title!!}</li>
+	   	 		<li class="li2">{{$goods->price}}</li>
 	   	 		<li class="pull-right">
 	   	 			<a href="#">查看详情</a></li>
 	   	 	</ul>
@@ -121,19 +108,20 @@
          	1、选择颜色
          </div>
          <div class="col-md-12 lb">
-         	<div class="col-md-6 bk bks">
+         	<div class="col-md-5 bk bks active">
          		<p>极光蓝</p>
          	</div>
-         	<div class="col-md-6 bk">
+          <div class="col-md-1"></div>
+         	<div class="col-md-5 bk">
          		<p>黑金</p>
          	</div>
          </div>
          
          <!-- 选择版本 -->
-          <div class="col-md-12 ys">
+          <div class="col-md-8 ys">
          	2、选择版本
           </div>
-          <div class="col-md-12 lb">
+          <div class="col-md-10 lb">
           	 <div class="col-md-6 bk bks">
           	 	<p>6GB+64GB</p>
           	 </div>
@@ -144,11 +132,12 @@
          	3、选择优惠配件套餐
           </div>
           <div class="col-md-12 lb">
-          	<div class="col-md-4 tz tzs">
+          	<div class="col-md-4 tz tzs" style="margin-left: 14px;">
           		<p class="p1">Z17S套装版(含屏碎保)</p>
           		<p class="p2">￥3399.00<span>&nbsp;省 36.00元</span></p>
           	</div>
-          	<div class="col-md-4 tz">
+            <div class="col-md-1"></div>
+          	<div class="col-md-4 tz sj">
           		<p class="p1">仅手机</p>
           		<p class="p2">￥2999.00</p>
           	</div>
@@ -160,60 +149,83 @@
          	<a href="#">了解"nubia保障服务"</a>
           </div>
           <div class="col-md-12 lb">
-          	<div class="col-md-10 bk fw">
+          	<div class="col-md-10 fw fws">
           		<p>Z17S (6GB+64GB) 屏碎宝 (1年内保修一次)&nbsp;&nbsp;&nbsp; ￥129.00</p>
           	</div>
           </div>
           <div class="col-md-12 lb">
-          	<div class="col-md-10 bk fw">
+          	<div class="col-md-10 fw">
           		<p>Z17S (6GB+64GB) 意外宝 (1年内保修一次)&nbsp;&nbsp;&nbsp; ￥179.00</p>
           	</div>
           </div>
           <div class="col-md-12 lb">
-          	<div class="col-md-8 bk fw">
+          	<div class="col-md-8 fw">
           		<p>Z17S (6GB+64GB) 意外宝&nbsp;&nbsp;&nbsp; ￥249.00</p>
           	</div>
           </div>
 
+          
+
+            <!-- 支持花呗分期 -->
+          <div class="col-md-12 zc">
+
+            <div class="col-md-12 hb">
+              <p>支持花呗分期 :</p>
+            </div>
+            <div class="col-md-12 fq">
+              <div class="col-md-4 fq1">
+                <p class="p1">￥1022.66*3</p>
+                <p>(含￥69.98手续费)</p>
+              </div>
+              <div class="col-md-4 fq1 fq2">
+                <p class="p1">￥499.83*6</p>
+                <p>(含￥0.00手续费)</p>
+              </div>
+              <div class="col-md-4 fq1 fq2">
+                <p class="p1">￥268.66*12</p>
+                <p>(含￥224.93手续费)</p>
+              </div>
+            </div>
+          </div>
           <!-- 您选择的商品 -->
           <div class="col-md-12 xz">
-          	<p class="xz1">您选择的商品:</p>
-          	<p class="p1">
-          		Z17S 全面屏 黑金 6GB+64GB
-          	</p>
-          	<div class="col-md-12 zj">
-          		<p>总计:<span>￥2999.00</span></p>
-          	</div>
+            <form class="add-to-cart" action="/cart" method="post">
+             <div class="col-md-12 sl">
+                <h4 style="float: left;margin-left: -10px;">数量:</h4>
+                <input type="text" placeholder="" name="num" value="1" style="float: left;width: 50px;height: 35px;text-align: center;">
+                <div class="clearfix"></div>
+                <input type="hidden" name="goods_id" value="{{$goods->id}}">
+            
+            </div>
 
-          	<!-- 支持花呗分期 -->
-          	<div class="col-md-12 hb">
-          		<p>支持花呗分期 :</p>
-          	</div>
-          	<div class="col-md-12 fq">
-          		<div class="col-md-4 fq1">
-          			<p class="p1">￥1022.66*3</p>
-          			<p>(含￥69.98手续费)</p>
-          		</div>
-          		<div class="col-md-4 fq1 fq2">
-          			<p class="p1">￥499.83*6</p>
-          			<p>(含￥0.00手续费)</p>
-          		</div>
-          		<div class="col-md-4 fq1 fq2">
-          			<p class="p1">￥268.66*12</p>
-          			<p>(含￥224.93手续费)</p>
-          		</div>
-          	</div>
-          	<div class="col-md-12 tj">
-          		<button class="btn btn-primary tj1">
-          			立即购买
-          		</button>
-          	</div>
+              <div class="col-md-12 xzsp">
+              	<p class="xz1">您选择的商品:</p>
+              	<p class="p1">
+              		{!!$goods->title!!}
+              	</p>
+              </div>
+              
+              <!-- 分享 -->
+              <div class="col-md-12" style="margin-top: 20px;margin-left: -15px;margin-bottom: 10px;">
+                <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+                <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+                
+              </div>
+              <hr>
+
+            	<div class="col-md-8 tj">
+            		<button class="btn btn-primary tj1">
+            			立即购买
+            		</button>
+            	</div>
+              
+              </form>
           </div>
 	   </div>	
 	</div>
    </div>
    <!-- 商品介绍end -->
-	
+	<!-- 商品stop -->
 	<div class="clearfix"></div>
    <!-- 身体start -->
    <section>
@@ -228,9 +240,11 @@
    	 		</div>
    	 		<div class="content">
    	 			<div class="active tab spxq">
-   	 		    	<img src="holder.js/100px300?bg=#afe&text=111">
-   	 		    	<img src="holder.js/100px300?bg=#ade&text=111">
-   	 		    	<img src="holder.js/100px300?bg=#abe&text=111">
+            @foreach($goods_pic as $k=>$v)
+   	 		    	<img src="{{$v->pic}}" style="width: 100%;height: 400px;">
+            @endforeach
+   	 		    	<!-- <img src="holder.js/100px300?bg=#ade&text=111">
+   	 		    	<img src="holder.js/100px300?bg=#abe&text=111"> -->
    	 			</div>
    	 			<div class="tab active cs"></div>
    	 			<div class="tab active cs jb">
@@ -272,16 +286,8 @@
    	 		    		<div class="sxt">
    	 		    			<span>后置主摄像头</span>
    	 		    			<ul class="list-unstyled">
-   	 		    				<li class="li1">1200万像素(主摄像头)+2300万像素(辅摄像头)</li>
-   	 		    				<li>1200万像素(主摄像头)+2300万像素(辅摄像头)</li>
-   	 		    				<li>1200万像素(主摄像头)+2300万像素(辅摄像头)</li>
-   	 		    				<li>1200万像素(主摄像头)+2300万像素(辅摄像头)</li>
-   	 		    				<li>1200万像素(主摄像头)+2300万像素(辅摄像头)</li>
-   	 		    				<li>1200万像素(主摄像头)+2300万像素(辅摄像头)</li>
-   	 		    				<li>1200万像素(主摄像头)+2300万像素(辅摄像头)</li>
-   	 		    				<li>1200万像素(主摄像头)+2300万像素(辅摄像头)</li>
-   	 		    				<li>1200万像素(主摄像头)+2300万像素(辅摄像头)</li>
-   	 		    				<li>1200万像素(主摄像头)+2300万像素(辅摄像头)</li>
+   	 		    				<li class="li1">{!!$goods->content!!}</li>
+   	 		    				
    	 		    			</ul>
    	 		    		</div>
    	 		    	   <div class="xx1">
@@ -541,20 +547,14 @@
 
    <!-- 身体end -->
    <div class="clearfix"></div>
-   <!-- 脚部start -->
-   <footer>
-   	 	<div class="jb">
-   	 		<img src="holder.js/100px400?text=Bottom" alt="">
-   	 	</div>
-   </footer>
-   <!-- 脚部end -->
+   
    <!-- 上边导航start -->
    <div class="sbdh">
-   	  <div class="fk">
-   	  	<p>Z17S 全面屏 黑金 6GB+64GB ￥2999.00</p>
+   	  <div class="fk" style="float: right;">
+   	  	<p>{{$goods->title}} ￥{{$goods->price}}</p>
    	  	<button class="btn btn-lg">立即购买</button>
    	  </div>
    </div>
    <!-- 上边导航end -->
-</body>
-</html>
+@stop
+

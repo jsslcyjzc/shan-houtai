@@ -15,8 +15,10 @@ class LoginMiddleware
      */
     public function handle($request, Closure $next)
     {
+        $id = session('id');
+        //没有登录
         if (empty($id)) {
-            return http_redirect('/admin/login')->with('msg','没有登录');
+            return redirect('/admin/login')->with('msg','没有登录');
         }
         return $next($request);
     }

@@ -35,4 +35,5 @@ class HomeController extends Controller
     public function shouji(){
         return view('home.shouji.shouji');
     }
+
 }
