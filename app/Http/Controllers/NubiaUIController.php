@@ -137,6 +137,12 @@ class NubiaUIController extends Controller
     public function edit($id)
     {
         //
+        //读取当前用户信息
+        $nubia = DB::table('nubiaUI')->where('id',$id)->first();
+
+
+
+        return view('admin.nubiaUI.edit',compact('nubia'));
     }
 
     /**
@@ -149,6 +155,58 @@ class NubiaUIController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+
+        $data = $request->only(['title','time','author','photo','pic','content']);
+        // dd($data);
+
+        //头像图片
+        if($request->hasFile('photo')){
+            //获取文件后缀名
+            $suffix = $request->file('photo')->extension();
+            // dd($suffix);
+            //创建一个新的随机数名称
+            $name = uniqid('photo_').'.'.$suffix;
+            // dd($name);
+            //文件夹路径
+            $dir = './nubiaUI图片/'.date('Y-m-d');
+            // dd($dir);
+            //移动文件
+            $request->file('photo')->move($dir,$name);
+            //获取文件路径
+            $data['photo'] = trim($dir.'/'.$name,'.');
+            // dd($data['photo']);
+
+        }
+
+
+
+        //头像图片
+        if($request->hasFile('pic')){
+            //获取文件后缀名
+            $suffix = $request->file('pic')->extension();
+            // dd($suffix);
+            //创建一个新的随机数名称
+            $name = uniqid('pic_').'.'.$suffix;
+            // dd($name);
+            //文件夹路径
+            $dir = './nubiaUI图片/'.date('Y-m-d');
+            // dd($dir);
+            //移动文件
+            $request->file('pic')->move($dir,$name);
+            //获取文件路径
+            $data['pic'] = trim($dir.'/'.$name,'.');
+            // dd($data['pic']);
+
+        }
+
+
+        //将数据库插入到数据库中
+        if(DB::table('nubiaUI')->where('id',$id)->update($data)){
+            return redirect('UIluntan')->with('msg','更新成功');
+        }else{
+            return back()->with('msg','更新成功');
+        }
     }
 
     /**
@@ -161,7 +219,7 @@ class NubiaUIController extends Controller
     {
         //
         //执行删除
-        if (DB::table('nubiaUI')->where('id',$id)->dalete()){
+        if (DB::table('nubiaUI')->where('id',$id)->delete()){
              return back()->with('msg','删除成功');
         }else{
             return back()->with('msg','删除失败');

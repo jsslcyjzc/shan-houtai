@@ -78,11 +78,14 @@
                                     <a href="/UIluntan/create">
                                     <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
                                     </a>
+                                    <a href="/UIluntan/{{ $nubias->id }}/edit">
                                     <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-edit"></span> 编辑</button>
+                                    </a>
                                 <form action="/UIluntan/{{ $nubias->id }}" class="del" method="post">
+
                                     {{method_field('DELETE')}}
                                     {{csrf_field()}}
-                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                    <button class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
                                  
                                 </form>
                                 </div>
@@ -116,12 +119,17 @@
     </div>
     <div class="tpl-alert"></div>
 
-    <script>
-        $('.del').submint(function(){
+    
+
+</div>
+@endsection
+
+
+@section('js')
+<script>
+        $('.am-btn-group > .del').submint(function(){
             alert(655);
             if(!confirm('您确定要删除该文章吗')) return false;
         })
-    </script>
-
-</div>
+</script>
 @endsection
