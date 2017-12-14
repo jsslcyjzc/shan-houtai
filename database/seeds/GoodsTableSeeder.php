@@ -29,7 +29,7 @@ class GoodsTableSeeder extends Seeder
               'status' => 1,
         	];
 
-        	$id = DB::table('goods')->insertGetId($tmp);
+        	// $id = DB::table('goods')->insertGetId($tmp);
         	//空数组
         	$data = [];
         	for ($j=0; $j < 4; $j++) { 
@@ -43,7 +43,7 @@ class GoodsTableSeeder extends Seeder
         		$data[] = $t;
         	}
 
-        	DB::table('goods_pic')->insert($data);
+        	// DB::table('goods_pic')->insert($data);
         }
     }
 }

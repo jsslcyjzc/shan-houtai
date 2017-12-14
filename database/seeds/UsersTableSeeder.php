@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
         	$d[] = $data;
         }
         
-        DB::table('users')->insert($d);
+        // DB::table('users')->insert($d);
     }
 
 }

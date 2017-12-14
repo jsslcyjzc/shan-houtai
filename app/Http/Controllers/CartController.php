@@ -36,16 +36,18 @@ class CartController extends Controller
     	//解析模板
     	return view('home.gouwu.gouwu',compact('goods'));
     }
-    public function delete(Request $request)
+    public function delete(Requsest $request)
     {
        //获取id
     	$id = $request->input('cid');
-    	echo $id;
+    	// echo $id;
       //删除该商品
-    	// if (DB::table('carts')->where('id',$id)->delete()) {
-    	// 	echo '1';
-    	// }else{
-    	// 	echo '0';
-    	// }
+    	if (DB::table('carts')->where('id',$id)->delete()) {
+    		echo '1';
+    	}else{
+    		echo '0';
+    	}
     }
+
+
 }

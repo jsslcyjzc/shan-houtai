@@ -38,7 +38,7 @@
         //发送请求
         $.ajax({
             type:'get',
-            url: '/cart/delete',
+            url: '/gwc/delete',
             data: {'cid':cid},
             success: function(data){
                 if(data == '1') {
@@ -62,7 +62,7 @@
 <div class="contianer-fluid" id="gouwu">
        <div class="container" style="padding: 0px;">
        	   <div class="col-xs-12">
-                     <form  method="post" action="/dingdan">
+              <form action="/dingdan">
        	   	   <ul class="list-unstyle list-inline">
        	   	   	   <li><a href="" class="active">购物车</a>
        	   	   	   	<span class="active2">
@@ -90,10 +90,9 @@
        	   	   	   	  <td></td>
        	   	   	   	  <td>单价</td>
        	   	   	   	  <td>数量</td>
-       	   	   	   	  <td>小计</td>
        	   	   	   	  <td>操作</td>
        	   	   	   </tr>
-                               @foreach($goods as $k=>$v)
+                    @foreach($goods as $k=>$v)
        	   	   	   <tr>
        	   	   	   	  <td>
        	   	   	   	  	 <img src="{{$v->pic}}" alt="" width="50" height="100">
@@ -110,40 +109,24 @@
        	   	   	   	  	 <p id="jia" style="cursor: pointer;">+</p>
        	   	   	   	  </td>
        	   	   	   	  <td>
-       	   	   	   	  	  <ol class="list-unstyled">
-       	   	   	   	  	  	 <li>¥<span>{{$v->num}}</span></li>
-       	   	   	   	  	  </ol>
-       	   	   	   	  </td>
-       	   	   	   	  <td>
        	   	   	   	  	<a href="#" class="remove-item del" cid="{{$v->id}}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Remove from cart" style="color: #838383;">
        	   	   	   	  	  <i class="glyphicon glyphicon-remove"></i>
        	   	   	   	  	</a>
        	   	   	   	  </td>
        	   	   	   </tr>
-                               @endforeach
-       	   	   	   <tr>
-       	   	   	   	  <td colspan="4">
-                                            <p style="float: right;margin-top: 5px;">商品总计:</p>
-                                            <div class="clearfix"></div>
-                                            <p style="float: right;">合计(不含运费):</p>
-       	   	   	   	  </td>
-       	   	   	   	  <td colspan="2">
-       	   	   	   	  	  <p>¥<span>1799</span></p>
-       	   	   	   	  	  <p>¥<span>1599</span></p>
-       	   	   	   	  </td>
-       	   	   	   </tr>
+                    @endforeach
        	   	   	   <tr>
        	   	   	   	  <td colspan="6">
        	   	   	   	  	  <button class="but" type="button">
        	   	   	   	  	  	   继续购物
        	   	   	   	  	  </button>
-       	   	   	   	  	  <button class="but" type="button">
+       	   	   	   	  	  <button class="but" type="submit" >
        	   	   	   	  	  	   立即结算
        	   	   	   	  	  </button>
        	   	   	   	  </td>
        	   	   	   </tr>
        	   	   </table>
-                     </form>
+              </form>
        	   </div>
 
        </div>

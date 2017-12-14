@@ -52,7 +52,7 @@
 		$(".tutu > a").hover(function(){
 			$(this).find('img').stop().animate({
 				width:"100px",
-				height:"195px",
+				height:"165px",
 				top:"-5px",
 				left:"-5px"
 				},500)
@@ -60,7 +60,7 @@
 		},function(){
 			$(this).find('img').stop().animate({
 				width:"95px",
-				height:"185px",
+				height:"155px",
 				top:"0px",
 				left:"0px"
 			},500)

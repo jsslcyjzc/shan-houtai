@@ -9,6 +9,10 @@
 
     
 @stop
+
+
+
+
 @section('center')
 	<!-- 导航start -->
 	<div class="nav">
@@ -63,7 +67,7 @@
             @foreach($goods_pic as $k=>$v)
             
             <td>
-              <a href="{{$v->pic}}" target="dt" style="width: 380px;height: 550px;">
+              <a href="{{$v->pic}}" target="dt" style="width: 380px;height: 400px;">
                 <img src="{{$v->pic}}" style="width: 90px;height: 90px;margin-left: -14px;">
               </a>
             </td>
@@ -189,7 +193,7 @@
           </div>
           <!-- 您选择的商品 -->
           <div class="col-md-12 xz">
-            <form class="add-to-cart" action="/cart" method="post">
+            <form class="add-to-cart" action="/gwc" method="post">
              <div class="col-md-12 sl">
                 <h4 style="float: left;margin-left: -10px;">数量:</h4>
                 <input type="text" placeholder="" name="num" value="1" style="float: left;width: 50px;height: 35px;text-align: center;">

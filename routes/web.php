@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.layout.home');
 });
 //后台
 //登录管理
@@ -44,9 +44,12 @@ Route::resource('goods','GoodsController');
 Route::resource('banner','BannerController');
 
 //购物车加入成功
-Route::post('/cart','CartController@store');
-Route::get('/cart','CartController@indexa');
-Route::get('/cart/delete','CartController@delete');
+Route::post('/gwc','CartController@store');
+Route::get('/gwc','CartController@indexa');
+Route::get('/gwc/delete','CartController@delete');
+
+//收获地址
+Route::resource('dingdan','DingdanController');
 
 });
 
