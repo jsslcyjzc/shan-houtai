@@ -19,7 +19,7 @@
 	<div class="container-fluid top-nav">
 		<div class="container">
 			<ul class="list-unstyled list-inline pull-left">
-				<li><a href="/Homes">nubia商城</a></li>
+				<li><a href="/">nubia商城</a></li>
 				<li><a href="/index">nubia官网</a></li>
 				<li><a href="">nubia微博</a></li>
 				<li><a href="">nubia UI</a></li>

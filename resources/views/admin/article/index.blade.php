@@ -37,12 +37,26 @@
                                     <thead>
                                         <tr>
                                             <th class="table-check"></th>
-                                            <th class="table-id" style="width: 150px;">ID</th>
-                                            <th class="table-title" style="width: 200px;margin-left: 100px;">用户标题</th>
-                                            <th class="table-photo" style="width: 100px;">照片</th>
-                                            <th class="table-set" style="width: 130px;text-align: center;">操作</th>
+                                            <th class="table-id">ID</th>
+                                            <th class="table-title" style="width: 120px;">用户标题</th>
+                                            <th class="table-author" style="width: 80px;margin-left: 100px;">用户作者</th>
+                                            <th class="table-time" style="width: 80px;">创建时间</th>
+                                            <th class="table-photo" style="width: 80px;">照片</th>
+                                            <th class="table-set" style="width: 130px;">操作</th>
                                         </tr>
                                     </thead>
+
+                                    <style>
+                                        table thead tr th{
+                                            font-size: 15px;
+                                        }
+                                        table tbody tr td{
+                                            font-size: 15px;
+                                        }
+                                        table tbody tr td div span{
+                                            font-size: 15px;
+                                        }
+                                    </style>
                                     <tbody>
                                     	@if(count($articles) > 0)
 	                                	@foreach($articles as $k=>$v)
@@ -50,21 +64,23 @@
                                             <td><input type="checkbox"></td>
                                             <td>{{ $v->id }}</td>
                                             <td><a href="#" style="font-size: 15px;">{{ $v->title }}</a></td>
+                                            <td>{{ $v -> author }}</td>
+                                            <td>{{ $v -> time }}</td>
                                             <td class="center">
                                                 <img width="40" src="{{$v->pic}}" alt="">
                                             </td>
                                             <td>
                                                 <div class="am-btn-toolbar">
-                                                    <div class="am-btn-group am-btn-group-xs">
-                                                       <a href="/article/{{$v->id}}/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary bj" type="submit">
+                                                    <div class="am-btn-group am-btn-group-xs" style="margin-top: 7px;">
+                                                       <a href="/article/{{$v->id}}/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary bj" type="submit" style="font-size: 15px; width: 80px;height: 30px;line-height: 10px;">
                                                         	<span class="am-icon-pencil-square-o"></span> 修改
                                                         
                                                        </a>
                                                          <form class="del" action="/article/{{$v->id}}" method="post" style="float: left;">
-                                                        {{method_field('DELETE')}}
-                                                         {{csrf_field()}}
-                                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
-                                                    </form>
+                                                            {{method_field('DELETE')}}
+                                                             {{csrf_field()}}
+                                                            <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" style="font-size: 15px; width: 80px;height: 30px;line-height: 10px;"><span class="am-icon-trash-o"></span> 删除</button>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </td>

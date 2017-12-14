@@ -77,6 +77,8 @@ class CateController extends Controller
     public function show($id)
     {
         //
+        $cates = DB::table('cates')->where('id',$id)->first();
+        return view('home.layout.home',compact('cates'));
     }
 
     /**

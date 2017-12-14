@@ -55,7 +55,7 @@ class ArticleController extends Controller
     {
         // dd($request->all());
        //获取参数
-        $data = $request->only(['title','content']);
+        $data = $request->only(['title','content','author','time']);
        //针对图片处理
 
         //图片上传
@@ -89,7 +89,17 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        //
+        //读取商品的详细信息
+        $articles = DB::table('articles')->where('id',$id)->first();
+
+
+        //读取最近的文章
+        $recents = DB::table('articles')->orderBy('id','desc')->take(5)->first();
+        // dd($recents);
+        return view('home.qiangxianbuju',[
+               'articles' => $articles,
+               'recents'=>$recents
+        ]);
     }
 
     /**
@@ -117,7 +127,7 @@ class ArticleController extends Controller
     public function update(Request $request, $id)
     {
         //获取参数
-        $data = $request->only(['title','content']);
+        $data = $request->only(['title','content','author','time','contop']);
         //针对图片处理
         if ($request->hasFile('pic')) {
             //获取文件的后缀名
@@ -155,4 +165,12 @@ class ArticleController extends Controller
             return back()->with('msg','删除失败!!');
         }
     }
+
+
+
+
+ 
+
+
+
 }

@@ -33,11 +33,4 @@ class HomeController extends Controller
         return view('home.shouji.shouji');
     }
 
-
-
-
-    
-
-
-  
 }

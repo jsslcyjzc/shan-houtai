@@ -211,143 +211,21 @@
 				</ul>
 
 				<div class="col-xs-12" style="padding: 0px;margin-top: 40px;">
+					@foreach($goods as $k=>$v)
 					<div class="tutu col-xs-3">
-						<a href="">
+						<a href="/goods/{{$v->id}}">
 						<div class="imgs">
-							<img src="/image/tutu1.png" alt="">
+							<img src="{{$v->pic}}" alt="">
 						</div>
 						<ul class="list-unstyled">
-							<li>Z17S 透明保护壳</li>
-							<li>¥<span>29.00</span></li>
+							<li>{{$v->title}}</li>
+							<li>¥<span>{{$v->price}}</span></li>
 						</ul>
 						</a>
 					</div>
-					<div class="tutu col-xs-3">
-						<a href="">
-						<div class="imgs">
-							<img src="/image/tutu1.png" alt="">
-						</div>
-						<ul class="list-unstyled">
-							<li>Z17S 透明保护壳</li>
-							<li>¥<span>29.00</span></li>
-						</ul>
-						</a>
-					</div>
-					<div class="tutu col-xs-3">
-						<a href="">
-						<div class="imgs">
-							<img src="/image/tutu1.png" alt="">
-						</div>
-						<ul class="list-unstyled">
-							<li>Z17S 透明保护壳</li>
-							<li>¥<span>29.00</span></li>
-						</ul>
-						</a>
-					</div>
-					<div class="tutu col-xs-3">
-						<a href="">
-						<div class="imgs">
-							<img src="/image/tutu1.png" alt="">
-						</div>
-						<ul class="list-unstyled">
-							<li>Z17S 透明保护壳</li>
-							<li>¥<span>29.00</span></li>
-						</ul>
-						</a>
-					</div>
+					@endforeach
 				</div>
-				<div class="col-xs-12" style="padding: 0px;margin-top: 40px;">
-					<div class="tutu col-xs-3">
-						<a href="">
-						<div class="imgs">
-							<img src="/image/tutu1.png" alt="">
-						</div>
-						<ul class="list-unstyled">
-							<li>Z17S 透明保护壳</li>
-							<li>¥<span>29.00</span></li>
-						</ul>
-						</a>
-					</div>
-					<div class="tutu col-xs-3">
-						<a href="">
-						<div class="imgs">
-							<img src="/image/tutu1.png" alt="">
-						</div>
-						<ul class="list-unstyled">
-							<li>Z17S 透明保护壳</li>
-							<li>¥<span>29.00</span></li>
-						</ul>
-						</a>
-					</div>
-					<div class="tutu col-xs-3">
-						<a href="">
-						<div class="imgs">
-							<img src="/image/tutu1.png" alt="">
-						</div>
-						<ul class="list-unstyled">
-							<li>Z17S 透明保护壳</li>
-							<li>¥<span>29.00</span></li>
-						</ul>
-						</a>
-					</div>
-					<div class="tutu col-xs-3">
-						<a href="">
-						<div class="imgs">
-							<img src="/image/tutu1.png" alt="">
-						</div>
-						<ul class="list-unstyled">
-							<li>Z17S 透明保护壳</li>
-							<li>¥<span>29.00</span></li>
-						</ul>
-						</a>
-					</div>
-				</div>
-				<div class="col-xs-12" style="padding: 0px;margin-top: 40px;">
-					<div class="tutu col-xs-3">
-						<a href="">
-						<div class="imgs">
-							<img src="/image/tutu1.png" alt="">
-						</div>
-						<ul class="list-unstyled">
-							<li>Z17S 透明保护壳</li>
-							<li>¥<span>29.00</span></li>
-						</ul>
-						</a>
-					</div>
-					<div class="tutu col-xs-3">
-						<a href="">
-						<div class="imgs">
-							<img src="/image/tutu1.png" alt="">
-						</div>
-						<ul class="list-unstyled">
-							<li>Z17S 透明保护壳</li>
-							<li>¥<span>29.00</span></li>
-						</ul>
-						</a>
-					</div>
-					<div class="tutu col-xs-3">
-						<a href="">
-						<div class="imgs">
-							<img src="/image/tutu1.png" alt="">
-						</div>
-						<ul class="list-unstyled">
-							<li>Z17S 透明保护壳</li>
-							<li>¥<span>29.00</span></li>
-						</ul>
-						</a>
-					</div>
-					<div class="tutu col-xs-3">
-						<a href="">
-						<div class="imgs">
-							<img src="/image/tutu1.png" alt="">
-						</div>
-						<ul class="list-unstyled">
-							<li>Z17S 透明保护壳</li>
-							<li>¥<span>29.00</span></li>
-						</ul>
-						</a>
-					</div>
-				</div>
+			
 			</div>
 
 		</div>

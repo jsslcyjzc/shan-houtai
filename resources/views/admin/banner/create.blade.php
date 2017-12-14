@@ -77,7 +77,7 @@
 
                                     </button>
                                     
-                                    </div>
+                                </div>
                                     <hr />
                                     <script type="text/javascript">            
                                         //判断浏览器是否支持FileReader接口
