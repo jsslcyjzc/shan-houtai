@@ -42,7 +42,7 @@
 			</div>
 			<div class="col-xs-12">
 				<ul class="list-unstyled list-inline">
-					<li><a href="">首页</a></li>
+					<li><a href="/index">首页</a></li>
 					<li><a href="">产品交流</a></li>
 					<li><a href="">资源分享</a></li>
 					<li><a href="">牛仔乐园</a></li>
@@ -115,26 +115,25 @@
 				</div>
 				<div class="jinri">
 				<div style="float: left;min-height: 500px;width: 750px;">
+					@foreach($shequ as $k=>$v)
 					<div class="col-xs-5 jinri-left jinri-left-one">
 					  <div class="col-xs-12" id="nunuli">
 					  	<a href="">
-						<h4 class="pull-left">努努力第34期</h4>
-						<span class="pull-left">|</span>
-						<h4 class="pull-left">2017年nubia UI期末考试</h4>
+						<h4 class="pull-left">{{ $v->title }}</h4>
 						</a>
                       </div>
                       <div class="col-xs-12">
-                      	  <a href=""><img src="holder.js/100px300" alt=""></a>
+                      	  <a href=""><img src="{{ $v->pic }}" alt="" width="100%" height="100%"></a>
                       </div>
                       <div class="col-xs-12">
-                      	  <p>叮铛！叮铛！叮铛！2017年nubia UI 期末考试开考啦！牛仔们准备好了吗？</p>
+                      	  <p>{!! $v->content !!}</p>
                       </div>
                       <div class="col-xs-12" style="margin-top: 3px;">
-                      	  <img src="holder.js/25x25" alt="" class="pull-left touxiang">
+                      	  <img src="{{ $v->photo }}" alt="" class="pull-left touxiang" width="25" height="25">
                       	  <ul class="list-unstyled list-inline pull-left">
-                      	  	  <li><a href="">华华舒尔</a></li>
+                      	  	  <li><a href="">{!! $v->author !!}</a></li>
                       	  	  <li>/</li>
-                      	  	  <li>发布于: <span>2017-11-10</span></li>
+                      	  	  <li>发布于: <span>{!! $v->time !!}</span></li>
                       	  	  <li>/</li>
                       	  	  <li>查看: <span>2086</span></li>
                       	  	  <li>/</li>
@@ -142,87 +141,7 @@
                       	  </ul>
                       </div>
 					</div>
-					<div class="col-xs-5 jinri-left jinri-left-one">
-						<div class="col-xs-12" id="nunuli">
-					  	<a href="">
-						<h4 class="pull-left">努努力第34期</h4>
-						<span class="pull-left">|</span>
-						<h4 class="pull-left">2017年nubia UI期末考试</h4>
-						</a>
-                      </div>
-                      <div class="col-xs-12">
-                      	  <a href=""><img src="holder.js/100px300" alt=""></a>
-                      </div>
-                      <div class="col-xs-12">
-                      	  <p>叮铛！叮铛！叮铛！2017年nubia UI 期末考试开考啦！牛仔们准备好了吗？</p>
-                      </div>
-                      <div class="col-xs-12" style="margin-top: 3px;">
-                      	  <img src="holder.js/25x25" alt="" class="pull-left touxiang">
-                      	  <ul class="list-unstyled list-inline pull-left">
-                      	  	  <li><a href="">华华舒尔</a></li>
-                      	  	  <li>/</li>
-                      	  	  <li>发布于: <span>2017-11-10</span></li>
-                      	  	  <li>/</li>
-                      	  	  <li>查看: <span>2086</span></li>
-                      	  	  <li>/</li>
-                      	  	  <li>回复: <span>143</span></li>
-                      	  </ul>
-                      </div>
-					</div>
-					<div class="col-xs-5 jinri-left jinri-left-one">
-						<div class="col-xs-12" id="nunuli">
-					  	<a href="">
-						<h4 class="pull-left">努努力第34期</h4>
-						<span class="pull-left">|</span>
-						<h4 class="pull-left">2017年nubia UI期末考试</h4>
-						</a>
-                      </div>
-                      <div class="col-xs-12">
-                      	  <a href=""><img src="holder.js/100px300" alt=""></a>
-                      </div>
-                      <div class="col-xs-12">
-                      	  <p>叮铛！叮铛！叮铛！2017年nubia UI 期末考试开考啦！牛仔们准备好了吗？</p>
-                      </div>
-                      <div class="col-xs-12" style="margin-top: 3px;">
-                      	  <img src="holder.js/25x25" alt="" class="pull-left touxiang">
-                      	  <ul class="list-unstyled list-inline pull-left">
-                      	  	  <li><a href="">华华舒尔</a></li>
-                      	  	  <li>/</li>
-                      	  	  <li>发布于: <span>2017-11-10</span></li>
-                      	  	  <li>/</li>
-                      	  	  <li>查看: <span>2086</span></li>
-                      	  	  <li>/</li>
-                      	  	  <li>回复: <span>143</span></li>
-                      	  </ul>
-                      </div>
-					</div>
-					<div class="col-xs-5 jinri-left jinri-left-one">
-						<div class="col-xs-12" id="nunuli">
-					  	<a href="">
-						<h4 class="pull-left">努努力第34期</h4>
-						<span class="pull-left">|</span>
-						<h4 class="pull-left">2017年nubia UI期末考试</h4>
-						</a>
-                      </div>
-                      <div class="col-xs-12">
-                      	  <a href=""><img src="holder.js/100px300" alt=""></a>
-                      </div>
-                      <div class="col-xs-12">
-                      	  <p>叮铛！叮铛！叮铛！2017年nubia UI 期末考试开考啦！牛仔们准备好了吗？</p>
-                      </div>
-                      <div class="col-xs-12" style="margin-top: 3px;">
-                      	  <img src="holder.js/25x25" alt="" class="pull-left touxiang">
-                      	  <ul class="list-unstyled list-inline pull-left">
-                      	  	  <li><a href="">华华舒尔</a></li>
-                      	  	  <li>/</li>
-                      	  	  <li>发布于: <span>2017-11-10</span></li>
-                      	  	  <li>/</li>
-                      	  	  <li>查看: <span>2086</span></li>
-                      	  	  <li>/</li>
-                      	  	  <li>回复: <span>143</span></li>
-                      	  </ul>
-                      </div>
-					</div>
+					@endforeach
 				</div>
 				<div style="float: right; min-height: 500px; width: 290px;">
 					<a href="">

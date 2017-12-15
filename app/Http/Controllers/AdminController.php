@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use yhd;
 class AdminController extends Controller
 {
     public function index(){

@@ -115,6 +115,7 @@ class ArticleController extends Controller
         $article = DB::table('articles')->where('id',$id)->first();
 
         return view('admin.article.edit',['article'=>$article]);
+       
     }
 
     /**
@@ -126,8 +127,11 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         //获取参数
         $data = $request->only(['title','content','author','time','contop']);
+        $data = $request->only(['title','content',]);
+        $sta = $request->only(['status']);
         //针对图片处理
         if ($request->hasFile('pic')) {
             //获取文件的后缀名
@@ -142,6 +146,8 @@ class ArticleController extends Controller
             $data['pic'] = trim($dir.''.$name,'.');
         }
 
+
+        
         //将数据插入到数据库中
         if (DB::table('articles')->where('id',$id)->update($data)) {
             return redirect('article')->with('msg','更新成功');
@@ -170,7 +176,4 @@ class ArticleController extends Controller
 
 
  
-
-
-
 }

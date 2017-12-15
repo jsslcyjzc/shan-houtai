@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use Hash;
 
+
 class UserController extends Controller
 {
     /**

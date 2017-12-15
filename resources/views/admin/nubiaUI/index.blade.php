@@ -46,26 +46,25 @@
         </div>
         <div class="am-g">
             <div class="tpl-table-images">
-                <div class="am-u-sm-12 am-u-md-6 am-u-lg-4" style="float: left;">
-                    @if(count($nubias) > 0)
+                @if(count($nubia) > 0)
+                @foreach($nubia as $k=>$v)
+                <div class="am-u-sm-12 am-u-md-6 am-u-lg-4" style="float: left;height: 360px;margin-bottom: 30px;">
+                    
                     <div class="tpl-table-images-content">
-                        <div class="tpl-table-images-content-i-time">发布时间：{{ $nubias->time }}</div>
+                        <div class="tpl-table-images-content-i-time">发布时间：{{ $v->time }}</div>
                         <div class="tpl-i-title">
-                            {{ $nubias->title }}
+                            {{ $v->title }}
                         </div>
                         <a href="javascript:;" class="tpl-table-images-content-i">
                             <div class="tpl-table-images-content-i-info">
                                 <span class="ico">
-                        			<img src="{{ $nubias->photo }}" alt="" width="40" height="40">{{ $nubias->author }}
+                        			<img src="{{ $v->photo }}" alt="" width="40" height="40">{{ $v->author }}
                      			</span>
 
                             </div>
-                            <img src="{{ $nubias->pic }}" alt="">
+                            <img src="{{ $v->pic }}" alt="" width="245" height="154">
                         </a>
                         <div class="tpl-table-images-content-block">
-                            <div class="tpl-i-font">
-                                {!! $nubias->content !!}
-                            </div>
                             <div class="tpl-i-more">
                                 <ul>
                                     <li><span class="am-icon-qq am-text-warning"> 100+</span></li>
@@ -78,16 +77,17 @@
                                     <a href="/UIluntan/create">
                                     <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
                                     </a>
-                                    <a href="/UIluntan/{{ $nubias->id }}/edit">
+                                    <a href="/UIluntan/{{ $v->id }}/edit">
                                     <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-edit"></span> 编辑</button>
                                     </a>
-                                <form action="/UIluntan/{{ $nubias->id }}" class="del" method="post">
+                                    <form action="/UIluntan/{{ $v->id }}" id="del" method="post">
 
-                                    {{method_field('DELETE')}}
-                                    {{csrf_field()}}
-                                    <button class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
-                                 
-                                </form>
+                                        {{method_field('DELETE')}}
+                                        {{csrf_field()}}
+
+                                        <button class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                     
+                                    </form>
                                 </div>
                                 <style>
                                     .am-btn-toolbar .tpl-edit-content-btn .am-btn{
@@ -97,12 +97,14 @@
                             </div>
                         </div>
                     </div>
-                    @else
-                    <div class="am-u-sm-12">
+                    
+                </div>
+                @endforeach
+                @else
+                    <div class="am-u-sm-11" style="height: 80px;text-align: center;color: #999;font-size: 17px;background-color: #f1c0c0;line-height: 80px;margin-left: 40px;">
                         暂无数据
                     </div>
-                    @endif
-                </div>
+                @endif
                 <style>
                 	.am-btn-toolbar .tpl-edit-content-btn .am-btn{
                 		font-size: 12px;
@@ -127,9 +129,8 @@
 
 @section('js')
 <script>
-        $('.am-btn-group > .del').submint(function(){
-            alert(655);
-            if(!confirm('您确定要删除该文章吗')) return false;
-        })
+    $('.am-btn-group #del').submit(function(e){
+    if(!confirm('您确定要删除该文章么?')) return false;
+    });
 </script>
 @endsection

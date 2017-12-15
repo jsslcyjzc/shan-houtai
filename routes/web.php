@@ -64,7 +64,8 @@ Route::get('/Homes','HomeController@index');
 //努比亚首页
 Route::get('/index','HomeController@doindex');
 //努比亚论坛
-Route::get('/nubiaUI','HomeController@nubiaUI');
+Route::get('/Shequ','HomeController@Shequ');
+
 
 //注册
 
@@ -101,6 +102,9 @@ Route::get('/Gouwu',"HomeController@gouwu");
 
 
 //手机配件
+
+Route::get('/Shouji',"HomeController@shouji");
+
 Route::get('/Shouji',"GoodsController@glist");
 
 Route::get('home/zhuce1','zhuceController@zhuce1');
@@ -115,4 +119,3 @@ Route::get('home/gerenzhongxin','gerenController@gerenzhongxin');
 Route::get('home/qiangxianbuju','ArticleController@show');
 
 Route::get('home/qiangxianbuju','qiangxianbujuController@index');
-

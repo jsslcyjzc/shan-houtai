@@ -17,7 +17,7 @@ class NubiaUIController extends Controller
         //
         // echo "string";
         //数量
-        $num = $request->input('num',1);
+        $num = $request->input('num',6);
         
         $keywords = $request->input('keywords','');
 
@@ -30,12 +30,10 @@ class NubiaUIController extends Controller
         }
          
 
-        $nubias = DB::table('nubiaUI')->first();
-         // dd($nubias);
+         // dd($nubia);
         return view('admin.nubiaUI.index',[
             'nubia' => $nubia,
             'num' => $num,
-            'nubias' => $nubias,
             'keywords' => $keywords
 
         ]);
@@ -76,7 +74,7 @@ class NubiaUIController extends Controller
             $name = uniqid('photo_').'.'.$suffix;
             // dd($name);
             //文件夹路径
-            $dir = './nubiaUI图片/'.date('Y-m-d');
+            $dir = './nubiaUI/'.date('Y-m-d');
             // dd($dir);
             //移动文件
             $request->file('photo')->move($dir,$name);
@@ -97,7 +95,7 @@ class NubiaUIController extends Controller
             $name = uniqid('pic_').'.'.$suffix;
             // dd($name);
             //文件夹路径
-            $dir = './nubiaUI图片/'.date('Y-m-d');
+            $dir = './nubiaUI/'.date('Y-m-d');
             // dd($dir);
             //移动文件
             $request->file('pic')->move($dir,$name);
@@ -126,6 +124,7 @@ class NubiaUIController extends Controller
     public function show($id)
     {
         //
+        // echo "string";
     }
 
     /**
@@ -169,7 +168,7 @@ class NubiaUIController extends Controller
             $name = uniqid('photo_').'.'.$suffix;
             // dd($name);
             //文件夹路径
-            $dir = './nubiaUI图片/'.date('Y-m-d');
+            $dir = './nubiaUI/'.date('Y-m-d');
             // dd($dir);
             //移动文件
             $request->file('photo')->move($dir,$name);
@@ -190,7 +189,7 @@ class NubiaUIController extends Controller
             $name = uniqid('pic_').'.'.$suffix;
             // dd($name);
             //文件夹路径
-            $dir = './nubiaUI图片/'.date('Y-m-d');
+            $dir = './nubiaUI/'.date('Y-m-d');
             // dd($dir);
             //移动文件
             $request->file('pic')->move($dir,$name);
@@ -225,4 +224,10 @@ class NubiaUIController extends Controller
             return back()->with('msg','删除失败');
         }
     }
+
+
+
+
+
+    
 }

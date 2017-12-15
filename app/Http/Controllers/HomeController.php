@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 class HomeController extends Controller
 {
     //
-
+    public function index(){
+        // echo "string";
+        $banner =DB::table('banner')->where('path',1)->get();
+    return view('home.index',compact('banner'));
+        return view('home.index');
+    }
 
 
 
@@ -17,8 +23,15 @@ class HomeController extends Controller
     }
 
 
-    public function nubiaUI(){
-    	return view('home.nubiaUI.nubiaUI');
+    public function shequ(){
+        // echo "string";
+        $shequ = DB::table('nubiaUI')->paginate();
+
+        // dd($shequ);
+
+
+
+    	return view('home.nubiaUI.nubiaUI',compact('shequ'));
     }
 
 

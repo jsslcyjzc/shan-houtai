@@ -11,14 +11,6 @@
 
 
 @section('am')
-<div class="tpl-content-page-title">
-    nubia UI 添加
-</div>
-<ol class="am-breadcrumb">
-    <li><a href="/admin" class="am-icon-home">首页</a></li>
-    <li><a href="/UIluntan/create">nubia UI 添加</a></li>
-    <li class="am-active">内容</li>
-</ol>
 <div class="tpl-portlet-components">
     <div class="portlet-title">
         <div class="caption font-green bold">

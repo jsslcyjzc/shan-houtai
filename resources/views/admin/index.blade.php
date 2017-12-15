@@ -7,6 +7,7 @@
     @section('title')
     <title>1号店后台</title>
     @show
+    <title>nubia后台</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +36,7 @@
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
             <a href="javascript:;" class="tpl-logo">
-                <img src="/admins/assets/img/logo1.jpg" alt="">
+                <img src="/admins/assets/img/logo1.png" alt="">
 
             </a>
         </div>
@@ -145,7 +146,7 @@
 
                 <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
                     <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
-                        <span class="tpl-header-list-user-nick">禁言小张</span><span class="tpl-header-list-user-ico"> <img src="/admins/assets/img/user01.png"></span>
+                        <span class="tpl-header-list-user-nick">小张</span><span class="tpl-header-list-user-ico"> <img src="/admins/assets/img/user01.png"></span>
                     </a>
                     <ul class="am-dropdown-content">
                         <li><a href="#"><span class="am-icon-bell-o"></span> 资料</a></li>
@@ -171,14 +172,14 @@
 
         <div class="tpl-left-nav tpl-left-nav-hover">
             <div class="tpl-left-nav-title">
-                一号店 列表
+                nubia 列表
             </div>
             @include('layout.menu')
         </div>
         <div class="tpl-content-wrapper">
             @section('page')
             <div class="tpl-content-page-title">
-                1号店 首页组件
+                nubia 首页组件
             </div>
             @show
 
@@ -193,8 +194,6 @@
             @section('dizhi')
             <ol class="am-breadcrumb">
                 <li><a href="#" class="am-icon-home">首页</a></li>
-                <li><a href="#">分类</a></li>
-                <li class="am-active">内容</li>
             </ol>
             @show
             

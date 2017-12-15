@@ -11,14 +11,6 @@
 
 
 @section('am')
-<div class="tpl-content-page-title">
-    nubia UI 修改
-</div>
-<ol class="am-breadcrumb">
-    <li><a href="/admin" class="am-icon-home">首页</a></li>
-    <li><a href="/UIluntan/create">nubia UI 修改</a></li>
-    <li class="am-active">内容</li>
-</ol>
 <div class="tpl-portlet-components">
     <div class="portlet-title">
         <div class="caption font-green bold">
@@ -37,11 +29,11 @@
 
         <div class="am-g">
             <div class="tpl-form-body tpl-form-line">
-                <form class="am-form tpl-form-line-form" action="/UIluntan" method="post" enctype="multipart/form-data">
+                <form class="am-form tpl-form-line-form" action="/UIluntan/{{ $nubia->id }}" method="post" enctype="multipart/form-data">
                     <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
                         <div class="am-u-sm-9">
-                            <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入标题文字" name="title">
+                            <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入标题文字" name="title" value="{{ $nubia->title }}">
                             <small>请填写标题文字10-20字左右。</small>
                         </div>
                     </div>
@@ -49,7 +41,7 @@
                     <div class="am-form-group">
                         <label for="user-email" class="am-u-sm-3 am-form-label">发布时间 <span class="tpl-form-line-small-title">Time</span></label>
                         <div class="am-u-sm-9">
-                            <input type="text" class="am-form-field tpl-form-no-bg" placeholder="发布时间" data-am-datepicker="" readonly="" name="time">
+                            <input type="text" class="am-form-field tpl-form-no-bg" placeholder="发布时间" data-am-datepicker="" readonly="" name="time" value="{{ $nubia->time }}">
                             <small>发布时间为必填</small>
                         </div>
                     </div>
@@ -59,7 +51,7 @@
 
                        
                         <div class="am-u-sm-9">
-                        	<input type="text" class="tpl-form-input" placeholder="作者" name="author" id="user-author">
+                        	<input type="text" class="tpl-form-input" placeholder="作者" name="author" id="user-author" value="{{ $nubia->author }}">
 						</div>
                     </div>
 
@@ -71,7 +63,7 @@
                         <div class="am-u-sm-9">
                             <div class="am-form-group am-form-file">
                                 <div class="tpl-form-file-img">
-                                    <img id="xmTanImg"/ style="width: 80px;height: 80px;border-radius: 360px;">
+                                    <img id="xmTanImg"/ style="width: 80px;height: 80px;border-radius: 360px;" src="{{ $nubia->photo }}">
                                     <div id="xmTanDiv"></div>
                                 </div>
                                 <button type="button" class="am-btn am-btn-danger am-btn-sm">
@@ -135,7 +127,7 @@
                         <div class="am-u-sm-9">
                             <div class="am-form-group am-form-file">
                                 <div class="tpl-form-file-img">
-                                    <img id="xmTanImgtwo"/>
+                                    <img id="xmTanImgtwo"/ src="{{ $nubia->pic }}">
                                     <div id="xmTanDivtwo"></div>
                                 </div>
                                 <button type="button" class="am-btn am-btn-danger am-btn-sm">
@@ -206,16 +198,20 @@
 
                     <div class="am-form-group">
                         <label for="user-email" class="am-u-sm-3 am-form-label">文章内容</label>
-                        <script id="editor" type="text/plain" name="content" style="width:750px;height:500px;float: left;margin-left: 240px;margin-top: -20px;"></script>
+                        <script id="editor" type="text/plain" name="content" style="width:750px;height:500px;float: left;margin-left: 240px;margin-top: -20px;">
+                        	{!! $nubia->content !!}
+                        </script>
                         <label for="user-email" class="am-form-label" style="margin-left: 15px;">文章内容</label>
-                        <script id="editor" type="text/plain" name="content" style="width:800px;height:500px;"></script>
+                        <script id="editor" type="text/plain" name="content" style="width:800px;height:500px;">
+                        	
+                        </script>
                     </div>
                     
-
+                    {{method_field('PUT')}}
                     {{ csrf_field() }}
                     <div class="am-form-group">
                         <div class="am-u-sm-9 am-u-sm-push-3">
-                            <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                            <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">确认修改</button>
                         </div>
                     </div>
                     <style>
