@@ -35,11 +35,11 @@
                                     <thead>
                                         <tr>
                                             <th class="table-check"></th>
-                                            <th class="table-id" style="min-width: 150px;">ID</th>
+                                            <th class="table-id" style="min-width: 80px;">ID</th>
                                             <th class="table-title" style="min-width: 150px;">商品标题</th>
                                             <th class="table-phone" style="min-width: 150px;">商品价格</th>
-                                            <th class="table-set" style="min-width: 150px;">库存</th>
-                                            <th class="table-set" style="min-width: 150px;">操作</th>
+                                            <th class="table-set" style="min-width: 70px;">库存</th>
+                                            <th class="table-set" style="min-width: 300px;">操作</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -54,15 +54,23 @@
                                             <td>
                                                 <div class="am-btn-toolbar">
                                                     <div class="am-btn-group am-btn-group-xs">
+                                                        
                                                        <a href="/goods/{{$v->id}}/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary bj" type="submit">
                                                         	<span class="am-icon-pencil-square-o"></span> 编辑
                                                         
                                                        </a>
+<<<<<<< HEAD
+=======
+                                                       
+                                                        <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
+>>>>>>> 75eface58974c80ca55dac04c1fd3b7aa2ad284e
 
                                                          <form class="del" action="/goods/{{$v->id}}" method="post" style="float: left;">
                                                         {{method_field('DELETE')}}
                                                          {{csrf_field()}}
+                                                         
                                                         <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
+                                                   
                                                     </form>
                                                     </div>
                                                 </div>

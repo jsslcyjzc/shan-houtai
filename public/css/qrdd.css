@@ -70,5 +70,14 @@
 	margin-top: 20px;
 }
 .spqd .spqd_b table{
-	background: lightblue;
+	min-width: 300px;
+	min-height: 255px;
+	/*background: lightblue;*/
+}
+.spqd .spqd_b table tr .td1{
+	width: 373px;
+	height: 76px;
+}
+.spqd .spqd_b table tr .td2{
+	width: 100px;
 }

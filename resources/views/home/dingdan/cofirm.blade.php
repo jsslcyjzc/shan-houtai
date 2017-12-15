@@ -62,12 +62,18 @@
        	   	   	  	商品清单
        	   	   	  </div>
        	   	   	  <div class="spqd_b">
-       	   	   	  	<table>
-       	   	   	  		<tr>
-       	   	   	  		   <td>1</td>	
-       	   	   	  		   <td>2</td>	
-       	   	   	  		   <td>3</td>	
-       	   	   	  		   <td>4</td>	
+       	   	   	  	<table style="margin-left: 1px;">
+       	   	   	  		<tr class="tr1">
+       	   	   	  		   <td class="td1">1</td>	
+       	   	   	  		   <td class="td2">2</td>	
+       	   	   	  		   <td class="td2">3</td>	
+       	   	   	  		   <td class="td2">4</td>	
+       	   	   	  		</tr>
+       	   	   	  		<tr class="tr2">
+       	   	   	  		   <td class="td1">1</td>	
+       	   	   	  		   <td class="td2">2</td>	
+       	   	   	  		   <td class="td2">3</td>	
+       	   	   	  		   <td class="td2">4</td>	
        	   	   	  		</tr>
        	   	   	  	</table>
        	   	   	  </div>

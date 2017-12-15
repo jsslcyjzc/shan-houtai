@@ -58,10 +58,9 @@
                                             </td>
                                             <td>
                                                 <div class="am-btn-toolbar">
-                                                    <div class="am-btn-group am-btn-group-xs">
-                                                       <a href="/user/{{$v->id}}/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary bj" type="submit">
-                                                        	<span class="am-icon-pencil-square-o"></span> 编辑
+                                                    <div class="am-btn-group am-btn-group-xs col-md-12">
                                                         
+<<<<<<< HEAD
                                                        </a>
                                                         <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
 
@@ -70,6 +69,22 @@
                                                          {{csrf_field()}}
                                                         <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
                                                        </form>
+=======
+                                                            <a href="/user/{{$v->id}}/edit" class=" col-btn-4 am-btn am-btn-default am-btn-xs am-text-secondary bj" type="submit">
+                                                        	<span class="col-btn-4 am-icon-pencil-square-o"></span> 编辑</a>
+                                                       
+                                                        
+                                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
+                                                       
+                                                         <form class="del" action="/user/{{$v->id}}" method="post" style="float: left;">
+                                                            
+                                                        {{method_field('DELETE')}}
+                                                         {{csrf_field()}}
+                                                         
+                                                            <button class="col-btn-4 am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
+                                                        
+                                                    </form>
+>>>>>>> 75eface58974c80ca55dac04c1fd3b7aa2ad284e
                                                     </div>
                                                 </div>
                                             </td>

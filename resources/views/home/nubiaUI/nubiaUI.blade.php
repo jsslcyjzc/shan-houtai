@@ -42,7 +42,7 @@
 			</div>
 			<div class="col-xs-12">
 				<ul class="list-unstyled list-inline">
-					<li><a href="">首页</a></li>
+					<li><a href="/index">首页</a></li>
 					<li><a href="">产品交流</a></li>
 					<li><a href="">资源分享</a></li>
 					<li><a href="">牛仔乐园</a></li>
