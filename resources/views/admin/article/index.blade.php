@@ -42,11 +42,6 @@
                                             <th class="table-time" style="width: 80px;">创建时间</th>
                                             <th class="table-photo" style="width: 80px;">照片</th>
                                             <th class="table-set" style="width: 130px;">操作</th>
-                                            <th class="table-id" style="width: 110px;">ID</th>
-                                            <th class="table-title" style="width: 100px;">用户标题</th>
-                                            <th class="table-status" style="width: 100px;">状态</th>
-                                            <th class="table-photo" style="width: 100px;">照片</th>
-                                            <th class="table-set" style="width: 130px;text-align: center;">操作</th>
                                         </tr>
                                     </thead>
 
@@ -70,14 +65,6 @@
                                             <td><a href="#" style="font-size: 15px;">{{ $v->title }}</a></td>
                                             <td>{{ $v -> author }}</td>
                                             <td>{{ $v -> time }}</td>
-                                            <td>
-                                                @if(($v->status) > 0)
-                                                    <span style="color: green;">在线</span>
-                                               @else
-                                                        
-                                                        <span style="color: red;">离线</span>
-                                                @endif
-                                            </td>
                                             <td class="center">
                                                 <img width="40" src="{{$v->pic}}" alt="">
                                             </td>
