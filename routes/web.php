@@ -12,8 +12,12 @@
 */
 
 Route::get('/', function () {
+<<<<<<< HEAD
 	$banner =DB::table('banner')->where('path',1)->get();
     return view('home.index',compact('banner'));
+=======
+    return view('home.layout.home');
+>>>>>>> 98f8b6b7c22cb0b1f6042d519b3a2ea087eb1d28
 });
 //后台
 //登录管理
@@ -21,7 +25,7 @@ Route::get('/admin/login','LoginController@login');
 Route::post('/admin/login','LoginController@dologin');
 
 //后台路由组
-Route::group(['middlemware'=>'login'],function(){
+Route::group(['middleware'=>'login'],function(){
 //首页
 Route::get('/admin','AdminController@index');
 
@@ -45,8 +49,11 @@ Route::resource('goods','GoodsController');
 Route::resource('banner','BannerController');
 
 
+<<<<<<< HEAD
 //nubiaUI
 Route::resource('UIluntan','NubiaUIController');
+=======
+>>>>>>> 98f8b6b7c22cb0b1f6042d519b3a2ea087eb1d28
 
 });
 
@@ -119,3 +126,13 @@ Route::get('home/gerenzhongxin','gerenController@gerenzhongxin');
 Route::get('home/qiangxianbuju','ArticleController@show');
 
 Route::get('home/qiangxianbuju','qiangxianbujuController@index');
+
+
+
+//购物车加入成功
+Route::post('/gwc','CartController@store');
+Route::get('/gwc','CartController@indexa');
+Route::get('/gwc/delete','CartController@delete');
+
+//收获地址
+Route::resource('dingdan','DingdanController');

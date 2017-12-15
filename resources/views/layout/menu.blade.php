@@ -122,6 +122,7 @@
                         </ul>
                     </li>
 
+<<<<<<< HEAD
                     <!-- 尺寸管理 -->
                    <li class="tpl-left-nav-item">
                         <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
@@ -149,6 +150,8 @@
                             </li>
                         </ul>
                     </li>
+=======
+>>>>>>> 98f8b6b7c22cb0b1f6042d519b3a2ea087eb1d28
 
                      <!-- 商品管理 -->
                    <li class="tpl-left-nav-item">

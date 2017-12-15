@@ -157,7 +157,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //执行删除
+        //删除
+        dd($id);
         if (DB::table('users')->where('id',$id)->delete()) {
             return back()->with('msg','删除成功');
         }else{

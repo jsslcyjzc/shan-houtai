@@ -31,8 +31,6 @@
                 <div class="tpl-block">
                     <div class="am-g">
                         <div class="am-u-sm-12">
-                        	
-                            <form class="am-form" action="/goods">
                                 <table class="am-table am-table-striped am-table-hover table-main">
                                     <thead>
                                         <tr>
@@ -61,8 +59,11 @@
                                                         	<span class="am-icon-pencil-square-o"></span> 编辑
                                                         
                                                        </a>
+<<<<<<< HEAD
+=======
                                                        
                                                         <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
+>>>>>>> 75eface58974c80ca55dac04c1fd3b7aa2ad284e
 
                                                          <form class="del" action="/goods/{{$v->id}}" method="post" style="float: left;">
                                                         {{method_field('DELETE')}}
@@ -86,8 +87,7 @@
                                 <hr>
                                 			
                                 {{ $goods->appends(['num'=>$num])->links() }}
-
-                            </form>                              
+                             
                         </div>
 
                     </div>
