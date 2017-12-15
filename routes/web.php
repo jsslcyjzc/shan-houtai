@@ -12,12 +12,8 @@
 */
 
 Route::get('/', function () {
-<<<<<<< HEAD
-	$banner =DB::table('banner')->where('path',1)->get();
-    return view('home.index',compact('banner'));
-=======
+	// $banner =DB::table('banner')->where('path',1)->get();
     return view('home.layout.home');
->>>>>>> 98f8b6b7c22cb0b1f6042d519b3a2ea087eb1d28
 });
 //后台
 //登录管理
@@ -47,13 +43,8 @@ Route::resource('goods','GoodsController');
 
 //轮播图管理
 Route::resource('banner','BannerController');
-
-
-<<<<<<< HEAD
 //nubiaUI
 Route::resource('UIluntan','NubiaUIController');
-=======
->>>>>>> 98f8b6b7c22cb0b1f6042d519b3a2ea087eb1d28
 
 });
 

@@ -59,11 +59,8 @@
                                                         	<span class="am-icon-pencil-square-o"></span> 编辑
                                                         
                                                        </a>
-<<<<<<< HEAD
-=======
                                                        
                                                         <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
->>>>>>> 75eface58974c80ca55dac04c1fd3b7aa2ad284e
 
                                                          <form class="del" action="/goods/{{$v->id}}" method="post" style="float: left;">
                                                         {{method_field('DELETE')}}

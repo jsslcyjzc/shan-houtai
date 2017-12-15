@@ -122,36 +122,6 @@
                         </ul>
                     </li>
 
-<<<<<<< HEAD
-                    <!-- 尺寸管理 -->
-                   <li class="tpl-left-nav-item">
-                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
-                            <i class="am-icon-th-list"></i>
-                            <span>尺寸管理</span>
-                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
-                        </a>
-                        <ul class="tpl-left-nav-sub-menu">
-                            <li>
-                                <a href="/size/create">
-                                        <i class="am-icon-angle-right"></i>
-                                        <span>添加</span>
-                                        <i class="tpl-left-nav-content tpl-badge-primary">
-                                           5
-                                        </i>
-                                </a>
-                                <a href="/size">
-                                    <i class="am-icon-angle-right"></i>
-                                    <span>列表</span>
-                                    <i class="tpl-left-nav-content tpl-badge-success">
-                                        18
-                                    </i>
-                                 </a>
-
-                            </li>
-                        </ul>
-                    </li>
-=======
->>>>>>> 98f8b6b7c22cb0b1f6042d519b3a2ea087eb1d28
 
                      <!-- 商品管理 -->
                    <li class="tpl-left-nav-item">
