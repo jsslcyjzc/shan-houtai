@@ -112,7 +112,7 @@
 				<ul class="list-unstyled list-inline" style="margin-top: 25px;">
 					<li style="margin-left: 45px;"><a href="/Homes">商城</a></li>
 					<li class="shangchang" >
-						<a href="">手机</a>
+						<a href="/Shouji">手机</a>
 						<div class="xialacaidan" id="xialacaidan">
 					         <div class="container" role="listbox">
 
@@ -166,7 +166,7 @@
 		                </div>
 					</li>
 					<li class="shangchang">
-						<a href="">配件</a>
+						<a href="/Shouji">配件</a>
 						<div class="xialacaidan" id="xialacaidan">
 					         <div class="container" role="listbox">
 

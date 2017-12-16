@@ -4,6 +4,7 @@
 	min-height: 140px;
 	margin-top: 84px;
 	padding: 0px;
+	margin-left: 70px;
 }
 .shdz_t{
 	width: 100%;
@@ -17,7 +18,7 @@
 .shdz .shdz_b{
 	width: 100%;
 	min-height: 95px;
-	background: violet;
+	/*background: violet;*/
 }
 .shdz .shdz_b button{
 	min-width: 112px;
@@ -27,17 +28,62 @@
 	margin-top: 35px;
 	margin-left: 40px;
 }
+.shdz .shdz_b .dizhi{
+	height: 550px;
+	background-color: #fff;
+    position: relative;
+    top: -50px;
+    left: 0px;
+    display: none;
+}
+.shdz .shdz_b .dizhi .ren{
+	margin-left: 45px;
+	font-size: 14px;
+	color: #666666;
+}
+.shdz .shdz_b .wancheng{
+	width: 300px;
+	height: 220px;
+	background-color: #fff;
+	position: relative;
+	top: -40px;
+	left: 35px;
+	display: none;
+}
+.shdz .shdz_b .wancheng .wan{
+	width: 100%;
+	height: 145px;
+	border: 1px solid #e8340e;
+}
+.shdz .shdz_b .wancheng .wan .neirong{
+	width: 100%;
+	min-height: 33px;
+	border-bottom: 1px dashed #d5d5d5;
+	line-height: 33px;
+	text-indent: 20px;
+	font-size: 15px;
+	color: #8b98a6;	
+}
+
+
+
+
+
+
+
+
 
 /*支付方式*/
 .zffs{
 	min-height: 140px;
-	background: pink;
+	/*background: pink;*/
 	padding: 0px;
+	margin-left: 70px;
 }
 .zffs .zffs_b{
 	width: 100%;
 	min-height: 95px;
-	background: violet;
+	/*background: violet;*/
 }
 .zffs .zffs_b input{
 	width: 25px;
@@ -60,24 +106,84 @@
 /*商品清单*/
 .spqd{
 	min-height: 320px;
-	background: pink;
+	/*background: pink;*/
 	padding: 0px;
+	margin-left: 70px;
+
 }
 .spqd .spqd_b{
 	width: 100%;
 	min-height: 255px;
-	background: violet;
+	/*background: violet;*/
 	margin-top: 20px;
+	margin-bottom: 50px;
+	padding: 0px;
 }
 .spqd .spqd_b table{
-	min-width: 300px;
-	min-height: 255px;
-	/*background: lightblue;*/
+
 }
-.spqd .spqd_b table tr .td1{
-	width: 373px;
-	height: 76px;
+.spqd .spqd_b table tr:first-child th{
+    height: 75px;
+    border: 1px solid #e7e7e7;
+    text-align: center;
+    background-color: #fafafa;
 }
-.spqd .spqd_b table tr .td2{
-	width: 100px;
+.spqd .spqd_b table tr:first-child th:first-child{
+	width: 470px;
+}
+.spqd .spqd_b table tr:first-child th:nth-child(2){
+	width: 270px;
+}
+.spqd .spqd_b table tr:first-child th:nth-child(3){
+	width: 215px;
+}
+.spqd .spqd_b table tr:first-child th:last-child{
+	width: 225px;
+}
+.spqd .spqd_b table tr td{
+	background-color: #fff;
+	color: #666666
+}
+.spqd .spqd_b table tr td .xiaon{
+	width: 70px;
+	height: 100px;
+	background-color: red;
+	margin-left: 45px;
+	float: left;
+	margin-top: 5px;
+}
+.spqd .spqd_b table tr td .titles{
+	width: 400px;
+	height: 50px;
+    float: left;
+    margin-top: 15px;
+}
+.spqd .spqd_b table tr td .titles p{
+    clear: left;
+    text-indent: 18px;
+    line-height: 8px;
+}
+.spqd .spqd_b table tr td .titles p a{
+	font-size: 13px;
+	color: #464646;
+}
+.spqd .spqd_b table tr td .jin{
+	text-align: right;
+	margin-bottom: 10px;
+}
+.spqd .spqd_b table tr td .jin span{
+	margin-right: 5px;
+	color: #ea4725;
+	margin-left: 5px;
+}
+.spqd .spqd_b table tr td .jin:last-child{
+	float: right;
+}
+.spqd .spqd_b table tr td .jin input{
+	width: 95px;
+	height: 30px;
+	background-color: #e8380d;
+	border: none;
+	border-radius: 7px;
+	color: #fff;
 }

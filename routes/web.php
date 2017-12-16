@@ -12,8 +12,10 @@
 */
 
 Route::get('/', function () {
-	$banner =DB::table('banner')->where('path',1)->get();
-    return view('home.index',compact('banner'));
+	// $banner =DB::table('banner')->where('path',1)->get();
+ //    return view('home.index',compact('banner'));
+	// $banner =DB::table('banner')->where('path',1)->get();
+    return view('home.layout.home');
 });
 //后台
 //登录管理
@@ -99,6 +101,18 @@ Route::get('/Home/tiyan','TiyanController@tiyan');
 
 //购物车
 Route::get('/Gouwu',"HomeController@gouwu");
+
+
+
+//购物车
+Route::post('/gwc','CartController@store');
+Route::get('/gwc','CartController@indexa');
+Route::get('/gwc/delete','CartController@delete');
+
+
+//收获地址
+Route::resource('/dingdan','DingdanController');
+Route::get('/zhifu','DingdanController@zhifu');
 
 
 //手机配件
