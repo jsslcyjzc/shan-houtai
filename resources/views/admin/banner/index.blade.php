@@ -147,7 +147,7 @@
 
 @section('js')
 <script>
-	$('#del').submit(function(e){
+	$('.am-btn-group #del').submit(function(e){
 		if(!confirm('您确定要删除该图片么?')) return false;
 	})
 

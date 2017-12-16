@@ -23,7 +23,7 @@ Route::get('/admin/login','LoginController@login');
 Route::post('/admin/login','LoginController@dologin');
 
 //后台路由组
-Route::group(['middleware'=>'login'],function(){
+Route::group(['middlemware'=>'login'],function(){
 //首页
 Route::get('/admin','AdminController@index');
 
@@ -45,6 +45,8 @@ Route::resource('goods','GoodsController');
 
 //轮播图管理
 Route::resource('banner','BannerController');
+
+
 //nubiaUI
 Route::resource('UIluntan','NubiaUIController');
 
@@ -64,7 +66,7 @@ Route::get('/Homes','HomeController@index');
 //努比亚首页
 Route::get('/index','HomeController@doindex');
 //努比亚论坛
-Route::get('/Shequ','HomeController@Shequ');
+Route::get('/Shequ','HomeController@shequ');
 
 
 //注册
@@ -101,6 +103,18 @@ Route::get('/Home/tiyan','TiyanController@tiyan');
 Route::get('/Gouwu',"HomeController@gouwu");
 
 
+
+//购物车
+Route::post('/gwc','CartController@store');
+Route::get('/gwc','CartController@indexa');
+Route::get('/gwc/delete','CartController@delete');
+
+
+//收获地址
+Route::resource('/dingdan','DingdanController');
+Route::get('/zhifu','DingdanController@zhifu');
+
+
 //手机配件
 
 Route::get('/Shouji',"HomeController@shouji");
@@ -119,13 +133,3 @@ Route::get('home/gerenzhongxin','gerenController@gerenzhongxin');
 Route::get('home/qiangxianbuju','ArticleController@show');
 
 Route::get('home/qiangxianbuju','qiangxianbujuController@index');
-
-
-
-//购物车加入成功
-Route::post('/gwc','CartController@store');
-Route::get('/gwc','CartController@indexa');
-Route::get('/gwc/delete','CartController@delete');
-
-//收获地址
-Route::resource('dingdan','DingdanController');

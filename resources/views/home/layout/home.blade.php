@@ -116,10 +116,8 @@
 			</div>
 			<div class="col-sm-8">
 				<ul class="list-unstyled list-inline" style="margin-top: 25px;">
-					@foreach($cates as $k=>$v)
-					<li style="margin-left: 45px;"><a href="/Homes">{{$v->name}}</a></li>
-					@endforeach
-					<!-- <li class="shangchang">
+					<li style="margin-left: 45px;"><a href="/Homes">商城</a></li>
+					<li class="shangchang">
 						<a href="/Shouji">手机</a>
 						<div class="xialacaidan" id="xialacaidan">
 					         <div class="container" role="listbox">
@@ -337,7 +335,7 @@
 
 					         </div>
 		                </div>
-					</li> -->
+					</li>
 				</ul>
 				
 			</div>
@@ -374,14 +372,12 @@
 
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
-                    @foreach($banner as $k=>$v)
-				    <div class="@if($k==0) active @endif item">
-					      <img src="{{$v->pic}}" alt="">
+				    <div class="active item">
+					      <img src="holder.js/100px530" alt="">
 					      <div class="carousel-caption">
 					      </div>
 				    </div>
-				    @endforeach
-				    <!-- <div class="item">
+				    <div class="item">
 				      <img src="holder.js/100px530?bg=#265" alt="">
 				      <div class="carousel-caption">
 				      </div>
@@ -395,7 +391,7 @@
 				      <img src="holder.js/100px530?theme=sky" alt="...">
 				      <div class="carousel-caption">
 				      </div>
-				    </div> -->
+				    </div>
 				  </div>
 				  <!-- Controls -->
 				  <a class="left carousel-control" href="" role="button" data-slide="prev">

@@ -84,4 +84,13 @@ class DingdanController extends Controller
     {
         //
     }
+
+
+
+
+    public function zhifu(){
+        // echo "string";
+
+        return view('home.zhifu.zhifu');
+    }
 }
