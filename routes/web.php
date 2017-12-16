@@ -12,8 +12,10 @@
 */
 
 Route::get('/', function () {
-	// $banner =DB::table('banner')->where('path',1)->get();
-    return view('home.layout.home');
+	$banner = DB::table('banner')->where('path',1)->get();
+	$cates = DB::table('cates')->where('pid',0)->get();
+	// dd($cates);
+    return view('home.layout.home',['banner'=>$banner,'cates'=>$cates]);
 });
 //后台
 //登录管理

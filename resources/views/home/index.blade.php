@@ -5,7 +5,14 @@
 	<title>努比亚nubia手机商城——努比亚nubia智能手机官网</title>
 @endsection
 		
-
+@section('css')
+<style type="text/css">
+	.carousel-inner > .item > img, .carousel-inner > .item > a > img{
+		width: 1340px;
+		height: 500px;
+	}
+</style>
+@stop
 
 @section('center')
 	<section>
@@ -23,37 +30,15 @@
 
 			  <!-- Wrapper for slides -->
 			  <div class="carousel-inner" role="listbox" style="margin-left: -10px;">
-				    <div class="active item">
-				    	<a href="">
-                          @foreach($banner as $k=>$v)
-					      <img src="{{$v->pic}}" width="1340" height="500" style=" top: 0px;left: 0px;">
-					      @endforeach
+                    @foreach($banner as $k=>$v)
+				    <div class="@if($k==0) active @endif item">
+				    	<a href="#">
+					      <img src="{{$v->pic}}" style=" top: 0px;left: 0px;">
 					      <div class="carousel-caption">
 					      </div>
 					    </a>
-				    </div><!-- 
-				    <div class="item">
-				      <a href="">
-					      <img src="holder.js/1340x500?bg=#265" width="1340" height="500">
-					      <div class="carousel-caption">
-					      </div>
-				       </a>
 				    </div>
-				    <div class="item">
-				    	<a href="">
-					      <img src="holder.js/1340x500?bg=#654" width="1340" height="500">
-					      <div class="carousel-caption">
-					      </div>
-				        </a>
-				    </div>
-				    <div class="item">
-				    	<a href="">
-					      <img src="holder.js/1340x500?theme=sky" width="1340" height="500">
-					      <div class="carousel-caption">
-					      </div>
-				        </a>
-				    </div> -->
-			    
+					@endforeach
 			  </div>
 			   
 			  <!-- Controls -->

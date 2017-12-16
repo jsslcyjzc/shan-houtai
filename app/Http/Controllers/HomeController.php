@@ -10,8 +10,7 @@ class HomeController extends Controller
     public function index(){
         // echo "string";
         $banner =DB::table('banner')->where('path',1)->get();
-    return view('home.index',compact('banner'));
-        return view('home.index');
+        return view('home.index',['banner'=>$banner]);
     }
 
 

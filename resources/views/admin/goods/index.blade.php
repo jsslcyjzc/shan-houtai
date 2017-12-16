@@ -111,7 +111,7 @@
     .pagination{
         float: right;
     }
-    .pagination li{
+    /*.pagination li{
         width: 30px;
         float: left;
         text-align: center;
@@ -119,7 +119,7 @@
         border: 1px solid #ddd;
         color: #36c6d3;
         border-radius: 5px;
-    }
+    }*/
     .am-table-striped>tbody>tr:nth-child(odd)>td, .am-table-striped>tbody>tr:nth-child(odd)>th{
         font-size: 14px;
     }

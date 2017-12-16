@@ -97,6 +97,12 @@
 
 		@show
 </head>
+<style type="text/css">
+	.carousel-inner > .item > img, .carousel-inner > .item > a > img{
+		width: 1340px;
+		height: 500px;
+	}
+</style>
 <body>
 	@section('tou')
 	<!-- 头部导航  start -->
@@ -110,13 +116,15 @@
 			</div>
 			<div class="col-sm-8">
 				<ul class="list-unstyled list-inline" style="margin-top: 25px;">
-					<li style="margin-left: 45px;"><a href="/Homes">商城</a></li>
-					<li class="shangchang" >
+					@foreach($cates as $k=>$v)
+					<li style="margin-left: 45px;"><a href="/Homes">{{$v->name}}</a></li>
+					@endforeach
+					<!-- <li class="shangchang">
 						<a href="/Shouji">手机</a>
 						<div class="xialacaidan" id="xialacaidan">
 					         <div class="container" role="listbox">
 
-					         	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					         	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-s9lide="prev">
 							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="margin-left:20px;"></span>
 							    <span class="sr-only">Previous</span>
 							  </a>
@@ -277,7 +285,7 @@
 					<li><a href="/Home/tiyan">体验店</a></li>
 					<li><a href="">社区</a></li>
 					<li style="margin-right: none;" class="shangchang">
-						<a href="/nubiaUI">nubia UI</a>
+						<a href="/Shequ">nubia UI</a>
                         <div class="xialacaidan" id="xialacaidan">
 					         <div class="container" role="listbox">
 
@@ -329,7 +337,7 @@
 
 					         </div>
 		                </div>
-					</li>
+					</li> -->
 				</ul>
 				
 			</div>
@@ -366,12 +374,14 @@
 
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
-				    <div class="item active">
-					      <img src="holder.js/100px530" alt="">
+                    @foreach($banner as $k=>$v)
+				    <div class="@if($k==0) active @endif item">
+					      <img src="{{$v->pic}}" alt="">
 					      <div class="carousel-caption">
 					      </div>
 				    </div>
-				    <div class="item">
+				    @endforeach
+				    <!-- <div class="item">
 				      <img src="holder.js/100px530?bg=#265" alt="">
 				      <div class="carousel-caption">
 				      </div>
@@ -385,7 +395,7 @@
 				      <img src="holder.js/100px530?theme=sky" alt="...">
 				      <div class="carousel-caption">
 				      </div>
-				    </div>
+				    </div> -->
 				  </div>
 				  <!-- Controls -->
 				  <a class="left carousel-control" href="" role="button" data-slide="prev">
