@@ -112,7 +112,12 @@ Route::get('/gwc/delete','CartController@delete');
 
 //收获地址
 Route::resource('/dingdan','DingdanController');
+
+Route::get('/getarea','DingdanController@getArea');
+
 Route::get('/zhifu','DingdanController@zhifu');
+
+Route::get('/store','DingdanController@store');
 
 
 //手机配件

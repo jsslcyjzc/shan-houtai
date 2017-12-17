@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 
-class DingdanController extends Controller
+class ZhifuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,15 +15,7 @@ class DingdanController extends Controller
     public function index()
     {
         //
-        //读取收货地址
-        $addresses = DB::table('addresses')->where('user_id', session('id'))->get();
-        foreach ($addresses as $key => &$value) {
-            $value->pname = DB::table('areas')->where('id',$value->province)->value('area_name');
-            $value->cname = DB::table('areas')->where('id',$value->city)->value('area_name');
-            $value->xname = DB::table('areas')->where('id',$value->xian)->value('area_name');
-        }
-        return view('home.qrdd.qrdd',compact('addresses'));
-
+        // return view('home.zhifu.zhifu');
     }
 
     /**
@@ -45,19 +37,7 @@ class DingdanController extends Controller
     public function store(Request $request)
     {
         //
-        // dd($request->all());
-        $data = $request->except(['_token']);
-        //
-        $data['user_id'] = session('id');
-        //插入
-        if(DB::table('addresses')->insert($data)) {
-            return back()->with('msg','地址添加成功');
-        }else{
-            return back()->with('msg','添加失败!!');
-        }
-
     }
-
 
     /**
      * Display the specified resource.
@@ -104,21 +84,8 @@ class DingdanController extends Controller
         //
     }
 
-
-
-
-    public function zhifu(){
-        // echo "string";
-
-        return view('home.zhifu.zhifu');
-    }
-
-    public function getArea(Request $request)
+    public function zf()
     {
-        $pid = $request->pid;
-        
-        $areas = DB::table('areas')->where('area_parent_id',$pid)->get();
-
-        return $areas->toJson();
+        return view('home.zhifu.zhifu');
     }
 }

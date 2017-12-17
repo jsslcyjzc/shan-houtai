@@ -104,9 +104,7 @@
        	   	   	   	  	 ¥{{$v->detail->price}}
        	   	   	   	  </td>
        	   	   	   	  <td>
-       	   	   	   	  	 <p style="margin-left: 35px;cursor: pointer;" id="jian">-</p>
-       	   	   	   	  	 <input type="text" value="1" id="shu">
-       	   	   	   	  	 <p id="jia" style="cursor: pointer;">+</p>
+                         <input type="text" style="width:20%" name="data[{{$v->id}}][num]" value="{{$v->num}}">
        	   	   	   	  </td>
        	   	   	   	  <td>
        	   	   	   	  	<a href="#" class="remove-item del" cid="{{$v->id}}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Remove from cart" style="color: #838383;">
