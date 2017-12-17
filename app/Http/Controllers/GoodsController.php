@@ -14,7 +14,7 @@ class GoodsController extends Controller
     public function index(Request $request)
     {
         //
-        $num = $request->input('num',10);
+        $num = $request->input('num',5);
         $keywords = $request->input('keywords','');
 
         //关键字搜索
@@ -26,13 +26,18 @@ class GoodsController extends Controller
         }else{
            $users = DB::table('goods')->paginate($num); 
         }
+
+
+        $goods_pic = DB::table('goods_pic')->get()->first();
+        // dd($goods_pic);
         
        //解释模板
         return view('admin.goods.index',[
        
            'goods'=>$users,
            'keywords' => $keywords,
-           'num' => $num
+           'num' => $num,
+           'goods_pic'=>$goods_pic
         ]);
     }
 
@@ -57,7 +62,7 @@ class GoodsController extends Controller
         //
         // dd($request->file('pic'));
         // dd($request->all());
-        $data = $request->only(['title','price','content','kucun']);
+        $data = $request->only(['title','price','content','kucun','pic']);
         //补时间
         $data['created_at'] = date('Y-m-d H:i:s');
         $data['status'] = 1;
@@ -121,7 +126,7 @@ class GoodsController extends Controller
     public function edit($id)
     {
         //
-        $goods_pic = DB::table('goods_pic')->where('goods_id', $id)->get();
+        $goods_pic = DB::table('goods_pic')->get()->first();
         
         $goods = DB::table('goods')->where('id',$id)->first();
 
@@ -143,17 +148,8 @@ class GoodsController extends Controller
         $data = $request->only(['title','price','content','kucun']);
         $data['created_at'] = date('Y-m-d H:i:s');
         $data['status'] = 1;
-        if (DB::table('goods')->where('id',$id)->update($data)) {
-             return redirect('/goods')->with('msg','更新成功');
-         } else{
-            return back()->with('msg','更新失败!!');
-         }
-
-         
-
         //将数据插入到数据库中
-        $res = DB::table('goods')->insertGetId($data);
-        // dd($res);
+        $res = DB::table('goods')->where('id',$id)->update($data);
 
         //如果插入成功
         if($res > 0) {
@@ -179,7 +175,16 @@ class GoodsController extends Controller
                 //将图片信息插入到商品图片表中
                 DB::table('goods_pic')->insert($images);
             }
+            return redirect('/goods')->with('msg','添加成功');
+        }else{
+            return back()->with('msg','添加失败!!');
         }
+
+
+        
+
+         
+
 
     }
 
@@ -217,5 +222,8 @@ class GoodsController extends Controller
         //解析模板
           return view('home.shouji.shouji',compact('goods'));
     }
+
+
+
 
 }

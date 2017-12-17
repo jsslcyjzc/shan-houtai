@@ -34,12 +34,13 @@
                                 <table class="am-table am-table-striped am-table-hover table-main">
                                     <thead>
                                         <tr>
-                                            <th class="table-check"></th>
+                                            <th class="table-check" style="min-width: 50px;"></th>
                                             <th class="table-id" style="min-width: 80px;">ID</th>
-                                            <th class="table-title" style="min-width: 150px;">商品标题</th>
+                                            <th class="table-title" style="min-width: 150px;">商品名称</th>
                                             <th class="table-phone" style="min-width: 150px;">商品价格</th>
+                                            <th class="table-phone" style="min-width: 150px;">商品图片</th>
                                             <th class="table-set" style="min-width: 70px;">库存</th>
-                                            <th class="table-set" style="min-width: 300px;">操作</th>
+                                            <th class="table-set" style="min-width: 100px;">操作</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -50,6 +51,10 @@
                                             <td>{{ $v->id }}</td>
                                             <td><a href="#">{{ $v->title }}</a></td>
                                             <td>{{ $v->price }}</td>
+                                            <td>
+                                                <img src="{{ $goods_pic->pic }}" alt="" width="100" height="50">
+                                            </td>
+
                                             <td class="center">{{$v->kucun}}</td>
                                             <td>
                                                 <div class="am-btn-toolbar">
@@ -59,8 +64,6 @@
                                                         	<span class="am-icon-pencil-square-o"></span> 编辑
                                                         
                                                        </a>
-                                                        <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only" style="font-size: 14px;"><span class="am-icon-copy"></span> 复制</button>                
-                                                        <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
 
                                                          <form class="del" action="/goods/{{$v->id}}" method="post" style="float: left;">
                                                         {{method_field('DELETE')}}
@@ -117,7 +120,7 @@
     .pagination{
         float: right;
     }
-    /*.pagination li{
+    .pagination li{
         width: 30px;
         float: left;
         text-align: center;
@@ -125,7 +128,7 @@
         border: 1px solid #ddd;
         color: #36c6d3;
         border-radius: 5px;
-    }*/
+    }
     .am-table-striped>tbody>tr:nth-child(odd)>td, .am-table-striped>tbody>tr:nth-child(odd)>th{
         font-size: 14px;
     }
