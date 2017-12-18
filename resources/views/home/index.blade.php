@@ -383,12 +383,16 @@
 				</div>
 			</div>
 			@foreach($banner as $k=>$v)
-			@if($k < 2)
-			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right" style="margin-left: 9px;">
+			@if($k == 6)
+			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right" style=" margin-left: 0px;">
 				<img src="{{ $v->pic }}" alt="" width="306" height="175">
 			</div>
-			@elseif($k == 3)
-			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right" style="margin-top: 15px;margin-left: -10px; ">
+			@elseif($k == 4)
+			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right">
+				<img src="{{ $v->pic }}" alt=""  width="306" height="175" >
+			</div>
+			@elseif($k == 5)
+			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right" style=" margin-left: -8px;">
 				<img src="{{ $v->pic }}" alt=""  width="306" height="175" >
 			</div>
 			@endif
@@ -467,7 +471,7 @@
 			    </a>
 			</div>
 			@foreach($banner as $k=>$v)
-			@if($k == 4)
+			@if($k == 7)
 			<div class="col-xs-12 chanpin" style="margin-bottom: 15px;">
 				<a href="">
 				<img src="{{ $v->pic }}" alt="" width="100%" height="100%">
@@ -475,10 +479,11 @@
 			</div>
 			@endif
 			@endforeach
+
 			<div class="col-xs-12 chanpin">
 
 				@foreach($goods as $key =>$v)
-				@if($key > 3)
+				@if($key > 4)
 				<div class="col-xs-3 chanpin-one">
 					<a href="">
 					<img src=" {{ $v->pic }}" alt="">
@@ -497,7 +502,7 @@
 				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
 				    </div>				    
 				</div>
-				@elseif($key == 5)
+				@elseif($key == 4)
 				<div class="col-xs-3 chanpin-one" style="margin-right: 0;">
 					<a href="">
 					<img src="{{ $v->pic }}" alt="">

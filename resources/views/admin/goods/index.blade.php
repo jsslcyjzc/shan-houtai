@@ -52,7 +52,7 @@
                                             <td><a href="#">{{ $v->title }}</a></td>
                                             <td>{{ $v->price }}</td>
                                             <td>
-                                                <img src="{{ $goods_pic->pic }}" alt="" width="100" height="50">
+                                                <img src="" alt="" width="100" height="50">
                                             </td>
 
                                             <td class="center">{{$v->kucun}}</td>

@@ -204,7 +204,7 @@
                               </label>
                             </div>
                               {{csrf_field()}}
-                            <button type="submit" class="btn btn-default" style="margin-top: 20px;">Submit</button>
+                            <button class="btn btn-default" style="margin-top: 20px;">Submit</button>
                             <div class="clearfix"></div>
                             
                           </form>

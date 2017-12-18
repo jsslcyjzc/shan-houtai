@@ -107,7 +107,6 @@ Route::get('/Gouwu',"HomeController@gouwu");
 //购物车
 Route::post('/gwc','CartController@store');
 Route::get('/gwc','CartController@indexa');
-Route::get('/gwc/delete','CartController@delete');
 
 
 //收获地址

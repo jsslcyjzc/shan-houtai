@@ -70,7 +70,7 @@
                                 <div class="am-u-sm-9">
                                     <div class="am-form-group am-form-file">
                                         <div class="tpl-form-file-img">
-                                            <img id="xmTanImgtwo"/ src="{{ $goods_pic->pic }}">
+                                            <img id="xmTanImgtwo"/ src="">
                                             <div id="xmTanDivtwo"></div>
                                         </div>
                                         <button type="button" class="am-btn am-btn-danger am-btn-sm">
@@ -156,7 +156,6 @@
                     </form>
                     
                 </div>
-                {{ $goods->appends(['num'=>$num])->links() }}
             </div>
         </div>
 

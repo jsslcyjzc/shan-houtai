@@ -14,15 +14,17 @@ class DingdanController extends Controller
      */
     public function index()
     {
-        //
+        session(['user_id'=>1]);
         //读取收货地址
-        $addresses = DB::table('addresses')->where('user_id', session('id'))->get();
+        $addresses = DB::table('addresses')->where('user_id', session('user_id'))->get();
+
         foreach ($addresses as $key => &$value) {
             $value->pname = DB::table('areas')->where('id',$value->province)->value('area_name');
             $value->cname = DB::table('areas')->where('id',$value->city)->value('area_name');
             $value->xname = DB::table('areas')->where('id',$value->xian)->value('area_name');
         }
-        return view('home.qrdd.qrdd',compact('addresses'));
+        // dd(1);
+        return view('home.dingdan.cofirm',compact('addresses'));
 
     }
 
@@ -33,7 +35,7 @@ class DingdanController extends Controller
      */
     public function create()
     {
-        //
+        echo "string";
     }
 
     /**
@@ -44,17 +46,23 @@ class DingdanController extends Controller
      */
     public function store(Request $request)
     {
-        //
         // dd($request->all());
-        $data = $request->except(['_token']);
-        //
-        $data['user_id'] = session('id');
-        //插入
-        if(DB::table('addresses')->insert($data)) {
-            return back()->with('msg','地址添加成功');
-        }else{
-            return back()->with('msg','添加失败!!');
+        $data = $request->only(['name','phone','province','city','xian','detail']);
+        
+        DB::table('addresses')->insert($data);
+
+        session(['user_id'=>2]);
+        //读取收货地址
+        $addresses = DB::table('addresses')->where('user_id', session('user_id'))->get();
+        // dd($addresses);
+        foreach ($addresses as $key => &$value) {
+            $value->pname = DB::table('areas')->where('id',$value->province)->value('area_name');
+            $value->cname = DB::table('areas')->where('id',$value->city)->value('area_name');
+            $value->xname = DB::table('areas')->where('id',$value->xian)->value('area_name');
         }
+
+        return view('home.dingdan.cofirm',compact('addresses'));
+
 
     }
 
