@@ -24,13 +24,17 @@ class ArticleController extends Controller
            //列表显示
             $articles = DB::table('articles')->paginate($num);
         }
+
+
+        $user = DB::table('users')->get();
         
 
         return view('admin.article.index',[
 
            'articles' => $articles,
            'keywords' => $keywords,
-           'num' => $num
+           'num' => $num,
+           'user'=>$user
         ]);
 
     }
@@ -42,7 +46,9 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('admin.article.create');
+
+        $user = DB::table('users')->get();
+        return view('admin.article.create',compact('user'));
     }
 
     /**

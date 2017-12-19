@@ -117,12 +117,18 @@ Route::get('/gwc','CartController@indexa');
 
 //收获地址
 Route::resource('/dingdan','DingdanController');
+Route::post('/dingdan/confirm','DingdanController@index');
 
-Route::get('/getarea','DingdanController@getArea');
+// Route::get('/getarea','DingdanController@getArea');
 
 Route::get('/zhifu','DingdanController@zhifu');
 
 Route::get('/store','DingdanController@store');
+
+//支付页面
+Route::resource('/zf','ZhifuController');
+
+
 
 
 //手机配件
@@ -153,7 +159,17 @@ Route::get('/confirm/{id}', 'UserController@confirm');
 //个人中心
 Route::get('home/gerenzhongxin','gerenController@gerenzhongxin');
 
+
+
+//收获地址
+Route::resource('/address','AddressController');
+Route::get('/getadd','AddressController@getAdd');
+Route::post('/dingdan','DingdanController@store');
+
+
+
 //抢先布局
+
 //ht.com/article/304
 Route::get('home/qiangxianbuju','ArticleController@show');
 

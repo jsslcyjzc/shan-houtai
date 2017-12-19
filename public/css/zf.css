@@ -1,0 +1,12 @@
+section{
+	min-height: 500px;
+}
+#zf{
+	min-height: 1000px;
+	/*background: pink;*/
+}
+
+table tr td{
+	border: 1px solid #eee;
+	text-align: center;
+}

@@ -28,13 +28,18 @@ class UserController extends Controller
         }else{
            $users = DB::table('users')->paginate($num); 
         }
+
+
+
+        $user = DB::table('users')->get();
         
        //解释模板
         return view('admin.user.index',[
        
            'users'=>$users,
            'keywords' => $keywords,
-           'num' => $num
+           'num' => $num,
+           'user'=>$user
         ]);
 
 
@@ -47,7 +52,10 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.user.create');
+        // echo "string";
+
+        $user = DB::table('users')->get();
+        return view('admin.user.create',compact('user'));
     }
 
     /**

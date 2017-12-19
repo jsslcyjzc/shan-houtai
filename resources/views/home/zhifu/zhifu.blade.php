@@ -47,15 +47,17 @@
            <!-- 订单提交成功 -->
            <div class="col-xs-11 one">
            	    <div class="dui glyphicon glyphicon-ok"></div>
+                @foreach($goods as $k=>$v)
            	    <div class="two">
            	    	<ol class="list-unstyled">
            	    		<li>订单提交成功 !</li>
            	    		<li>(请您在 <span>23时59分33秒</span>内完成支付 , 超时订单将自动取消 ) 。</li>
            	    		<li>您的订单已经提交成功 , 请记住您的订单号 : <span>NN171212940483320591</span></li>
            	    		<li>您选定的支付方式为 : <span>在线支付</span></li>
-           	    		<li>您的订单总额为 : <span>¥1,999.00</span></li>
+           	    		<li>您的订单总额为 : <span>¥{{ $v->detail->price }}</span></li>
            	    	</ol>
            	    </div>
+                @endforeach
            </div>
 
 
@@ -131,6 +133,9 @@
            	    		</div>
            	    		<div class="clearfix"></div>
            	    		<input type="button" value="立即支付" style="margin-top: 40px;width: 125px;height: 30px;background-color: #e8380d;border-radius: 5px;border: none;color: #fff;margin-left:150px;">
+
+
+                    
            	    	</div>
 
 

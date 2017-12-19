@@ -29,12 +29,13 @@ class NubiaUIController extends Controller
             $nubia = DB::table('nubiaUI')->paginate($num);
         }
          
-
+        $user = DB::table('users')->get();
          // dd($nubia);
         return view('admin.nubiaUI.index',[
             'nubia' => $nubia,
             'num' => $num,
-            'keywords' => $keywords
+            'keywords' => $keywords,
+            'user'=>$user
 
         ]);
     }
@@ -47,8 +48,8 @@ class NubiaUIController extends Controller
     public function create()
     {
         //
-
-        return view('admin.nubiaUI.create');
+        $user = DB::table('users')->get();
+        return view('admin.nubiaUI.create',compact('user'));
     }
 
     /**

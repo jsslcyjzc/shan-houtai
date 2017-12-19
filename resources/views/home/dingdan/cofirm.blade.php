@@ -15,6 +15,9 @@
     width: 300px;
     min-height: 50px;
   }
+  .ten{
+    height: 20px;
+  }
 </style>
 
 @section('center')
@@ -105,6 +108,9 @@
       });
     })
 
+
+
+
 </script>
 
 
@@ -143,17 +149,66 @@
            	   	   <div class="container">
                   <div class="row">
                       <div class="col-md-10">
-                          <a href="/address/create" class="btn btn-default pull-right normal" style="">添加收货地址</a>
                               
                           @foreach($addresses as $k=>$v)
-                          <div class="col-md-4 m-10" style="border: 1px dashed #000;margin-top: 30px;">
+                          <div class="col-md-4 m-10" style="border: 1px dashed #000;margin-top: 30px;margin-left: 20px;">
                               <div class="address-item">
                               <h4>{{$v->name}}</h4>
                               <p>{{$v->phone}}</p>
-                              <p>{{$v->pname}}{{$v->cname}}{{$v->xian}}{{$v->detail}}</p>
+                              <p>{{$v->pname}} {{$v->cname}} {{$v->xname}} {{$v->detail}}</p>
                               </div>
                           </div>
                           @endforeach
+                      </div>
+                      <div class="col-md-11" style="min-height: 50px;margin-top: 40px;padding: 0px;">
+
+                           <div>
+                            <form action="/zhifu">
+                               <table id="shoptable">
+                                 <tr>
+                                    <th>共<span>1</span>件商品</th>
+                                 </tr>
+                                 <tr>
+                                    <td>商品</td>
+                                    <td>商品名称</td>
+                                    <td>单价</td>
+                                    <td>数量</td>
+                                    <td>操作</td>
+                                 </tr>
+                                  @foreach($goods as $k=>$v)
+                                 <tr>
+                                    <td>
+                                       <input type="checkbox" style="height: 18px;width: 18px;margin-top: 40px;" value="{{$v->id}}" name="data[{{$v->id}}][id]">
+                                       <img src="{{$v->pic}}" alt="" width="50" height="100">
+                                    </td>
+                                    <td style="text-align: left;">
+                                       <a href="" style="color: #000000;">&nbsp;&nbsp;
+                                        {{$v->detail->title}}
+                                       </a>
+                                    </td>
+                                    <td>
+                                       ¥{{ $v->detail->price }}
+                                    </td>
+                                    <td>
+                                       <input type="text" style="width:20%" name="data[{{$v->id}}][num]" value="{{$v->num}}">
+                                    </td>
+                                    <td>
+                                      <a href="/gwc" class="remove-item del" cid="{{$v->id}}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Remove from cart" style="color: #838383;">
+                                        <i class="glyphicon glyphicon-remove"></i>
+                                      </a>
+                                    </td>
+                                 </tr>
+                                  @endforeach
+                                 <tr>
+                                    <td colspan="6">
+
+                                        {{ csrf_field() }}
+                                        <button class="but" type="submit" style="margin-top: 7px;">
+                                             立即结算
+                                        </button>
+                                    </td>
+                                 </tr>
+                             </table>
 
 
 
@@ -208,12 +263,7 @@
                             <div class="clearfix"></div>
                             
                           </form>
-                          <div style="min-height: 100px;margin-bottom: 100px;">
-                            <a href="/zhifu" style="margin-left: 300px;">
-                              <button style="margin-top: 50px;height: 50px;border: 1px solid #ccc;color: #000;background: #eee;" class="btn btn-default">下一步</button>
-                            </a>
-                            </div>
-                          </div>
+                           </div>
                       </div>
                   </div>
               </div>

@@ -26,7 +26,10 @@ class QiantaiController extends Controller
         }else{
            $useres = DB::table('useres')->paginate($num); 
         }
-        return view('admin.home.index',compact('useres'));
+
+
+        $user = DB::table('users')->get();
+        return view('admin.home.index',compact('useres','user'));
     }
 
     /**
