@@ -14,7 +14,7 @@ class GoodsController extends Controller
     public function index(Request $request)
     {
         //
-        $num = $request->input('num',10);
+        $num = $request->input('num',5);
         $keywords = $request->input('keywords','');
 
         //关键字搜索
@@ -28,7 +28,10 @@ class GoodsController extends Controller
         }
 
 
+<<<<<<< HEAD
         $user = DB::table('users')->get();
+=======
+>>>>>>> ea1988a7dc967fee863102892c1df36bd5f3e6bd
         
        //解释模板
         return view('admin.goods.index',[
@@ -125,11 +128,9 @@ class GoodsController extends Controller
      */
     public function edit($id)
     {
-        //
-        $goods_pic = DB::table('goods_pic')->where('goods_id', $id)->get();
-        
-        $goods = DB::table('goods')->where('id',$id)->first();
 
+        $goods_pic = DB::table('goods_pic')->where('goods_id',$id)->get();
+        $goods = DB::table('goods')->where('id',$id)->first();
         return view('admin.goods.edit',compact('goods','goods_pic'));
     }
 
@@ -148,17 +149,15 @@ class GoodsController extends Controller
         $data = $request->only(['title','price','content','kucun']);
         $data['created_at'] = date('Y-m-d H:i:s');
         $data['status'] = 1;
-        if (DB::table('goods')->where('id',$id)->update($data)) {
-             return redirect('/goods')->with('msg','更新成功');
-         } else{
-            return back()->with('msg','更新失败!!');
-         }
-
-         
-
         //将数据插入到数据库中
+        if(DB::table('goods')->where('id',$id)->update($data)){
+             return redirect('/goods')->with('msg','更新成功');
+        }else{
+            return back()->with('msg','更新失败');
+        }
+
+
         $res = DB::table('goods')->insertGetId($data);
-        // dd($res);
 
         //如果插入成功
         if($res > 0) {
@@ -184,7 +183,10 @@ class GoodsController extends Controller
                 //将图片信息插入到商品图片表中
                 DB::table('goods_pic')->insert($images);
             }
+
+
         }
+
 
     }
 
@@ -222,5 +224,8 @@ class GoodsController extends Controller
         //解析模板
           return view('home.shouji.shouji',compact('goods'));
     }
+
+
+
 
 }

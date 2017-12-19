@@ -65,7 +65,7 @@ class BannerController extends Controller
         //获取参数
         $data = $request->only(['bname','blink','pic']);
         // dd($data);
-
+        $data['path'] = 1;
         //图片上传
         if($request->hasFile('pic')){
             //获取文件的后缀名
@@ -118,6 +118,9 @@ class BannerController extends Controller
     public function edit($id)
     {
         //
+        // echo "string";
+        $banner = DB::table('banner')->where('bid',$id)->first();
+        return view('admin.banner.edit',compact('banner'));
     }
 
     /**
@@ -130,6 +133,37 @@ class BannerController extends Controller
     public function update(Request $request, $id)
     {
         //
+        //获取参数
+        $data = $request->only(['bname','blink','pic']);
+        $data['path'] = 1;
+        //图片上传
+        if($request->hasFile('pic')){
+            //获取文件的后缀名
+            $suffix = $request->file('pic')->extension();
+            
+
+
+            //创建新的名称
+            $name = uniqid('img_').'.'.$suffix;
+            // dd($suffix);
+
+            //文件夹路径
+            $dir = './banner img/'.date('Y-m-d');
+            //移动文件
+            $request->file('pic')->move($dir,$name);
+            //获取文件的路径
+            $data['pic'] = trim($dir.'/'.$name,'.');
+
+        }
+
+        //将数据插入到数据库中
+        if(DB::table('banner')->where('bid',$id)->update($data)){
+            return redirect('banner')->with('msg','添加成功 !!!');
+
+        }else{
+            return back()->with('msg','添加失败 /(ㄒoㄒ)/~~');
+        }
+
     }
 
     /**

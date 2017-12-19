@@ -31,6 +31,7 @@
 			  <!-- Wrapper for slides -->
 			  <div class="carousel-inner" role="listbox" style="margin-left: -10px;">
                     @foreach($banner as $k=>$v)
+                    @if($k < 4)
 				    <div class="@if($k==0) active @endif item">
 				    	<a href="#">
 					      <img src="{{$v->pic}}" style=" top: 0px;left: 0px;">
@@ -38,6 +39,7 @@
 					      </div>
 					    </a>
 				    </div>
+				    @endif
 					@endforeach
 			  </div>
 			   
@@ -330,7 +332,7 @@
 	<!-- 以旧换新 start -->
 	<div class="container-fluid yijiu">
 		<div class="container">
-			<div class="col-xs-2 yijiu-left" >
+			<div class="col-xs-2 yijiu-left"  style="margin-right: 10px;">
 				<div class="col-xs-4 lefts">
 					<a href="">
 					<ul class="list-unstyled">
@@ -380,15 +382,25 @@
 				    </a>
 				</div>
 			</div>
-			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right" style="margin-right: -13px;">
-				<img src="holder.js/306x175" alt="">
+			@foreach($banner as $k=>$v)
+			@if($k == 6)
+			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right" style=" margin-left: 0px;">
+				<img src="{{ $v->pic }}" alt="" width="306" height="175">
 			</div>
+			@elseif($k == 4)
+			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right">
+				<img src="{{ $v->pic }}" alt=""  width="306" height="175" >
+			</div>
+			@elseif($k == 5)
+			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right" style=" margin-left: -8px;">
+				<img src="{{ $v->pic }}" alt=""  width="306" height="175" >
+			</div>
+			@endif
+			@endforeach
+			<!-- 
 			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right">
 				<img src="holder.js/306x175" alt="">
-			</div>
-			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right">
-				<img src="holder.js/306x175" alt="">
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<!-- 以旧换新 end -->
@@ -402,13 +414,15 @@
 			    </a>
 			</div>
 			<div class="col-xs-12 chanpin">
+				@foreach($goods as $key =>$v)
+				@if($key < 3)
 				<div class="col-xs-3 chanpin-one">
 					<a href="">
-					<img src="holder.js/200x250" alt="">
+					<img src=" {{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
+						<li>{{ $v->title }}</li>
 						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
+						<li>¥{{ $v->price }} <span>| <del>¥2799</del></span></li>
 					</ul>
 					<div class="quan">
 						新品
@@ -420,13 +434,16 @@
 				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
 				    </div>				    
 				</div>
-				<div class="col-xs-3 chanpin-one">
+				@elseif($key == 3)
+				<div class="col-xs-3 chanpin-one" style="margin-right: 0;">
 					<a href="">
-					<img src="holder.js/200x250" alt="">
+					<img src="{{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
+						<li>
+							{{ $v->title }}
+						</li>
 						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
+						<li>¥2499 <span>| <del>¥2799</del></span></li>
 					</ul>
 					<div class="quan">
 						新品
@@ -436,44 +453,10 @@
 				    <div class="goumai">
 				    	<button type="button" class="btn btn-default but1">查看详情</button>
 				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
-				    </div>					    
+				    </div>				    
 				</div>
-				<div class="col-xs-3 chanpin-one">
-					<a href="">
-					<img src="holder.js/200x250" alt="">
-					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
-						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
-					</ul>
-					<div class="quan">
-						新品
-					</div>
-					<div class="xiaoquan"></div>
-				    </a>
-				    <div class="goumai">
-				    	<button type="button" class="btn btn-default but1">查看详情</button>
-				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
-				    </div>					    
-				</div>
-				<div class="col-xs-3 chanpin-one" style="margin-right: 0px;">
-					<a href="">
-					<img src="holder.js/200x250" alt="">
-					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
-						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
-					</ul>
-					<div class="quan">
-						新品
-					</div>
-					<div class="xiaoquan"></div>
-				    </a>
-				    <div class="goumai">
-				    	<button type="button" class="btn btn-default but1">查看详情</button>
-				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
-				    </div>					    
-				</div>
+				@endif
+				@endforeach
 			</div>
 		</div>
 	</div>
@@ -487,19 +470,27 @@
 				<h5 class="pull-right">查看更多&nbsp;<i class="glyphicon glyphicon-plus-sign"></i></h5>
 			    </a>
 			</div>
-			<div class="col-xs-12 chanpin">
+			@foreach($banner as $k=>$v)
+			@if($k == 7)
+			<div class="col-xs-12 chanpin" style="margin-bottom: 15px;">
 				<a href="">
-				<img src="holder.js/1185x400" alt="">
+				<img src="{{ $v->pic }}" alt="" width="100%" height="100%">
 			    </a>
 			</div>
+			@endif
+			@endforeach
+
 			<div class="col-xs-12 chanpin">
+
+				@foreach($goods as $key =>$v)
+				@if($key > 4)
 				<div class="col-xs-3 chanpin-one">
 					<a href="">
-					<img src="holder.js/200x250" alt="">
+					<img src=" {{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
+						<li>{{ $v->title }}</li>
 						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
+						<li>¥{{ $v->price }} <span>| <del>¥2799</del></span></li>
 					</ul>
 					<div class="quan">
 						新品
@@ -509,51 +500,37 @@
 				    <div class="goumai">
 				    	<button type="button" class="btn btn-default but1">查看详情</button>
 				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
-				    </div>					    
+				    </div>				    
 				</div>
-				<div class="col-xs-3 chanpin-one">
+				@elseif($key == 4)
+				<div class="col-xs-3 chanpin-one" style="margin-right: 0;">
 					<a href="">
-					<img src="holder.js/200x250" alt="">
+					<img src="{{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
+						<li>
+							{{ $v->title }}
+						</li>
 						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
+						<li>¥2499 <span>| <del>¥2799</del></span></li>
 					</ul>
 					<div class="quan">
 						新品
 					</div>
 					<div class="xiaoquan"></div>
-				    </a>				    
+				    </a>
+				    <div class="goumai">
+				    	<button type="button" class="btn btn-default but1">查看详情</button>
+				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
+				    </div>				    
 				</div>
-				<div class="col-xs-3 chanpin-one">
-					<a href="">
-					<img src="holder.js/200x250" alt="">
-					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
-						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
-					</ul>
-					<div class="quan">
-						新品
-					</div>
-					<div class="xiaoquan"></div>
-				    </a>				    
-				</div>
-				<div class="col-xs-3 chanpin-one" style="margin-right: 0px;">
-					<a href="">
-					<img src="holder.js/200x250" alt="">
-					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
-						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
-					</ul>
-					<div class="quan">
-						新品
-					</div>
-					<div class="xiaoquan"></div>
-				    </a>				    
-				</div>
+				@endif
+				@endforeach
 			</div>
+
+
+
+
+
 			<div class="col-xs-12 chanpin" style="margin-top: 15px;">
 				<div class="col-xs-3 chanpin-one">
 					<a href="">

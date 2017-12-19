@@ -87,7 +87,10 @@
                                     	
                                         <div class="am-btn-toolbar">
                                             <div class="am-btn-group am-btn-group-xs">
-                                            	<form action="/banner/{{$v->bid}}" method="post" id="del">
+                                                <a href="/banner/{{ $v->bid }}/edit" style="float: left;">
+                                                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 编辑</button>
+                                                </a>
+                                            	<form action="/banner/{{$v->bid}}" method="post" id="del" style="float: left;">
                                                 {{method_field('DELETE')}}
                                                 {{csrf_field()}}
                                                 <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
