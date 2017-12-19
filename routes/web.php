@@ -15,7 +15,7 @@ Route::get('/', function () {
 	$banner = DB::table('banner')->where('path',1)->get();
 	$cates = DB::table('cates')->where('pid',0)->get();
 	// dd($cates);
-    return view('home.layout.home',['banner'=>$banner,'cates'=>$cates]);
+    return view('home.home',['banner'=>$banner,'cates'=>$cates]);
 });
 //后台
 //登录管理
@@ -23,7 +23,7 @@ Route::get('/admin/login','LoginController@login');
 Route::post('/admin/login','LoginController@dologin');
 
 //后台路由组
-Route::group(['middlemware'=>'login'],function(){
+Route::group(['middleware'=>'login'],function(){
 //首页
 Route::get('/admin','AdminController@index');
 
@@ -50,6 +50,10 @@ Route::resource('banner','BannerController');
 //nubiaUI
 Route::resource('UIluntan','NubiaUIController');
 
+
+//前台管理
+Route::resource('qt','QiantaiController');
+
 });
 
 
@@ -72,13 +76,15 @@ Route::get('/Shequ','HomeController@shequ');
 //注册
 
 
+
 //登录
 Route::get('/Home/login','LoginsController@login');
+Route::post('/Home/login','LoginsController@dologin');
 Route::get('/Home/login1','LoginsController@login1');
 //忘记密码
 Route::get('/Home/wangji','WangjiController@wangji');
 Route::get('/Home/wangji1','WangjiController@wangji1');
-Route::get('/message','CommonControlller@message');
+Route::get('/messge','CommonControlller@message');
 
 //了解努比亚
 Route::get('/Home/liaojie','LiaojieController@liaojie');
@@ -125,10 +131,25 @@ Route::get('/Shouji',"HomeController@shouji");
 
 Route::get('/Shouji',"GoodsController@glist");
 
+
+//手机配件
+
+Route::get('/Peijian',"HomeController@peijian");
+
+Route::get('/Peijian',"GoodsController@gpeijian");
+
+
+
+
 Route::get('home/zhuce1','zhuceController@zhuce1');
 Route::get('home/index','ceshiController@index');
+
 //注册
-Route::get('home/zhuce','zhuceController@zhuce');
+Route::get('home/zhuce','UserController@signup');
+Route::post('home/zhuce','UserController@dosign');
+Route::get('/message','CommonController@message');
+Route::get('/confirm/{id}', 'UserController@confirm');
+
 //个人中心
 Route::get('home/gerenzhongxin','gerenController@gerenzhongxin');
 

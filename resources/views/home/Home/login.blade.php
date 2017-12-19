@@ -35,7 +35,7 @@
 								<dl>
 									<dd>
 			                            <div class="input-con">
-			                            	<input type="text" id="username" name="username" placeholder="邮箱/手机号码/用户名" datatype="*" errormsg="手机号码格式错误"> 
+			                            	<input type="text" id="username" name="phone" placeholder="邮箱/手机号码/用户名" datatype="*" errormsg="手机号码格式错误"> 
 			                            	<span class="icon-id"></span>
 			                            </div>
 										<div class="checktip" id="user_name_tag">

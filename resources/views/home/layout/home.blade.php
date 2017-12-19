@@ -84,7 +84,11 @@
 		    	})
 
 
-
+                $('.gr').hover(function(){
+                   $(this).find(".xl").stop(1000).slideDown(1000);
+             	},function(){
+                   $(this).find(".xl").stop(1000).slideUp(1000);
+             	})
 
              })
 
@@ -110,7 +114,7 @@
 	<div class="top-nav">
 		<div class="container">
 			<div class="col-sm-2" style="padding:0px;">
-				<a href="/index">
+				<a href="/">
 				<img src="/image/logo.png" alt="" style="margin-top: 20px;" width="150" height="38">
 				</a>
 			</div>
@@ -172,7 +176,7 @@
 		                </div>
 					</li>
 					<li class="shangchang">
-						<a href="/Shouji">配件</a>
+						<a href="/Peijian">配件</a>
 						<div class="xialacaidan" id="xialacaidan">
 					         <div class="container" role="listbox">
 
@@ -281,7 +285,7 @@
 					</li>
 					<li><a href="/Home/fuwu">服务</a></li>
 					<li><a href="/Home/tiyan">体验店</a></li>
-					<li><a href="">社区</a></li>
+					<li><a href="/adress">个人中心</a></li>
 					<li style="margin-right: none;" class="shangchang">
 						<a href="/Shequ">nubia UI</a>
                         <div class="xialacaidan" id="xialacaidan">
@@ -340,8 +344,8 @@
 				
 			</div>
 			<div class="col-sm-2">
-				<a href="/Home/login" class="yonghu">
-				<i class="glyphicon glyphicon-user" style="color:#fff;line-height: 70px;font-size: 16px;"></i>
+				<a href="/Home/login" class="yonghu" style="position: relative;">
+				<i class="glyphicon glyphicon-user gr" style="color:#fff;line-height: 70px;font-size: 16px;"></i>
 			    </a>
 				<a href="">
 				<div class="col-sm-9 gouwuche pull-right">
@@ -359,7 +363,7 @@
 
 	@section('center')
 	<section>
-		<div class="container-fluid" style="height: auto; background-color: #efeeeb;">
+		<div class="container-fluid" style="height: auto; background-color: #efeeeb;z-index: 1;">
 			<div class="col-xs-12" style="height: 530px; padding: 0px;">
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				  <!-- Indicators -->

@@ -20,8 +20,7 @@ class HomeController extends Controller
         $goods = DB::table('goods')
         ->where('status',1)
         ->select('id','title','price')
-        ->orderBy('id','desc')
-        ->paginate(12);
+        ->get();
         // dd($goods);
         //商品的图片加入
         foreach ($goods as $key => &$value) {
@@ -42,6 +41,9 @@ class HomeController extends Controller
 
     public function doindex(){
     	// echo "string";
+
+
+
     	return view('home.layout.home');
     }
 
@@ -50,11 +52,14 @@ class HomeController extends Controller
         // echo "string";
         $shequ = DB::table('nubiaUI')->paginate();
 
+        $banner = DB::table('banner')->get();
+        // dd($banner);
+
         // dd($shequ);
 
 
 
-    	return view('home.nubiaUI.nubiaUI',compact('shequ'));
+    	return view('home.nubiaUI.nubiaUI',compact('shequ','banner'));
     }
 
 
@@ -66,8 +71,21 @@ class HomeController extends Controller
 
 
     public function shouji(){
-        return view('home.shouji.shouji');
+
+
+
+        return view('home.shouji.shouji',compact('banner'));
     }
+
+
+
+
+    public function peijian(){
+        return view('home.peijian.peijian');
+    }
+
+
+
 
 
 

@@ -68,34 +68,44 @@
 						    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
 						    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
 						  </ol>
-
+                           
 						  <!-- Wrapper for slides -->
 						  <div class="carousel-inner" role="listbox">
-						    <div class="item active">
-							      <img src="holder.js/100px300?bg=#358" alt="...">
+						  	@foreach($banner as $k=>$v)
+						  	@if($k == 9)
+						    <div class="active item" style="width: 1200px;height: 330px;">
+							      <img src="{{ $v->pic }}" alt="..." style="width: 100%; height: 100%;">
 							      <div class="carousel-caption">
 							      </div>
 						    </div>
-						    <div class="item">
-						      <img src="holder.js/100px300?bg=#265" alt="...">
+						    @endif
+						    @if($k == 10)
+						    <div class="item" style="width: 100%;height: 330px;">
+						      <img src="{{ $v->pic }}" alt="..." style="width: 100%; height: 100%;">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
-						    <div class="item">
-						      <img src="holder.js/100px300?bg=#654" alt="...">
+						    @endif
+						    @if($k == 11)
+						    <div class="item" style="width: 100%;height: 330px;">
+						      <img src="{{ $v->pic }}" alt="..." style="width: 100%; height: 100%;">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
-						    <div class="item">
-						      <img src="holder.js/100px300?theme=sky" alt="...">
+						    @endif
+						    @if($k == 12)
+						    <div class="item" style="width: 100%;height: 330px;">
+						      <img src="{{ $v->pic }}" alt="..." style="width: 100%; height: 100%;">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
+                            @endif
+						    @endforeach
 						  </div>
 						  
 					</div>
 				</div>
-				<div class="jinri">
+				<div class="jinri" style="margin-top: 40px;">
 					<div class="col-xs-5 jinri-left">
 						<ul class="list-unstyled list-inline">
 							<li>今日 : <span>410</span></li>
@@ -198,26 +208,36 @@
 						    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
 						  </ol>
 						  <div class="carousel-inner" role="listbox">
+						  	@foreach($banner as $k=>$v)
+						  	@if($k == 13)
 						    <div class="item active">
-							      <img src="holder.js/100px100?bg=#358" alt="...">
+							      <img src="{{ $v->pic }}" alt="..." style="height: 100px;width: 288px;">
 							      <div class="carousel-caption">
 							      </div>
 						    </div>
+						    @endif
+						    @if($k == 14)
 						    <div class="item">
-						      <img src="holder.js/100px100?bg=#265" alt="...">
+						      <img src="{{ $v->pic }}" alt="..." style="height: 100px;width: 288px;">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
+						    @endif
+						    @if($k == 15)
 						    <div class="item">
-						      <img src="holder.js/100px100?bg=#654" alt="...">
+						      <img src="{{ $v->pic }}" alt="..." style="height: 100px;width: 288px;">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
+						    @endif
+						    @if($k == 16)
 						    <div class="item">
-						      <img src="holder.js/100px100?theme=sky" alt="...">
+						      <img src="{{ $v->pic }}" alt="..." style="height: 100px;width: 288px;">
 						      <div class="carousel-caption">
 						      </div>
 						    </div>
+						    @endif
+                            @endforeach
 						  </div>
 						  
 							</div>
@@ -244,87 +264,117 @@
 					<div class="col-xs-5 jinri-right jinri-right-two" style="padding: 0px;min-height: 90px;" id="jinri-four">
 						<div class="panel panel-default" style="margin-bottom: 0px;">
 						  <div class="panel-heading">论坛明星用户</div>
+						    @foreach($banner as $k=>$v)
+						      @if($k == 17)
 						      <a href="">
 							      <ul class="list-unstyled" id="xiaoya">
-							      	  <li><img src="holder.js/48x48" alt=""></li>
-							      	  <li><a href="">小亚</a></li>
+							      	  <li><img src="{{ $v->pic }}" alt="" style="width: 48px;height: 48px;"></li>
+							      	  <li><a href="" style="font-size: 12px;">{{ $v->bname }}</a></li>
 							      </ul>
 						      </a>
+						      @endif
+						      @if($k == 18)
 						      <a href="">
 							      <ul class="list-unstyled" id="xiaoya">
-							      	  <li><img src="holder.js/48x48" alt=""></li>
-							      	  <li><a href="">小亚</a></li>
+							      	  <li><img src="{{ $v->pic }}" alt="" style="width: 48px;height: 48px;"></li>
+							      	  <li><a href="" style="font-size: 12px;">{{ $v->bname }}</a></li>
 							      </ul>
 						      </a>
+						      @endif
+						      @if($k == 19)
 						      <a href="">
 							      <ul class="list-unstyled" id="xiaoya">
-							      	  <li><img src="holder.js/48x48" alt=""></li>
-							      	  <li><a href="">小亚</a></li>
+							      	  <li><img src="{{ $v->pic }}" alt="" style="width: 48px;height: 48px;"></li>
+							      	  <li><a href="" style="font-size: 12px;">{{ $v->bname }}</a></li>
 							      </ul>
 						      </a>
+						      @endif
+						      @if($k == 20)
 						      <a href="">
 							      <ul class="list-unstyled" id="xiaoya">
-							      	  <li><img src="holder.js/48x48" alt=""></li>
-							      	  <li><a href="">小亚</a></li>
+							      	  <li><img src="{{ $v->pic }}" alt="" style="width: 48px;height: 48px;"></li>
+							      	  <li><a href="" style="font-size: 12px;">{{ $v->bname }}</a></li>
 							      </ul>
 						      </a>
+						      @endif
+						      @if($k == 21)
 						      <a href="">
 							      <ul class="list-unstyled" id="xiaoya">
-							      	  <li><img src="holder.js/48x48" alt=""></li>
-							      	  <li><a href="">小亚</a></li>
+							      	  <li><img src="{{ $v->pic }}" alt="" style="width: 48px;height: 48px;"></li>
+							      	  <li><a href="" style="font-size: 12px;">{{ $v->bname }}</a></li>
 							      </ul>
 						      </a>
+						      @endif
+						      @if($k == 22)
 						      <a href="">
 							      <ul class="list-unstyled" id="xiaoya">
-							      	  <li><img src="holder.js/48x48" alt=""></li>
-							      	  <li><a href="">小亚</a></li>
+							      	  <li><img src="{{ $v->pic }}" alt="" style="width: 48px;height: 48px;"></li>
+							      	  <li><a href="" style="font-size: 12px;">{{ $v->bname }}</a></li>
 							      </ul>
 						      </a>
+						      @endif
+						      @if($k == 23)
 						      <a href="">
 							      <ul class="list-unstyled" id="xiaoya">
-							      	  <li><img src="holder.js/48x48" alt=""></li>
-							      	  <li><a href="">小亚</a></li>
+							      	  <li><img src="{{ $v->pic }}" alt="" style="width: 48px;height: 48px;"></li>
+							      	  <li><a href="" style="font-size: 12px;">{{ $v->bname }}</a></li>
 							      </ul>
 						      </a>
+						      @endif
+						      @if($k == 24)
 						      <a href="">
 							      <ul class="list-unstyled" id="xiaoya">
-							      	  <li><img src="holder.js/48x48" alt=""></li>
-							      	  <li><a href="">小亚</a></li>
+							      	  <li><img src="{{ $v->pic }}" alt="" style="width: 48px;height: 48px;"></li>
+							      	  <li><a href="" style="font-size: 12px;">{{ $v->bname }}</a></li>
 							      </ul>
 						      </a>
+						      @endif
+						      @if($k == 25)
 						      <a href="">
 							      <ul class="list-unstyled" id="xiaoya">
-							      	  <li><img src="holder.js/48x48" alt=""></li>
-							      	  <li><a href="">小亚</a></li>
+							      	  <li><img src="{{ $v->pic }}" alt="" style="width: 48px;height: 48px;"></li>
+							      	  <li><a href="" style="font-size: 12px;">{{ $v->bname }}</a></li>
 							      </ul>
 						      </a>
+						      @endif
+						      @if($k == 26)
 						      <a href="">
 							      <ul class="list-unstyled" id="xiaoya">
-							      	  <li><img src="holder.js/48x48" alt=""></li>
-							      	  <li><a href="">小亚</a></li>
+							      	  <li><img src="{{ $v->pic }}" alt="" style="width: 48px;height: 48px;"></li>
+							      	  <li><a href="" style="font-size: 12px;">{{ $v->bname }}</a></li>
 							      </ul>
 						      </a>
+						      @endif
+						      @if($k == 27)
 						      <a href="">
 							      <ul class="list-unstyled" id="xiaoya">
-							      	  <li><img src="holder.js/48x48" alt=""></li>
-							      	  <li><a href="">小亚</a></li>
+							      	  <li><img src="{{ $v->pic }}" alt="" style="width: 48px;height: 48px;"></li>
+							      	  <li><a href="" style="font-size: 12px;">{{ $v->bname }}</a></li>
 							      </ul>
 						      </a>
+						      @endif
+						      @if($k == 28)
 						      <a href="">
 							      <ul class="list-unstyled" id="xiaoya">
-							      	  <li><img src="holder.js/48x48" alt=""></li>
-							      	  <li><a href="">小亚</a></li>
+							      	  <li><img src="{{ $v->pic }}" alt="" style="width: 48px;height: 48px;"></li>
+							      	  <li><a href="" style="font-size: 12px;">{{ $v->bname }}</a></li>
 							      </ul>
 						      </a>
+						      @endif
+						      @endforeach
 						</div>
 					</div>
 					<div class="col-xs-5 jinri-right jinri-right-two" style="padding: 0px;min-height: 90px;" id="jinri-four">
 						<div class="panel panel-default" style="margin-bottom: 0px;">
 						  <div class="panel-heading">nubiaUI社区客户端下载</div>
 						  <div style="width: 288px;">
+						  	@foreach($banner as $k=>$v)
+						  	@if($k == 8)
 						  	<a href="">
-						  	   <img src="holder.js/145x145" alt="" style="margin: 15px;margin-left:70px;" width="145" height="145">
+						  	   <img src="{{ $v->pic }}" alt="" style="margin: 15px;margin-left:70px;" width="145" height="145">
 						  	</a>
+						  	@endif
+						  	@endforeach
 						  </div>
 						</div>
 					</div>

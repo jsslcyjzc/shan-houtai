@@ -151,7 +151,35 @@
                         </ul>
                     </li>
 
+                    
+                    <!-- 登录中心 -->
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-thumbs-up"></i>
+                            <span>前台用户</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="/qt">
+                                        <i class="am-icon-angle-right"></i>
+                                        <span>用户列表</span>
+                                        <i class="tpl-left-nav-content tpl-badge-primary">
+                                           5
+                                        </i>
+                                </a>
 
+                                <a href="/qt/create">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>添加用户</span>
+                                    <i class="tpl-left-nav-content tpl-badge-success">
+                                       18
+                                     </i>
+                                 </a>
+
+                            </li>
+                        </ul>
+                    </li>
 
 
 

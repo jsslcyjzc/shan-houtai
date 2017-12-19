@@ -7,9 +7,7 @@
 
 @section('am')
     @if(session('msg'))
-    <div class="alert alert-info col-md-12 bg-primary">
-        {{session('msg')}}
-    </div>
+    <div class="alert alert-success" role="alert"></div>
     @endif
     <div class="tpl-portlet-components">
         <div class="portlet-title">

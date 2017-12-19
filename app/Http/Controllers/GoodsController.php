@@ -206,7 +206,7 @@ class GoodsController extends Controller
         ->where('status',1)
         ->select('id','title','price')
         ->orderBy('id','desc')
-        ->paginate(12);
+        ->get();
         // dd($goods);
         //商品的图片加入
         foreach ($goods as $key => &$value) {
@@ -214,9 +214,37 @@ class GoodsController extends Controller
         }
 
         $cates = DB::table('cates');
+
+
+        $banner = DB::table('banner')->get();
+        // dd($banner);
+        //解析模板
+          return view('home.shouji.shouji',compact('goods','banner'));
+    }
+
+
+
+
+
+    public function gpeijian(){
+        //读取商品的详细信息
+        $goods = DB::table('goods')
+        ->where('status',1)
+        ->select('id','title','price')
+        ->orderBy('id','desc')
+        ->get();
+        // dd($goods);
+        //商品的图片加入
+        foreach ($goods as $key => &$value) {
+            $value->pic = DB::table('goods_pic')->where('goods_id',$value->id)->value('pic');
+        }
+
+        $cates = DB::table('cates');
+
+        $banner = DB::table('banner')->get();
         // dd($goods);
         //解析模板
-          return view('home.shouji.shouji',compact('goods'));
+          return view('home.peijian.peijian',compact('goods','banner'));
     }
 
 

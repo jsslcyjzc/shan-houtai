@@ -415,9 +415,9 @@
 			</div>
 			<div class="col-xs-12 chanpin">
 				@foreach($goods as $key =>$v)
-				@if($key < 3)
+				@if($key == 4)
 				<div class="col-xs-3 chanpin-one">
-					<a href="">
+					<a href="/goods/{{$v->id}}">
 					<img src=" {{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
 						<li>{{ $v->title }}</li>
@@ -434,9 +434,47 @@
 				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
 				    </div>				    
 				</div>
-				@elseif($key == 3)
+				@elseif($key == 5 )
+				<div class="col-xs-3 chanpin-one">
+					<a href="/goods/{{$v->id}}">
+					<img src=" {{ $v->pic }}" alt="">
+					<ul class="list-unstyled">
+						<li>{{ $v->title }}</li>
+						<li>后置双1300万</li>
+						<li>¥{{ $v->price }} <span>| <del>¥2799</del></span></li>
+					</ul>
+					<div class="quan">
+						新品
+					</div>
+					<div class="xiaoquan"></div>
+				    </a>
+				    <div class="goumai">
+				    	<button type="button" class="btn btn-default but1">查看详情</button>
+				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
+				    </div>				    
+				</div>
+				@elseif($key == 6 )
+				<div class="col-xs-3 chanpin-one">
+					<a href="/goods/{{$v->id}}">
+					<img src=" {{ $v->pic }}" alt="">
+					<ul class="list-unstyled">
+						<li>{{ $v->title }}</li>
+						<li>后置双1300万</li>
+						<li>¥{{ $v->price }} <span>| <del>¥2799</del></span></li>
+					</ul>
+					<div class="quan">
+						新品
+					</div>
+					<div class="xiaoquan"></div>
+				    </a>
+				    <div class="goumai">
+				    	<button type="button" class="btn btn-default but1">查看详情</button>
+				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
+				    </div>				    
+				</div>
+				@elseif($key == 7)
 				<div class="col-xs-3 chanpin-one" style="margin-right: 0;">
-					<a href="">
+					<a href="/goods/{{$v->id}}">
 					<img src="{{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
 						<li>
@@ -483,7 +521,7 @@
 			<div class="col-xs-12 chanpin">
 
 				@foreach($goods as $key =>$v)
-				@if($key > 4)
+				@if($key == 8)
 				<div class="col-xs-3 chanpin-one">
 					<a href="">
 					<img src=" {{ $v->pic }}" alt="">
@@ -502,9 +540,9 @@
 				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
 				    </div>				    
 				</div>
-				@elseif($key == 4)
-				<div class="col-xs-3 chanpin-one" style="margin-right: 0;">
-					<a href="">
+				@elseif($key == 10)
+				<div class="col-xs-3 chanpin-one">
+					<a href="/goods/{{$v->id}}">
 					<img src="{{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
 						<li>
@@ -512,6 +550,44 @@
 						</li>
 						<li>后置双1300万</li>
 						<li>¥2499 <span>| <del>¥2799</del></span></li>
+					</ul>
+					<div class="quan">
+						新品
+					</div>
+					<div class="xiaoquan"></div>
+				    </a>
+				    <div class="goumai">
+				    	<button type="button" class="btn btn-default but1">查看详情</button>
+				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
+				    </div>				    
+				</div>
+				@elseif($key == 11)
+				<div class="col-xs-3 chanpin-one">
+					<a href="/goods/{{$v->id}}">
+					<img src=" {{ $v->pic }}" alt="">
+					<ul class="list-unstyled">
+						<li>{{ $v->title }}</li>
+						<li>后置双1300万</li>
+						<li>¥{{ $v->price }} <span>| <del>¥2799</del></span></li>
+					</ul>
+					<div class="quan">
+						新品
+					</div>
+					<div class="xiaoquan"></div>
+				    </a>
+				    <div class="goumai">
+				    	<button type="button" class="btn btn-default but1">查看详情</button>
+				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
+				    </div>				    
+				</div>
+				@elseif($key == 12)
+				<div class="col-xs-3 chanpin-one" style="margin-right: 0px;">
+					<a href="/goods/{{$v->id}}">
+					<img src=" {{ $v->pic }}" alt="">
+					<ul class="list-unstyled">
+						<li>{{ $v->title }}</li>
+						<li>后置双1300万</li>
+						<li>¥{{ $v->price }} <span>| <del>¥2799</del></span></li>
 					</ul>
 					<div class="quan">
 						新品
@@ -531,63 +607,89 @@
 
 
 
-			<div class="col-xs-12 chanpin" style="margin-top: 15px;">
+			<div class="col-xs-12 chanpin" style="margin-top: 13px;">
+
+				@foreach($goods as $key =>$v)
+				@if($key == 13)
 				<div class="col-xs-3 chanpin-one">
-					<a href="">
-					<img src="holder.js/200x250" alt="">
+					<a href="/goods/{{$v->id}}">
+					<img src=" {{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
+						<li>{{ $v->title }}</li>
 						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
+						<li>¥{{ $v->price }} <span>| <del>¥2799</del></span></li>
 					</ul>
 					<div class="quan">
 						新品
 					</div>
 					<div class="xiaoquan"></div>
-				    </a>				    
+				    </a>
+				    <div class="goumai">
+				    	<button type="button" class="btn btn-default but1">查看详情</button>
+				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
+				    </div>				    
 				</div>
+				@elseif($key == 10)
 				<div class="col-xs-3 chanpin-one">
-					<a href="">
-					<img src="holder.js/200x250" alt="">
+					<a href="/goods/{{$v->id}}">
+					<img src="{{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
+						<li>
+							{{ $v->title }}
+						</li>
 						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
+						<li>¥2499 <span>| <del>¥2799</del></span></li>
 					</ul>
 					<div class="quan">
 						新品
 					</div>
 					<div class="xiaoquan"></div>
-				    </a>				    
+				    </a>
+				    <div class="goumai">
+				    	<button type="button" class="btn btn-default but1">查看详情</button>
+				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
+				    </div>				    
 				</div>
+				@elseif($key == 11)
 				<div class="col-xs-3 chanpin-one">
-					<a href="">
-					<img src="holder.js/200x250" alt="">
+					<a href="/goods/{{$v->id}}">
+					<img src=" {{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
+						<li>{{ $v->title }}</li>
 						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
+						<li>¥{{ $v->price }} <span>| <del>¥2799</del></span></li>
 					</ul>
 					<div class="quan">
 						新品
 					</div>
 					<div class="xiaoquan"></div>
-				    </a>				    
+				    </a>
+				    <div class="goumai">
+				    	<button type="button" class="btn btn-default but1">查看详情</button>
+				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
+				    </div>				    
 				</div>
+				@elseif($key == 12)
 				<div class="col-xs-3 chanpin-one" style="margin-right: 0px;">
-					<a href="">
-					<img src="holder.js/200x250" alt="">
+					<a href="/goods/{{$v->id}}">
+					<img src=" {{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
+						<li>{{ $v->title }}</li>
 						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
+						<li>¥{{ $v->price }} <span>| <del>¥2799</del></span></li>
 					</ul>
 					<div class="quan">
 						新品
 					</div>
 					<div class="xiaoquan"></div>
-				    </a>				    
+				    </a>
+				    <div class="goumai">
+				    	<button type="button" class="btn btn-default but1">查看详情</button>
+				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
+				    </div>				    
 				</div>
+				@endif
+				@endforeach
 			</div>
 		</div>
 	</div>
@@ -602,16 +704,18 @@
 			    </a>
 			</div>
 			<div class="col-xs-12 chanpin">
-				<div class="col-xs-6 chanpin-one" style="width: 585px;">
-					<!-- <img src="hodel.js/" alt=""> -->				    
+
+				<div class="col-xs-6 chanpin-one" style="width: 585px; padding: 0px;">
+                    <a href="">
+					<img src="{{ $banner[32]->pic }}" alt="" style="width: 100%; height:410px;margin: 0px;">				
+					</a>
 				</div>
 				<div class="col-xs-3 chanpin-one">
-					<a href="">
-					<img src="holder.js/200x250" alt="">
+					<a href="/goods/{{$goods[14]->id}}">
+					<img src="{{ $goods[14]->pic }}" alt="" style="width: 280px; margin-left: -15px;" >
 					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
-						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
+						<li>{{ $goods[14]->title }}</li>
+						<li>¥{{ $goods[14]->price }}</li>
 					</ul>
 					<div class="quan">
 						新品
@@ -620,12 +724,11 @@
 				    </a>				    
 				</div>
 				<div class="col-xs-3 chanpin-one" style="margin-right: 0px;">
-					<a href="">
-					<img src="holder.js/200x250" alt="">
+					<a href="/goods/{{$goods[9]->id}}">
+					<img src="{{ $goods[9]->pic }}" alt="" style="width: 280px; margin-left: -15px;">
 					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
-						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
+						<li>{{ $goods[9]->title }}</li>
+						<li>¥{{ $goods[9]->price }}</li>
 					</ul>
 					<div class="quan">
 						新品
@@ -636,12 +739,11 @@
 			</div>
 			<div class="col-xs-12 chanpin" style="margin-top: 15px;">
 				<div class="col-xs-3 chanpin-one">
-					<a href="">
-					<img src="holder.js/200x250" alt="">
+					<a href="/goods/{{$goods[15]->id}}">
+					<img src="{{ $goods[15]->pic }}" alt="" style="width: 280px; margin-left: -15px;">
 					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
-						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
+						<li>{{ $goods[15]->title }}</li>
+						<li>¥{{ $goods[15]->price }} <span>| <del>149</del></span></li>
 					</ul>
 					<div class="quan">
 						新品
@@ -650,12 +752,12 @@
 				    </a>				    
 				</div>
 				<div class="col-xs-3 chanpin-one">
-					<a href="">
-					<img src="holder.js/200x250" alt="">
+					<a href="/goods/{{$goods[16]->id}}">
+					<img src="{{ $goods[16]->pic }}" alt="" >
 					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
-						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
+						<li>{{ $goods[16]->title }}</li>
+						<li></li>
+						<li>¥{{ $goods[16]->price }} <span>| <del>149</del></span></li>
 					</ul>
 					<div class="quan">
 						新品
@@ -664,12 +766,12 @@
 				    </a>				    
 				</div>
 				<div class="col-xs-3 chanpin-one">
-					<a href="">
-					<img src="holder.js/200x250" alt="">
+					<a href="/goods/{{$goods[17]->id}}">
+					<img src="{{ $goods[17]->pic }}" alt="" style="width: 280px; margin-left: -15px;">
 					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
-						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
+						<li>{{ $goods[17]->title }}</li>
+						<li></li>
+						<li>¥{{ $goods[17]->price }}</li>
 					</ul>
 					<div class="quan">
 						新品
@@ -678,12 +780,12 @@
 				    </a>				    
 				</div>
 				<div class="col-xs-3 chanpin-one" style="margin-right: 0px;">
-					<a href="">
-					<img src="holder.js/200x250" alt="">
+					<a href="/goods/{{$goods[18]->id}}">
+					<img src="{{ $goods[18]->pic }}" alt="">
 					<ul class="list-unstyled">
-						<li>Z17 无边框 曜石黑</li>
-						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>2799</del></span></li>
+						<li>{{ $goods[18]->title }}</li>
+						<li></li>
+						<li>¥{{ $goods[18]->price }}</li>
 					</ul>
 					<div class="quan">
 						新品
@@ -707,37 +809,37 @@
 			<div class="col-xs-12 reping">
 				<div class="col-xs-3 reping-one">
 					<a href="">
-					<img src="holder.js/285x175" alt="">
+					<img src="{{ $banner[33]->pic }}" alt="" width="285" height="175">
 					<ul class="list-unstyled">
-						<li>带上Z17S去旅行</li>
-						<li>记录你的全世界</li>
+						<li>{!! $banner[33]->bname !!}</li>
+						<li>{!! $banner[33]->blink !!}</li>
 					</ul>
 				    </a>
 				</div>
 				<div class="col-xs-3 reping-one">
 					<a href="">
-					<img src="holder.js/285x175" alt="">
+					<img src="{{ $banner[34]->pic }}" alt="" width="285" height="175">
 					<ul class="list-unstyled">
-						<li>带上Z17S去旅行</li>
-						<li>记录你的全世界</li>
+						<li>{!! $banner[34]->bname !!}</li>
+						<li>{!! $banner[34]->blink !!}</li>
 					</ul>
 				    </a>
 				</div>
 				<div class="col-xs-3 reping-one">
 					<a href="">
-					<img src="holder.js/285x175" alt="">
+					<img src="{{ $banner[35]->pic }}" alt="" width="285" height="175">
 					<ul class="list-unstyled">
-						<li>带上Z17S去旅行</li>
-						<li>记录你的全世界</li>
+						<li>{!! $banner[35]->bname !!}</li>
+						<li>{!! $banner[35]->blink !!}</li>
 					</ul>
 				    </a>
 				</div>
 				<div class="col-xs-3 reping-one" style="margin-right: 0px;">
 					<a href="">
-					<img src="holder.js/285x175" alt="">
+					<img src="{{ $banner[36]->pic }}" alt="" width="285" height="175">
 					<ul class="list-unstyled">
-						<li>带上Z17S去旅行</li>
-						<li>记录你的全世界</li>
+						<li>{!! $banner[36]->bname !!}</li>
+						<li>{!! $banner[36]->blink !!}</li>
 					</ul>
 				    </a>
 				</div>
@@ -757,10 +859,10 @@
 			<div class="col-xs-12 reping">
 				<div class="col-xs-3 reping-one reping-two">
 					<a href="">
-					<img src="holder.js/285x175" alt="">
+					<img src="{{ $banner[37]->pic }}" alt="" width="285" height="175">
 					<ul class="list-unstyled">
-						<li>带上Z17S去旅行</li>
-						<li>记录你的全世界</li>
+						<li>{!! $banner[37]->bname !!}</li>
+						<li>{!! $banner[37]->blink !!}</li>
 					</ul>
 				    <div class="kaishi glyphicon glyphicon-play"></div>
 
@@ -769,10 +871,10 @@
 
 				<div class="col-xs-3 reping-one reping-two">
 					<a href="">
-					<img src="holder.js/285x175" alt="">
+					<img src="{{ $banner[38]->pic }}" alt="" width="285" height="175">
 					<ul class="list-unstyled">
-						<li>带上Z17S去旅行</li>
-						<li>记录你的全世界</li>
+						<li>{!! $banner[38]->bname !!}</li>
+						<li>{!! $banner[38]->blink !!}</li>
 					</ul>
 				    <div class="kaishi glyphicon glyphicon-play"></div>
 
@@ -781,10 +883,10 @@
 
 				<div class="col-xs-3 reping-one reping-two">
 					<a href="">
-					<img src="holder.js/285x175" alt="">
+					<img src="{{ $banner[39]->pic }}" alt="" width="285" height="175">
 					<ul class="list-unstyled">
-						<li>带上Z17S去旅行</li>
-						<li>记录你的全世界</li>
+						<li>{!! $banner[39]->bname !!}</li>
+						<li>{!! $banner[39]->blink !!}</li>
 					</ul>
 				    <div class="kaishi glyphicon glyphicon-play"></div>
 
@@ -792,10 +894,10 @@
 				</div>
 				<div class="col-xs-3 reping-one reping-two" style="margin-right: 0px;">
 					<a href="">
-					<img src="holder.js/285x175" alt="">
+					<img src="{{ $banner[40]->pic }}" alt="" width="285" height="175">
 					<ul class="list-unstyled">
-						<li>带上Z17S去旅行</li>
-						<li>记录你的全世界</li>
+						<li>{!! $banner[40]->bname !!}</li>
+						<li>{!! $banner[40]->blink !!}</li>
 					</ul>
 				    <div class="kaishi glyphicon glyphicon-play"></div>
 

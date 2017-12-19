@@ -158,11 +158,54 @@ class UserController extends Controller
     public function destroy($id)
     {
         //删除
-        dd($id);
+        // dd($id);
         if (DB::table('users')->where('id',$id)->delete()) {
             return back()->with('msg','删除成功');
         }else{
             return back()->with('msg','删除失败!!');
+        }
+    }
+
+    public function signup(){
+        return view('home.zhuce');
+    }
+
+    public function dosign(Request $request){
+        //检测验证码是否正确
+        $code = $request->vcode;
+        if(session('vcode') != $code) {
+            return back()->with('msg','验证码错误');
+        }
+
+        //获取用户的信息
+        $data = $request->only(['username','phone','email','password','verfile']);
+        $data['password'] = Hash::make($data['password']);
+        $data['verify'] = str_random(30);
+
+        //插入数据
+        if(DB::table('useres')->insert($data)) {
+
+            return redirect('/Home/login')->with('msg','注册成功,一封激活邮件已经发送到您的邮箱,请确认激活!!');
+        } else {
+            return back()->with('msg','注册失败!!');
+        }
+    }
+
+    public function confirm($id)
+    {
+        //根据id来查找数据库中的用户信息
+        $user = DB::table('useres')->where('verify',$id)->first();
+        if(empty($user)) {
+            return redirect('/')->with('msg','激活失败!!请重新激活');
+        }
+        //更新用户的状态
+        $data = ['status'=>1];
+        $res = DB::table('useres')->where('id',$user->id)->update($data);
+
+        if($res) {
+            return redirect('/')->with('msg','激活成功');
+        }else{
+            return redirect('/')->with('msg','激活失败!!');
         }
     }
 }

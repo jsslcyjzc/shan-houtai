@@ -8,6 +8,13 @@
 
 @section('css')
 <link rel="stylesheet" href="/css/shouji.css">
+
+
+<style>
+section .shouji ul li{
+	margin-right: 30px;
+}
+</style>
 @endsection
 
 
@@ -51,16 +58,16 @@
         
 		$(".tutu > a").hover(function(){
 			$(this).find('img').stop().animate({
-				width:"100px",
-				height:"165px",
+				width:"190px",
+				height:"168px",
 				top:"-5px",
 				left:"-5px"
 				},500)
 			$(this).find("li:first-child").css("color","#ff370e");
 		},function(){
 			$(this).find('img').stop().animate({
-				width:"95px",
-				height:"155px",
+				width:"180px",
+				height:"160px",
 				top:"0px",
 				left:"0px"
 			},500)
@@ -77,43 +84,44 @@
 			<div class="col-xs-12 shouji">
 				<ul class="list-unstyle list-inline">
 					<li><a href="">
-						<img src="holder.js/60x80" alt="">
-						<p>耳机</p>
+						<img src="{{ $banner[42]->pic }}" alt="" style="width: 120px; margin-left: -35px;">
+						<p style="margin-left: -25px;">{{ $banner[42]->bname }}</p>
 						<span class="span1"></span>
 					    </a>
 					    
 				    </li>
 					<li><a href="">
-						<img src="holder.js/60x80" alt="">
-						<p>保护壳</p>
+						<img src="{{ $banner[43]->pic }}" alt="" style="width: 130px; margin-left: -35px;">
+						<p style="margin-left: -25px;">{{ $banner[43]->bname }}</p>
 						<span class="span1"></span>
 					    </a>
 					    
 				    </li>
 					<li><a href="">
-						<img src="holder.js/60x80" alt="">
-						<p>耳机</p>
+						<img src="{{ $banner[44]->pic }}" alt="" style="width: 150px; margin-left: -55px;">
+						<p style="margin-left: -47px;">{{ $banner[44]->bname }}</p>
 						<span class="span1"></span>
 						</a>
 						
 					</li>
 					<li><a href="">
-						<img src="holder.js/60x80" alt="">
-						<p>耳机</p>
+						<img src="{{ $banner[45]->pic }}" alt="" style="width: 150px; margin-left: -55px;">
+						<p style="margin-left: -47px;">{{ $banner[45]->bname }}</p>
+						<span class="span1"></span>
+						</a>
+						
+					</li>
+
+					<li><a href="">
+						<img src="{{ $banner[46]->pic }}" alt="" style="width: 150px; margin-left: -55px;">
+						<p style="margin-left: -47px;">{{ $banner[45]->bname }}</p>
 						<span class="span1"></span>
 						</a>
 						
 					</li>
 					<li><a href="">
-						<img src="holder.js/60x80" alt="">
-						<p>耳机</p>
-						<span class="span1"></span>
-						</a>
-						
-					</li>
-					<li><a href="">
-						<img src="holder.js/60x80" alt="">
-						<p>耳机</p>
+						<img src="{{ $banner[47]->pic }}" alt="" style="width: 150px; margin-left: -55px;">
+						<p style="margin-left: -47px;">{{ $banner[47]->bname }}</p>
 						<span class="span1"></span>
 						</a>
 						
@@ -121,12 +129,13 @@
 				</ul>
 			</div>
 			<div class="col-xs-12 tupian">
-				<img src="holder.js/100px450" alt="" width="100%" height="450">
+				<img src="{{ $banner[41]->pic }}" alt="" width="100%" height="450">
 			</div>
 			<div class="col-xs-12 tan">
 				<a href="">
 					<ul class="list-unstyled">
 						<li>
+
 							<div class="fangda">
 							    <img src="/image/erji1.png" alt="">
 							</div>
@@ -215,7 +224,7 @@
 					<div class="tutu col-xs-3">
 						<a href="/goods/{{$v->id}}">
 						<div class="imgs">
-							<img src="{{$v->pic}}" alt="">
+							<img src="{{$v->pic}}" alt="" style="width:180px;height:165px;margin-left: -50px;">
 						</div>
 						<ul class="list-unstyled">
 							<li>{{$v->title}}</li>
