@@ -28,10 +28,14 @@ class BannerController extends Controller
             $banners = DB::table('banner')->paginate($num);
         }
 
+
+        $user = DB::table('users')->get();
+
         return view('admin.banner.index',[
                'banners' => $banners,
                'keywords' => $keywords,
-               'num' => $num
+               'num' => $num,
+               'user'=>$user
         ]);
         
     }
@@ -44,8 +48,8 @@ class BannerController extends Controller
     public function create()
     {
         //
-
-        return view('admin.banner.create');
+        $user = DB::table('users')->get();
+        return view('admin.banner.create',compact('user'));
     }
 
     /**

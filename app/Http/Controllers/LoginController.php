@@ -23,6 +23,7 @@ class LoginController extends Controller
 
         //检测数据是否正确
         $user = DB::table('users')->where('username',$data['username'])->first();
+        // dd($user);
 
         // dd($user);
         //判断有没有这个用户

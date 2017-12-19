@@ -23,9 +23,11 @@ class CateController extends Controller
 
             $value->name = str_repeat('|-----', $count).$value->name;
         }
+        
 
+        $user = DB::table('users')->get();
         //解析模板
-        return view('admin.cate.index',['cates'=>$cates]);
+        return view('admin.cate.index',['cates'=>$cates,'user'=>$user]);
     }
 
     /**
@@ -37,7 +39,8 @@ class CateController extends Controller
     {
         //读取分类信息
         $cates = DB::table('cates')->get();
-        return view('admin.cate.create',['cates'=>$cates]);
+        $user = DB::table('users')->get();
+        return view('admin.cate.create',['cates'=>$cates,'user'=>$user]);
     }
 
     /**
@@ -91,6 +94,9 @@ class CateController extends Controller
     {
         //修改分类
         // return view('admin.cate.edit');
+        $p = DB::table('cates')->where('id',$id)->first();
+        return view('admin.cate.edit',compact('p'));
+
     }
 
     /**
@@ -103,6 +109,14 @@ class CateController extends Controller
     public function update(Request $request, $id)
     {
         //
+         $cate = $request->only(['name']);
+
+         //将数据插入到数据库中
+        if (DB::table('cates')->where('id',$id)->update($cate)) {
+            return redirect('cate')->with('msg','更新成功');
+        }else{
+            return back()->with('msg','更新失败!!');
+        }
     }
 
     /**

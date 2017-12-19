@@ -452,50 +452,47 @@
 				<div class="col-xs-2 banquan-one">
 					<h4>关于我们</h4>
 					<ul class="list-unstyled">
+						<li><a href="">关于nubia </a></li>
+						<li><a href="">新闻中心</a></li>
+						<li><a href="">体验店</a></li>
+						<li><a href="">公益</a></li>
+						<li><a href="">联系我们</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-2 banquan-one">
+					<h4>手机</h4>
+					<ul class="list-unstyled">
+						<li><a href="">nubiaZ17S</a></li>
+						<li><a href="">nibiaZ17miniS</a></li>
+						<li><a href="">nubia Z17</a></li>
+						<li><a href="">nibia Z17mini</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-2 banquan-one">
+					<h4>配件</h4>
+					<ul class="list-unstyled">
+						<li><a href="">保护壳</a></li>
+						<li><a href="">皮套</a></li>
+						<li><a href="">贴膜</a></li>
+						<li><a href="">耳机</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-2 banquan-one">
+					<h4>服务中心</h4>
+					<ul class="list-unstyled">
 						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
+						<li><a href="">售后服务</a></li>
+						<li><a href="">售后网点</a></li>
+						<li><a href="">特色服务</a></li>
 					</ul>
 				</div>
 				<div class="col-xs-2 banquan-one">
 					<h4>关于我们</h4>
 					<ul class="list-unstyled">
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-2 banquan-one">
-					<h4>关于我们</h4>
-					<ul class="list-unstyled">
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-2 banquan-one">
-					<h4>关于我们</h4>
-					<ul class="list-unstyled">
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-2 banquan-one">
-					<h4>关于我们</h4>
-					<ul class="list-unstyled">
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
-						<li><a href="">个人中心</a></li>
+						<li><a href="">社区</a></li>
+						<li><a href="">新浪微博</a></li>
+						<li><a href="">QQ空间</a></li>
+						<li><a href="">微信</a></li>
 					</ul>
 				</div>
 				<div class="col-xs-2 banquan-one">

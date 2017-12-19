@@ -39,7 +39,7 @@
                 <div class="portlet-input input-small input-inline">
                     <div class="input-icon right">
                         <i class="am-icon-search"></i>
-                        <input type="search" class="form-control form-control-solid" placeholder="搜索..." name="keywords"> </div>
+                        <input type="search" class="form-control form-control-solid" placeholder="搜索..." name="keywords" value="{{ $keywords }}"> </div>
                 </div>
             </div>
 

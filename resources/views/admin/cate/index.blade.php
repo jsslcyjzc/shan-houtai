@@ -48,6 +48,10 @@
                                             <td>
                                                 <div class="am-btn-toolbar">
                                                     <div class="am-btn-group am-btn-group-xs">
+                                                        <a href="/cate/{{$v->id}}/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary bj" type="submit" style="font-size: 15px;">
+                                                            <span class="am-icon-pencil-square-o"></span> 修改
+                                                        
+                                                       </a>
                                                          <form class="del" action="/cate/{{$v->id}}" method="post" style="float: left;">
                                                         {{method_field('DELETE')}}
                                                          {{csrf_field()}}

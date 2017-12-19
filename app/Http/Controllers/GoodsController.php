@@ -26,13 +26,17 @@ class GoodsController extends Controller
         }else{
            $users = DB::table('goods')->paginate($num); 
         }
+
+
+        $user = DB::table('users')->get();
         
        //解释模板
         return view('admin.goods.index',[
        
            'goods'=>$users,
            'keywords' => $keywords,
-           'num' => $num
+           'num' => $num,
+           'user'=>$user
         ]);
     }
 
@@ -43,7 +47,8 @@ class GoodsController extends Controller
      */
     public function create()
     {
-        return view('admin.goods.create');
+        $user = DB::table('users')->get();
+        return view('admin.goods.create',compact('user'));
     }
 
     /**

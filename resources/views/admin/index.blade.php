@@ -5,9 +5,9 @@
    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     @section('title')
-    <title>1号店后台</title>
+    <title>nubia 努比亚 后台</title>
     @show
-    <title>nubia后台</title>
+    
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -145,9 +145,13 @@
                 <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen" class="tpl-header-list-link"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
 
                 <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
+                    @foreach($user as $k=>$v)
+                    @if($k == 0)
                     <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
-                        <span class="tpl-header-list-user-nick">小张</span><span class="tpl-header-list-user-ico"> <img src="/admins/assets/img/user01.png"></span>
+                        <span class="tpl-header-list-user-nick">{{ $v->username }}</span><span class="tpl-header-list-user-ico"> <img src="{{ $v->profile }}"></span>
                     </a>
+                    @endif
+                    @endforeach
                     <ul class="am-dropdown-content">
                         <li><a href="#"><span class="am-icon-bell-o"></span> 资料</a></li>
                         <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>

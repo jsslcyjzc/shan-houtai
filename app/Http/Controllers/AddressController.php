@@ -5,16 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 
-class ZhifuController extends Controller
+class AddressController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-
+        //
+        // echo "string";
+        //读取收货地址
         $addresses = DB::table('addresses')->where('user_id', session('id'))->get();
         foreach ($addresses as $key => &$value) {
             $value->pname = DB::table('areas')->where('id',$value->province)->value('area_name');
@@ -22,22 +24,11 @@ class ZhifuController extends Controller
             $value->xname = DB::table('areas')->where('id',$value->xian)->value('area_name');
         }
 
-        //
-        $id = session('id');
-        //读取表
-        $goods = DB::table('carts')->where('user_id',$id)->get();
-        // dd($goods);
-        //根据id得到商品的详细信息
-        foreach ($goods as $key => $value) {
-            $value->detail = DB::table('goods')->where('id',$value->goods_id)->first();
-            $value->pic = DB::table('goods_pic')->where('goods_id',$value->goods_id)->value('pic');
-
-        }
+        // dd($addresses);
 
 
 
-    
-        return view('home.zf.zf',compact('goods','addresses','goodsData','total','goodes'));
+        return view('home.address.index',compact('addresses'));
     }
 
     /**
@@ -59,6 +50,18 @@ class ZhifuController extends Controller
     public function store(Request $request)
     {
         //
+        // dd($request->all());
+        //获取数据
+        $data = $request->except('_token');
+        // dd($data);
+        //
+        $data['user_id'] = session('id');
+        //插入
+        if(DB::table('addresses')->insert($data)) {
+            return back()->with('msg','地址添加成功');
+        }else{
+            return back()->with('msg','添加失败!!');
+        }
 
     }
 
@@ -107,8 +110,14 @@ class ZhifuController extends Controller
         //
     }
 
-    public function zf()
+
+
+    public function getAdd(Request $request)
     {
-        return view('home.zhifu.zhifu');
+        $pid = $request->pid;
+        //
+        // echo $pid;
+        $areas = DB::table('areas')->where('area_parent_id',$pid)->get();
+        return $areas->toJson();
     }
 }
