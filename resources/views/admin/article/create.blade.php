@@ -120,6 +120,9 @@
                         </div>
 
                     </div>
+                                <div class="am-form-group">
+                                    <div class="am-u-sm-9 am-u-sm-push-3">
+                                        <button type="submit" class="am-btn am-btn-primary">添加</button>
 
                     <div class="am-form-group">
                         <label for="user-email" class="am-u-sm-3 am-form-label">文章内容</label>

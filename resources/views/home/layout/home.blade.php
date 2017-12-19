@@ -97,12 +97,6 @@
 
 		@show
 </head>
-<style type="text/css">
-	.carousel-inner > .item > img, .carousel-inner > .item > a > img{
-		width: 1340px;
-		height: 500px;
-	}
-</style>
 <body>
 	@section('tou')
 	<!-- 头部导航  start -->
@@ -117,12 +111,12 @@
 			<div class="col-sm-8">
 				<ul class="list-unstyled list-inline" style="margin-top: 25px;">
 					<li style="margin-left: 45px;"><a href="/Homes">商城</a></li>
-					<li class="shangchang">
+					<li class="shangchang" >
 						<a href="/Shouji">手机</a>
 						<div class="xialacaidan" id="xialacaidan">
 					         <div class="container" role="listbox">
 
-					         	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-s9lide="prev">
+					         	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="margin-left:20px;"></span>
 							    <span class="sr-only">Previous</span>
 							  </a>
@@ -283,7 +277,7 @@
 					<li><a href="/Home/tiyan">体验店</a></li>
 					<li><a href="">社区</a></li>
 					<li style="margin-right: none;" class="shangchang">
-						<a href="/Shequ">nubia UI</a>
+						<a href="/nubiaUI">nubia UI</a>
                         <div class="xialacaidan" id="xialacaidan">
 					         <div class="container" role="listbox">
 
@@ -372,7 +366,7 @@
 
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" role="listbox">
-				    <div class="active item">
+				    <div class="item active">
 					      <img src="holder.js/100px530" alt="">
 					      <div class="carousel-caption">
 					      </div>
@@ -452,47 +446,50 @@
 				<div class="col-xs-2 banquan-one">
 					<h4>关于我们</h4>
 					<ul class="list-unstyled">
-						<li><a href="">关于nubia </a></li>
-						<li><a href="">新闻中心</a></li>
-						<li><a href="">体验店</a></li>
-						<li><a href="">公益</a></li>
-						<li><a href="">联系我们</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-2 banquan-one">
-					<h4>手机</h4>
-					<ul class="list-unstyled">
-						<li><a href="">nubiaZ17S</a></li>
-						<li><a href="">nibiaZ17miniS</a></li>
-						<li><a href="">nubia Z17</a></li>
-						<li><a href="">nibia Z17mini</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-2 banquan-one">
-					<h4>配件</h4>
-					<ul class="list-unstyled">
-						<li><a href="">保护壳</a></li>
-						<li><a href="">皮套</a></li>
-						<li><a href="">贴膜</a></li>
-						<li><a href="">耳机</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-2 banquan-one">
-					<h4>服务中心</h4>
-					<ul class="list-unstyled">
 						<li><a href="">个人中心</a></li>
-						<li><a href="">售后服务</a></li>
-						<li><a href="">售后网点</a></li>
-						<li><a href="">特色服务</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
 					</ul>
 				</div>
 				<div class="col-xs-2 banquan-one">
 					<h4>关于我们</h4>
 					<ul class="list-unstyled">
-						<li><a href="">社区</a></li>
-						<li><a href="">新浪微博</a></li>
-						<li><a href="">QQ空间</a></li>
-						<li><a href="">微信</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-2 banquan-one">
+					<h4>关于我们</h4>
+					<ul class="list-unstyled">
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-2 banquan-one">
+					<h4>关于我们</h4>
+					<ul class="list-unstyled">
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-2 banquan-one">
+					<h4>关于我们</h4>
+					<ul class="list-unstyled">
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
+						<li><a href="">个人中心</a></li>
 					</ul>
 				</div>
 				<div class="col-xs-2 banquan-one">

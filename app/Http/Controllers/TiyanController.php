@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class TiyanController extends Controller
 {
 	public function tiyan()
 	{
-		return view('home.Home.tiyan');
+
+        $tiya = DB::table('tiya')->get();
+        // dd($tiya);
+
+		return view('home.Home.tiyan',compact('tiya'));
 	}    
 }

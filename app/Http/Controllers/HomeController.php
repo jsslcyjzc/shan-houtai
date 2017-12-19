@@ -10,31 +10,8 @@ class HomeController extends Controller
     public function index(){
         // echo "string";
         $banner =DB::table('banner')->where('path',1)->get();
-        // dd($banner);
-
-        // $goods = DB::table('goods')->get();
-
-        // $goods_pic = DB::table('goods_pic')->get();
-        // dd($goods_pic);
-        //读取商品的详细信息
-        $goods = DB::table('goods')
-        ->where('status',1)
-        ->select('id','title','price')
-        ->orderBy('id','desc')
-        ->paginate(12);
-        // dd($goods);
-        //商品的图片加入
-        foreach ($goods as $key => &$value) {
-            $value->pic = DB::table('goods_pic')->where('goods_id',$value->id)->value('pic');
-        }
-
-
-
-
-        return view('home.index',[
-            'banner'=>$banner,
-            'goods'=>$goods
-        ]);
+    return view('home.index',compact('banner'));
+        return view('home.index');
     }
 
 
@@ -68,10 +45,5 @@ class HomeController extends Controller
     public function shouji(){
         return view('home.shouji.shouji');
     }
-
-
-
-
-
 
 }

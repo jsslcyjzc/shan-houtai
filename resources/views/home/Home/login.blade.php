@@ -91,12 +91,9 @@
     <script type="text/javascript" src="/Home/js/bootstrap.js"></script>
     <script type="text/javascript" src="/Home/js/bootstrap.min.js"></script>    
     <script type="text/javascript" src="/Home/js/holder.min.js"></script>
-     <script>
-     	 
-     </script>
-
-
     @section('js')
+
+
     @show
 </body>
 </html>

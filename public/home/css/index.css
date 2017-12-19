@@ -455,6 +455,13 @@ html,body{
 	text-indent: 30px;
 	color: #606366;
 }
+.jian .pinss{
+	height: 95px;
+	line-height: 25px;
+	/*background: yellow;*/
+	text-indent: 30px;
+	color: #606366;
+}
 .jian .pin{
 	height: 50px;
 	line-height: 25px;
@@ -498,25 +505,24 @@ html,body{
     border: 1px solid #f3f3f5;
     margin-left: 40px;
 }
-.news .gong .new_box h3 a{
+.news .gong .new_box .h3 a{
 	text-decoration: none;
 	color: #999;
 }
-.news .gong .new_box h3 a:hover{
+.news .gong .new_box .h3 a:hover{
 	color: #333;
 }
-.news .gong .new_box p{
+.news .gong .new_box .p{
 	color: #999;
 	font-size: 15px;
 }
 .news .gong .new_box .entry{
     height: 370px;
     /*background: lightblue;*/
-    margin-top: 20px;
+    margin-top: 0px;
 }
 .news .gong .new_box .biao{
-	margin-top: 20px;
-	font-size: 17px;
+	font-size: 14px;
 }
 .news .gong .new_box .biao a{
 	color: #e8340c;
@@ -555,7 +561,7 @@ html,body{
 	border: 1px solid #f3f3f5;
     margin-top: 30px;
 } 
-.news_boxl .oxls ul h3{
+.news_boxl .oxls ul .h3{
 	color: #454e55;
 }
 .news_boxl .oxls ul li{
@@ -568,11 +574,11 @@ html,body{
 .news_boxl .oxls ul li a:hover{
 	color: #e8340c;
 }
-.news_boxl .oxls ul li p{
+.news_boxl .oxls ul li .pp{
 	color: #454e55;
 	font-size: 14px;
 }
-.news_boxl .oxls ul li p a{
+.news_boxl .oxls ul li .pp a{
 	font-size: 15px;
 	color: #e8340c;
 }
@@ -582,7 +588,7 @@ html,body{
 	border: 1px solid #f3f3f5;
     margin-top: 30px;
 }
-.news_boxl .bxls h3{
+.news_boxl .bxls .h3{
 	color: #454e55;
 }
 .news_boxl .bxls ul{
@@ -620,7 +626,7 @@ html,body{
 	line-height: 30px;
 	text-align: center;
 	background: #e8340c;
-	margin-left: 50px;
+	margin-left: 40px;
 	margin-top: 10px;
 }
 .news_boxl .bxls .meta .lians a{
@@ -637,7 +643,7 @@ html,body{
 
 
 
-/*福利会*/
+/*手机服务*/
 .all{
 	height: auto;
 	background: #f5f5f5;
@@ -650,7 +656,7 @@ html,body{
 .all .fw .nb_stitl{
 	position: absolute;
 	top: 170px;
-	left: 460px;
+	left: 400px;
 }
 .all .fw .nb_stitl h3{
 	color: #fefefd;
@@ -669,12 +675,9 @@ html,body{
 	line-height: 30px;
 	/*background: lightgreen;*/
 }
-.all .nb_content .nb_xection .nb_stitle h3{
-	color: #333;
-}
 .all .nb_content .nb_xection .nb_sbo{
 	height: 240px;
-	margin-top: 20px;
+	margin-top: 10px;
 	/*background: coral;*/
 }
 .all .nb_content .nb_xection .nb_sbo .sbo .sbo_aa{
@@ -726,17 +729,14 @@ html,body{
 	height: 30px;
 	/*background: red;*/
 }
-.all .nb_content .nb_xection1 .nb_stitle1 h3{
-	color: #333;
-}
 .all .nb_content .nb_xection1 .nb_sbo1{
 	height: 400px; 
 	/*background: pink; */
-	margin-top: 20px;
+	margin-top: 10px;
 	position: relative;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t{
-	width: 295px;
+	width: 270px;
     height: 190px;
     background: #fff;
     float: left;
@@ -746,42 +746,42 @@ html,body{
 .all .nb_content .nb_xection1 .nb_sbo1 .t1 img{
 	position: absolute;
 	top: 25px;
-	left: 97px;
+	left: 95px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t2 img{
 	position: absolute;
 	top: 25px;
-	left: 405px;
+	left: 370px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t3 img{
 	position: absolute;
 	top: 25px;
-	left: 705px;
+	left: 650px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t4 img{
 	position: absolute;
 	top: 25px;
-	left: 1010px;
+	left: 935px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t5 img{
 	position: absolute;
 	top: 225px;
-	left: 97px;
+	left: 95px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t6 img{
 	position: absolute;
 	top: 225px;
-	left: 405px;
+	left: 370px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t7 img{
 	position: absolute;
 	top: 225px;
-	left: 705px;
+	left: 650px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t8 img{
 	position: absolute;
 	top: 225px;
-	left: 1010px;
+	left: 935px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t .zi{
 	width: 160px;
@@ -795,50 +795,50 @@ html,body{
 .all .nb_content .nb_xection1 .nb_sbo1 .t1 .zi{
 	position: absolute;
 	top: 160px;
-	left: 75px;
+	left: 70px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t2 .zi{
 	position: absolute;
 	top: 160px;
-	left: 390px;
+	left: 345px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t3 .zi{
 	position: absolute;
 	top: 160px;
-	left: 690px;
+	left: 625px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t4 .zi{
 	position: absolute;
 	top: 160px;
-	left: 990px;
+	left: 910px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t5 .zi{
 	position: absolute;
 	top: 360px;
-	left: 75px;
+	left: 70px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t6 .zi{
 	position: absolute;
 	top: 360px;
-	left: 390px;
+	left: 345px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t7 .zi{
 	position: absolute;
 	top: 360px;
-	left: 690px;
+	left: 625px;
 }
 .all .nb_content .nb_xection1 .nb_sbo1 .t8 .zi{
 	position: absolute;
 	top: 360px;
-	left: 990px;
+	left: 910px;
 }
 .all .nb_content .nb_sections{
 	height: 120px;
 	/*background: lightgreen;*/
-	margin-top: 20px;
+	margin-top: 10px;
 }
 .all .nb_content .nb_sections ul li{
-    width: 290px;
+    width: 265px;
     height: 120px;  
     /*background: pink; */
     float: left;
@@ -849,12 +849,12 @@ html,body{
 	width: 1px;
 	background: #dcdcdc;
 	margin-left: 6px;
-	margin-top: 7px;
+	margin-top: 0px;
 }
 .all .nb_content .nb_sections ul .s_a1 img{
 	float: left;
-    margin-left: 110px;
-    margin-top: 10px;
+    margin-left: 85px;
+    margin-top: 0px;
 }
 .all .nb_content .nb_sections ul .s_a1 a{
 	text-decoration: none;
@@ -865,8 +865,8 @@ html,body{
 	/*background: red;*/
 	color: #999;
 	float: left;
-	margin-top: 5px;
-	margin-left: 100px;
+	margin-top: 0px;
+	margin-left: 85px;
 	line-height: 20px;
 	text-align: center;
 }
@@ -893,7 +893,7 @@ html,body{
    /*background: red;*/
    position: absolute;
    top: 40px;
-   left:370px; 
+   left:350px; 
 }
 .alls .sss .t_tle .s_p{
 	height: 40px;
@@ -962,7 +962,7 @@ html,body{
 	color: #666;
 }
 .alls .dt .dit{
-	width: 1235px;
+	/*width: 1140px;*/
 	height: 800px;
 	/*background: red;*/
 }
@@ -1018,105 +1018,158 @@ html,body{
 .tab_content .kehu{
 	height: 30px;
 	line-height: 30px;
-	/*background: pink;*/
+	background: pink;
 	font-weight: bold;
 	font-size: 20px;
 	color: #606366; 
 }
 .tab_content .nei{
-	height: 80px;
-	line-height: 20px;
-	/*background: lightgreen;*/
+	height: 100px;
+	/*line-height: 20px;*/
+	background: lightgreen;
     font-size: 13px;
     color: #606366;
 }
 .tab_content .hezuo{
 	height: 30px;
 	line-height: 30px;
-	/*background: pink;*/
+	background: pink;
 	font-weight: bold;
 	font-size: 20px;
 	color: #606366; 
 }
 .tab_content .xian{
-	height: 40px;
+	height: 50px;
 	line-height: 20px;
-	/*background: lightgreen;*/
+	background: lightgreen;
     font-size: 13px;
     color: #606366;
 }
 .tab_content .gongguan{
 	height: 30px;
 	line-height: 30px;
-	/*background: pink;*/
+	background: pink;
 	font-weight: bold;
 	font-size: 20px;
 	color: #606366; 
 }
 .tab_content .xiao{
 	height: 20px;
-	line-height: 20px;
-	/*background: lightgreen;*/
+	/*line-height: 20px;*/
+	background: lightgreen;
     font-size: 13px;
     color: #606366;
 }
 .tab_content .yewu{
 	height: 30px;
 	line-height: 30px;
-	/*background: pink;*/
+	background: pink;
 	font-weight: bold;
 	font-size: 20px;
 	color: #606366; 
 }
 .tab_content .b2c{
 	height: 20px;
-	line-height: 20px;
-	/*background: lightgreen;*/
+	/*line-height: 20px;*/
+	background: lightgreen;
     font-size: 13px;
     color: #606366;
 }
 .tab_content .kaifa{
 	height: 30px;
 	line-height: 30px;
-	/*background: pink;*/
+	background: pink;
 	font-weight: bold;
 	font-size: 20px;
 	color: #606366; 
 }
 .tab_content .shiwu{
-	height: 100px;
-	line-height: 20px;
-	/*background: lightgreen;*/
+	height: 130px;
+	/*line-height: 20px;*/
+	background: lightgreen;
     font-size: 13px;
     color: #606366;
 }
 .tab_content .zhishi{
 	height: 30px;
 	line-height: 30px;
-	/*background: pink;*/
+	background: pink;
 	font-weight: bold;
 	font-size: 20px;
 	color: #606366; 
 }
 .tab_content .jubao{
 	height: 20px;
-	line-height: 20px;
-	/*background: lightgreen;*/
+	/*line-height: 20px;*/
+	background: lightgreen;
     font-size: 13px;
     color: #606366;
 }
 .tab_content .lianshi{
 	height: 30px;
 	line-height: 30px;
-	/*background: pink;*/
+	background: pink;
 	font-weight: bold;
 	font-size: 20px;
 	color: #606366; 
 }
 .tab_content .shenzhen{
-	height: 40px;
-	line-height: 20px;
-	/*background: lightgreen;*/
+	height: 50px;
+	/*line-height: 20px;*/
+	background: lightgreen;
     font-size: 13px;
     color: #606366;
+}
+
+
+/*品牌大事件*/
+/*左侧*/
+.ser_cons{
+   height: 30px;
+   /*background: pink;	*/
+}
+.ser_cons a{
+	line-height: 30px;
+	color: #999;
+	text-decoration: none;
+}
+.ser_cons a:hover{
+	color: #333;
+}
+.nas{
+	height: 120px;
+	margin-top: 30px;
+	/*background: lightyellow;*/
+}
+.nas ul  li{
+	height: 40px;
+	line-height: 40px;
+	/*background: lightgreen;*/
+	border-bottom: 1px solid #ddd;
+}
+.nas ul .activs{
+	background: #fafafa;
+}
+.nas ul .activs a{
+	color: #E8380D;
+}
+.nas ul  li a{
+	color: #999;
+	font-size: 15px;
+	text-decoration: none;
+}
+.nas ul  li a:hover{
+	color: #E8380D;
+}
+/*右侧*/
+.tab_contents{
+	height: auto;
+	margin-top: 50px;
+	/*background: red;*/
+}
+.tab_contents .duans{
+	height: 20px;
+	line-height: 20px;
+	/*background: lightblue;*/
+	margin-top: 10px; 
 }
