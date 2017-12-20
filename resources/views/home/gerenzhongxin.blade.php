@@ -41,7 +41,43 @@
             <a href="#" style="cursor:default">信息总览</a>
         </div>
         <div class="sideNav" id="memberCon">
-        @include('layout.creat-menu');
+    <ul>
+        <li>
+            <p class="membertitle">个人中心</p>
+            <ul class="membersubmenu">
+                <li class="selected">
+                    <a href="#">信息总览</a>
+                </li>
+                <li>
+                    <a href="#">我的优惠劵</a>
+                </li>
+                <li>
+                    <a href="#">我的礼包劵</a>
+                </li>
+                <li>
+                    <a href="#">我的回收代金劵</a>
+                </li>
+                <li>
+                    <a href="#">我的牛豆</a>
+                </li>
+                <li>
+                    <a href="#">我的NB码</a>
+                </li>
+                <li>
+                    <a href="/address">收货地址</a>
+                </li>
+                <li>
+                    <a href="#">我的收藏</a>
+                </li>
+                <li>
+                    <a href="#">我的预约</a>
+                </li>
+                <li>
+                    <a href="#">账户中心</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
 </div>        
 <div class="con">
     <div class="address memberboard">
@@ -60,12 +96,12 @@
             <th>操作</th>
         </tr>
         
-                                <tr>
+        <tr>
             <td colspan="6" class="quiet">
                 未找到任何订单
             </td>
         </tr>
-                            </tbody></table>
+       </tbody></table>
         <div class="more-orders">
             <span>等待付款订单数(0)</span>
             <span>未完成的订单数(0)</span>
@@ -80,8 +116,11 @@
 
 @section('css')
 <style type="text/css">
-   .gouwuche .pull-left{
+    .gouwuche .pull-left{
         line-height: 75px;
+    }
+    .col-sm-2 .gouwuche .glyphicon-shopping-cart{
+        margin-bottom: 25px;
     }
 </style>
 @stop

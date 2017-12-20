@@ -48,6 +48,7 @@
            <div class="col-xs-11 one">
            	    <div class="dui glyphicon glyphicon-ok"></div>
                 @foreach($goods as $k=>$v)
+                @if($k < 1)
            	    <div class="two">
            	    	<ol class="list-unstyled">
            	    		<li>订单提交成功 !</li>
@@ -57,6 +58,7 @@
            	    		<li>您的订单总额为 : <span>¥{{ $v->detail->price }}</span></li>
            	    	</ol>
            	    </div>
+                @endif
                 @endforeach
            </div>
 

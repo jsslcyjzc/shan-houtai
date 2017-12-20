@@ -187,7 +187,7 @@
                                        </a>
                                     </td>
                                     <td>
-                                       ¥{{ $v->detail->price }}
+                                       ¥{{ $v->detail->price}}
                                     </td>
                                     <td>
                                        <input type="text" style="width:20%" name="data[{{$v->id}}][num]" value="{{$v->num}}">
@@ -209,61 +209,7 @@
                                     </td>
                                  </tr>
                              </table>
-
-
-
-                          
-                          <div class="clearfix"></div>
-                          <div class="ten"></div>
-                          <div class="ten"></div>
-                          <hr>
-
-                          <div class="col-md-6 col-md-offset-3">
-                          <form action="/dingdan" method="post">
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">姓名</label>
-                              <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="">
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">手机号</label>
-                              <input type="text" name="phone" class="form-control" id="exampleInputEmail1" placeholder="">
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">收货地址</label>
-                              <div class="clearfix"></div>
-                              <div class='col-md-4'>
-                                  <select name="province" id="" class="form-control ">
-                                      <option value="">请选择</option>
-                                  </select>
-                              </div>
-                              <div class='col-md-4'>
-                                  <select name="city" id="" class="form-control ">
-                                      <option value="">请选择</option>
-                                  </select>
-                              </div>
-                              <div class='col-md-4'>
-                                  <select name="xian" id="" class="form-control ">
-                                      <option value="">请选择</option>
-                                  </select>
-                              </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="form-group" style="margin-top: 20px;">
-                              <label for="exampleInputEmail1">详细地址</label>
-                              <div class="clearfix"></div>
-                              <textarea name="detail" id=""></textarea>
-                            </div>
-                            <div class="checkbox">
-                              <label>
-                                <input type="checkbox" value="1" name="is_default"> 是否为默认收货地址
-                              </label>
-                            </div>
-                              {{csrf_field()}}
-                            <button class="btn btn-default" style="margin-top: 20px;">Submit</button>
-                            <div class="clearfix"></div>
-                            
                           </form>
-                           </div>
                       </div>
                   </div>
               </div>

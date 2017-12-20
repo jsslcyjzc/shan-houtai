@@ -65,10 +65,14 @@
                                             <td><a href="#" style="font-size: 15px;">{{ $v->title }}</a></td>
                                             <td>{{ $v -> author }}</td>
                                             <td>{{ $v -> time }}</td>
-                                            <td class="center">
-                                                <img width="40" src="{{$v->pic}}" alt="">
+                                            <td>
+                                                @if(($v->status) > 0)
+                                                    <span style="color: green;">在线</span>
+                                               @else
+                                                        
+                                                        <span style="color: red;">离线</span>
+                                                @endif
                                             </td>
-
                                             <td>
                                                 <div class="am-btn-toolbar">
                                                     <div class="am-btn-group am-btn-group-xs" style="margin-top: 7px;">

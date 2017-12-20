@@ -7,15 +7,22 @@ use DB;
 class HomeController extends Controller
 {
     //
+
+    public function resetId($id){
+        $this->flush();
+        $this->id = $id;
+        if($this->hasSession()){
+           $this->loadSession();
+        }
+
+
+        return view('home.index',compact('yonghu','id'));
+    }
     public function index(){
         // echo "string";
         $banner =DB::table('banner')->where('path',1)->get();
         // dd($banner);
 
-        // $goods = DB::table('goods')->get();
-
-        // $goods_pic = DB::table('goods_pic')->get();
-        // dd($goods_pic);
         //读取商品的详细信息
         $goods = DB::table('goods')
         ->where('status',1)
@@ -37,12 +44,13 @@ class HomeController extends Controller
     }
 
 
+    
+
+
 
 
     public function doindex(){
     	// echo "string";
-
-
 
     	return view('home.layout.home');
     }
@@ -56,8 +64,6 @@ class HomeController extends Controller
         // dd($banner);
 
         // dd($shequ);
-
-
 
     	return view('home.nubiaUI.nubiaUI',compact('shequ','banner'));
     }
@@ -76,7 +82,6 @@ class HomeController extends Controller
 
         return view('home.shouji.shouji',compact('banner'));
     }
-
 
 
 

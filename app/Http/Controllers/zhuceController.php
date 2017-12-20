@@ -14,6 +14,8 @@ class zhuceController extends Controller
     public function zhuce()
     {
         //echo 'qqqqq';
+         
+
         return view('home.zhuce'); 
     }
     public function zhuce1()

@@ -5,14 +5,7 @@
 	<title>努比亚nubia手机商城——努比亚nubia智能手机官网</title>
 @endsection
 		
-@section('css')
-<style type="text/css">
-	.carousel-inner > .item > img, .carousel-inner > .item > a > img{
-		width: 1340px;
-		height: 500px;
-	}
-</style>
-@stop
+
 
 @section('center')
 	<section>
@@ -32,15 +25,15 @@
 			  <div class="carousel-inner" role="listbox" style="margin-left: -10px;">
                     @foreach($banner as $k=>$v)
                     @if($k < 4)
-				    <div class="@if($k==0) active @endif item">
-				    	<a href="#">
-					      <img src="{{$v->pic}}" style=" top: 0px;left: 0px;">
+				    <div class="@if($k == 0) active @endif item">
+				    	<a href="">
+					      <img src="{{$v->pic}}" width="1340" height="500" style=" top: 0px;left: 0px;">
 					      <div class="carousel-caption">
 					      </div>
 					    </a>
 				    </div>
 				    @endif
-					@endforeach
+				    @endforeach
 			  </div>
 			   
 			  <!-- Controls -->
@@ -332,7 +325,7 @@
 	<!-- 以旧换新 start -->
 	<div class="container-fluid yijiu">
 		<div class="container">
-			<div class="col-xs-2 yijiu-left"  style="margin-right: 10px;">
+			<div class="col-xs-2 yijiu-left" >
 				<div class="col-xs-4 lefts">
 					<a href="">
 					<ul class="list-unstyled">
@@ -384,23 +377,19 @@
 			</div>
 			@foreach($banner as $k=>$v)
 			@if($k == 6)
-			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right" style=" margin-left: 0px;">
+			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right" style="margin-left: 0px;">
 				<img src="{{ $v->pic }}" alt="" width="306" height="175">
 			</div>
 			@elseif($k == 4)
 			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right">
-				<img src="{{ $v->pic }}" alt=""  width="306" height="175" >
+				<img src="{{ $v->pic }}" alt="" width="306" height="175">
 			</div>
 			@elseif($k == 5)
-			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right" style=" margin-left: -8px;">
-				<img src="{{ $v->pic }}" alt=""  width="306" height="175" >
+			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right" style="margin-left: -8px;">
+				<img src="{{ $v->pic }}" alt="" width="306" height="175">
 			</div>
 			@endif
 			@endforeach
-			<!-- 
-			<div class="col-xs-2 yijiu-left pull-right" id="yijiu-right">
-				<img src="holder.js/306x175" alt="">
-			</div> -->
 		</div>
 	</div>
 	<!-- 以旧换新 end -->
@@ -473,15 +462,13 @@
 				    </div>				    
 				</div>
 				@elseif($key == 7)
-				<div class="col-xs-3 chanpin-one" style="margin-right: 0;">
+				<div class="col-xs-3 chanpin-one" style="margin-right: 0px;">
 					<a href="/goods/{{$v->id}}">
-					<img src="{{ $v->pic }}" alt="">
+					<img src=" {{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
-						<li>
-							{{ $v->title }}
-						</li>
+						<li>{{ $v->title }}</li>
 						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>¥2799</del></span></li>
+						<li>¥{{ $v->price }} <span>| <del>¥2799</del></span></li>
 					</ul>
 					<div class="quan">
 						新品
@@ -517,18 +504,16 @@
 			</div>
 			@endif
 			@endforeach
-
 			<div class="col-xs-12 chanpin">
-
 				@foreach($goods as $key =>$v)
-				@if($key == 8)
+				@if($key == 8 )
 				<div class="col-xs-3 chanpin-one">
 					<a href="">
-					<img src=" {{ $v->pic }}" alt="">
+					<img src="{{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
 						<li>{{ $v->title }}</li>
 						<li>后置双1300万</li>
-						<li>¥{{ $v->price }} <span>| <del>¥2799</del></span></li>
+						<li>¥{{ $v->price }} <span>| <del>2799</del></span></li>
 					</ul>
 					<div class="quan">
 						新品
@@ -538,18 +523,16 @@
 				    <div class="goumai">
 				    	<button type="button" class="btn btn-default but1">查看详情</button>
 				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
-				    </div>				    
+				    </div>					    
 				</div>
 				@elseif($key == 10)
 				<div class="col-xs-3 chanpin-one">
-					<a href="/goods/{{$v->id}}">
+					<a href="">
 					<img src="{{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
-						<li>
-							{{ $v->title }}
-						</li>
+						<li>{{ $v->title }}</li>
 						<li>后置双1300万</li>
-						<li>¥2499 <span>| <del>¥2799</del></span></li>
+						<li>¥{{ $v->price }} <span>| <del>2799</del></span></li>
 					</ul>
 					<div class="quan">
 						新品
@@ -559,7 +542,7 @@
 				    <div class="goumai">
 				    	<button type="button" class="btn btn-default but1">查看详情</button>
 				    	<button type="button" class="btn btn-default but1 but2">立即购买</button>
-				    </div>				    
+				    </div>					    
 				</div>
 				@elseif($key == 11)
 				<div class="col-xs-3 chanpin-one">
@@ -610,8 +593,8 @@
 			<div class="col-xs-12 chanpin" style="margin-top: 13px;">
 
 				@foreach($goods as $key =>$v)
-				@if($key == 13)
-				<div class="col-xs-3 chanpin-one">
+				@if($key == 13)				
+				<div class="col-xs-3 chanpin-one" style="margin-right: 0px;">
 					<a href="/goods/{{$v->id}}">
 					<img src=" {{ $v->pic }}" alt="">
 					<ul class="list-unstyled">
@@ -670,7 +653,7 @@
 				    </div>				    
 				</div>
 				@elseif($key == 12)
-				<div class="col-xs-3 chanpin-one" style="margin-right: 0px;">
+				<div class="col-xs-3 chanpin-one">
 					<a href="/goods/{{$v->id}}">
 					<img src=" {{ $v->pic }}" alt="">
 					<ul class="list-unstyled">

@@ -15,9 +15,6 @@ class DetailsController extends Controller
         //读取商品的图片信息
         $goods_pic = DB::table('goods_pic')->where('goods_id', $id)->get();
 
-    	return view('home.details',[
-    		'goods'=>$goods,
-    		'goods_pic'=>$goods_pic
-    	]);	
+    	return view('home.details',compact('goods','goods_pic'));	
     }
 }

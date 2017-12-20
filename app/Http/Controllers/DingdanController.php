@@ -42,7 +42,6 @@ class DingdanController extends Controller
         // dd($total);
         return view('home.dingdan.cofirm',compact('addresses','goodsData','total','goods'));
         // dd(1);
-        return view('home.dingdan.cofirm',compact('addresses'));
 
     }
 
@@ -53,7 +52,7 @@ class DingdanController extends Controller
      */
     public function create()
     {
-        echo "string";
+        // echo "string";
     }
 
     /**

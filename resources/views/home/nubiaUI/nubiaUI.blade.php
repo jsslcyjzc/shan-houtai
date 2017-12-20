@@ -128,7 +128,7 @@
 					@foreach($shequ as $k=>$v)
 					<div class="col-xs-5 jinri-left jinri-left-one">
 					  <div class="col-xs-12" id="nunuli">
-					  	<a href="">
+					  	<a href="/article/304">
 						<h4 class="pull-left">{{ $v->title }}</h4>
 						</a>
                       </div>

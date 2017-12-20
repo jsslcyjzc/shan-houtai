@@ -14,6 +14,31 @@ class LoginsController extends Controller
     	return view('home.Home.login');
     }
 
+    public function logindex(){
+                 
+
+         // echo "string";
+        $banner =DB::table('banner')->where('path',1)->get();
+        // dd($banner);
+
+        //读取商品的详细信息
+        $goods = DB::table('goods')
+        ->where('status',1)
+        ->select('id','title','price')
+        ->get();
+        // dd($goods);
+        //商品的图片加入
+        foreach ($goods as $key => &$value) {
+            $value->pic = DB::table('goods_pic')->where('goods_id',$value->id)->value('pic');
+        }
+
+
+        return view('home.index',[
+            'banner'=>$banner,
+            'goods'=>$goods
+        ]);
+    }
+
     public function dologin(Request $request){
     	//提取参数
         // $data = $request->all();
@@ -40,6 +65,9 @@ class LoginsController extends Controller
         }
         return back()->with('msg','登录失败!!');
     }
+
+
+    
     public function login1()
     {
     	return view('home.Home.login1');

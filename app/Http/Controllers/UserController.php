@@ -28,18 +28,13 @@ class UserController extends Controller
         }else{
            $users = DB::table('users')->paginate($num); 
         }
-
-
-
-        $user = DB::table('users')->get();
         
        //解释模板
         return view('admin.user.index',[
        
            'users'=>$users,
            'keywords' => $keywords,
-           'num' => $num,
-           'user'=>$user
+           'num' => $num
         ]);
 
 
@@ -52,10 +47,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        // echo "string";
-
-        $user = DB::table('users')->get();
-        return view('admin.user.create',compact('user'));
+        return view('admin.user.create');
     }
 
     /**
@@ -179,14 +171,10 @@ class UserController extends Controller
     }
 
     public function dosign(Request $request){
-        //检测验证码是否正确
-        $code = $request->vcode;
-        if(session('vcode') != $code) {
-            return back()->with('msg','验证码错误');
-        }
+
 
         //获取用户的信息
-        $data = $request->only(['username','phone','email','password','verfile']);
+        $data = $request->only(['phone','password','verify']);
         $data['password'] = Hash::make($data['password']);
         $data['verify'] = str_random(30);
 

@@ -30,7 +30,7 @@
 			</div>
 			@section('content')
 				<div class="col-md-12 input">
-					<form method="post" action="/Home/login">
+					<form method="post" action="/home/zhuce">
 					<div class="col-md-12 a_ac">
 						<div class="col-md-3"><p class="p_a"></p></div>
 						
@@ -63,8 +63,9 @@
 
 					<div class="col-md-12 a_ac">
 						<div class="col-md-3"></div>
-						<div class="col-md-6"><a href="">
-							<input type="submit" value="立即注册" /></a></div>
+						<div class="col-md-6">
+							<button style="width: 200px;height: 40px;margin-top: 30px;margin-left: 20px;">提交</button>
+						</div>
 						<div class="col-md-3"></div>
 					</div>
 				  </form>

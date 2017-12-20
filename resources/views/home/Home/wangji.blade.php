@@ -121,7 +121,7 @@
 
             $.ajax({
                 type:'get',
-                data:{phone:phone},
+                data:{mobile:phone},
                 url:'/message',
                 success:function(data){
                     alert(data.data.vcode);

@@ -50,7 +50,7 @@
     </div>
     <div class="address user-orders">
         @foreach($addresses as $k=>$v)
-        <div class="col-xs-4" style="height:150px;border: 1px solid blue;padding: 0px;margin-right: 10px;margin-bottom: 15px; ">
+        <div class="col-xs-4" style="height:150px;border: 1px solid #666;padding: 0px;margin-right: 10px;margin-bottom: 15px; ">
             <div class="col-xs-10 col-md-offset-1" style="height: 140px;margin-top: 4px;padding: 0px;">
                  <h4>{{$v->name}}</h4>
                  <div class="col-xs-12" style="height: 1px;background-color: #999;"></div>

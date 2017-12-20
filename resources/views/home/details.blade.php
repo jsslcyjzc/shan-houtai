@@ -58,17 +58,14 @@
          <table border="0" cellpadding="20" cellspacing="0">
           <tr>
             <td colspan="5" class="new">
-
-              <iframe src="/images/2.jpg" frameborder="0" width="380" height="400" name="dt" style="margin-left: -15px;"></iframe>
-
+              @foreach($goods_pic as $k=>$v)
+              <img src="{{ $v->pic }}" frameborder="0" width="380" height="400" name="dt" style="margin-left: -15px;margin-bottom: 10px;"></img>
             </td>
           </tr>
           <tr class="xt">
-            @foreach($goods_pic as $k=>$v)
-            
-            <td>
+            <td style="">
               <a href="{{$v->pic}}" target="dt" style="width: 380px;height: 400px;">
-                <img src="{{$v->pic}}" style="width: 90px;height: 90px;margin-left: -14px;">
+                <img src="{{$v->pic}}" style="width: 90px;height: 90px;margin-left: -14px;border: 1px solid red;">
               </a>
             </td>
             @endforeach
@@ -218,8 +215,9 @@
               <hr>
 
             	<div class="col-md-8 tj">
+                
                   {{csrf_field()}}
-            		 <input type="submit" value="加入购物车" / style="width: 130px;height: 35px;border: none;background: #ccc;color: #fff;">
+            		 <input type="submit" value="加入购物车" style="width: 130px;height: 35px;border: none;background: #ccc;color: #fff;">
             	</div>
               
               </form>
@@ -244,7 +242,7 @@
    	 		<div class="content">
    	 			<div class="active tab spxq">
             @foreach($goods_pic as $k=>$v)
-   	 		    	<img src="{{$v->pic}}" style="width: 100%;height: 400px;">
+   	 		    	<img src="{{$v->pic}}" style="width: 100%;">
             @endforeach
    	 		    	<!-- <img src="holder.js/100px300?bg=#ade&text=111">
    	 		    	<img src="holder.js/100px300?bg=#abe&text=111"> -->
@@ -255,7 +253,10 @@
    	 		    	<div class="col-md-8 col-md-offset-2 jbxx">
    	 		    		<p class="p1">基本信息</p>
    	 		    		<div class="js">
-   	 		    			<img src="holder.js/100px295">
+                  @foreach($goods_pic as $k=>$v)
+   	 		    			<img src="{{ $v->pic }}" style="width: 350px;height: 350px;float: left;">
+                  @endforeach
+                  <div class="clearfix"></div>
    	 		    			<span>
    	 		    				机身颜色
    	 		    			</span>
@@ -520,10 +521,10 @@
    	 		    		<div class="cc">
    	 		    			<ul class="list-unstyled">
    	 		    				<li class="li1">骁龙835处理器 (MSM8998)</li>
-   	 		    				<li>骁龙835处理器 (MSM8998</li>
-   	 		    				<li>骁龙835处理器 (MSM8998</li>
-   	 		    				<li>骁龙835处理器 (MSM8998</li>
-   	 		    				<li>骁龙835处理器 (MSM8998</li>
+   	 		    				<li>骁龙835处理器 (MSM8998)</li>
+   	 		    				<li>骁龙835处理器 (MSM8998)</li>
+   	 		    				<li>骁龙835处理器 (MSM8998)</li>
+   	 		    				<li>骁龙835处理器 (MSM8998)</li>
    	 		    			</ul>
    	 		    		</div>
    	 		    	</div>
@@ -553,10 +554,13 @@
    
    <!-- 上边导航start -->
    <div class="sbdh">
+    <form action="/gwc" method="post">
    	  <div class="fk" style="float: right;">
    	  	<p>{{$goods->title}} ￥{{$goods->price}}</p>
-   	  	<button class="btn btn-lg">立即购买</button>
+        {{csrf_field()}}
+   	  	<button class="btn btn-lg" type="submit">立即购买</button>
    	  </div>
+    </form>
    </div>
    <!-- 上边导航end -->
 @stop

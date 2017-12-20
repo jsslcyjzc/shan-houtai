@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class FuwuController extends Controller
 {
     public function fuwu()
     {
-    	return view('home.Home.fuwu');
+
+
+    	$fw = DB::table('fw')->get();
+    	
+    	return view('home.Home.fuwu',compact('fw'));
     }
 }

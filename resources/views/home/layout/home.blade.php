@@ -344,10 +344,16 @@
 				
 			</div>
 			<div class="col-sm-2">
+				@if(isset($id))
 				<a href="/Home/login" class="yonghu" style="position: relative;">
 				<i class="glyphicon glyphicon-user gr" style="color:#fff;line-height: 70px;font-size: 16px;"></i>
 			    </a>
-				<a href="">
+			    @else
+			    <a href="/Home/login" class="yonghu" style="position: relative;">
+				<i style="color:#fff;line-height: 70px;font-size: 16px;">{{ session('id') }} </i>
+			    </a>
+			    @endif
+				<a href="/gwc">
 				<div class="col-sm-9 gouwuche pull-right">
 					<p class="pull-left" style="text-indent: 15px;margin-right: 5px;">购物车</p>
                     <i class="glyphicon glyphicon-shopping-cart" style="margin-top: 27px;"></i>
@@ -456,11 +462,11 @@
 				<div class="col-xs-2 banquan-one">
 					<h4>关于我们</h4>
 					<ul class="list-unstyled">
-						<li><a href="">关于nubia </a></li>
+						<li><a href="/Home/guanyu">关于nubia </a></li>
 						<li><a href="">新闻中心</a></li>
 						<li><a href="">体验店</a></li>
 						<li><a href="">公益</a></li>
-						<li><a href="">联系我们</a></li>
+						<li><a href="/Home/lianxi">联系我们</a></li>
 					</ul>
 				</div>
 				<div class="col-xs-2 banquan-one">

@@ -39,7 +39,7 @@
                 <div class="portlet-input input-small input-inline">
                     <div class="input-icon right">
                         <i class="am-icon-search"></i>
-                        <input type="search" class="form-control form-control-solid" placeholder="搜索..." name="keywords" value="{{ $keywords }}"> </div>
+                        <input type="search" class="form-control form-control-solid" placeholder="搜索..." name="keywords"> </div>
                 </div>
             </div>
 
@@ -87,10 +87,7 @@
                                     	
                                         <div class="am-btn-toolbar">
                                             <div class="am-btn-group am-btn-group-xs">
-                                                <a href="/banner/{{ $v->bid }}/edit" style="float: left;">
-                                                    <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 编辑</button>
-                                                </a>
-                                            	<form action="/banner/{{$v->bid}}" method="post" id="del" style="float: left;">
+                                            	<form action="/banner/{{$v->bid}}" method="post" id="del">
                                                 {{method_field('DELETE')}}
                                                 {{csrf_field()}}
                                                 <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
@@ -150,7 +147,7 @@
 
 @section('js')
 <script>
-	$('.am-btn-group #del').submit(function(e){
+	$('#del').submit(function(e){
 		if(!confirm('您确定要删除该图片么?')) return false;
 	})
 

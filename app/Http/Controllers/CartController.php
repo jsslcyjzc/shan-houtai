@@ -32,7 +32,6 @@ class CartController extends Controller
     		$value->detail = DB::table('goods')->where('id',$value->goods_id)->first();
     		$value->pic = DB::table('goods_pic')->where('goods_id',$value->goods_id)->value('pic');
     	}
-    	// dd($goods);
     	//解析模板
     	return view('home.gouwu.gouwu',compact('goods'));
     }

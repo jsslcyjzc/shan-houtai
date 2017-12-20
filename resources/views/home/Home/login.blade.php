@@ -16,7 +16,7 @@
 		<div class="col-md-12 zhu">
 			<div class="col-md-8 col-md-offset-2 ti">
 				<div class="col-md-6 col-md-offset-3 deng">
-					<form class="loginForm" method="post">
+					<form class="loginForm" method="post" action="/Homes">
 						<div class="logos"></div>
                         @section('div')
 						<div class="navTab" id="tab_nav">
@@ -57,7 +57,8 @@
 					    </div>
 					    @show
 					    <input type="hidden">
-                        <a href="../index" style="text-decoration: none;"><input type="button" style="margin-top:10px" id="login_btn_id" value="立&nbsp;&nbsp;即&nbsp;&nbsp;登&nbsp;&nbsp;录" class="btn-login"></a>
+					    {{ csrf_field() }}
+					    <input type="submit" style="margin-top:10px" id="login_btn_id" value="立&nbsp;&nbsp;即&nbsp;&nbsp;登&nbsp;&nbsp;录" class="btn-login">
                         <div class="register-now">
 					        <a href="/home/zhuce" style="color:#e8380d">注册新账号</a>
 					        <span style="font-size: 18px;padding: 0 7px;color: #d5d5d5;">|</span>
@@ -91,12 +92,9 @@
     <script type="text/javascript" src="/Home/js/bootstrap.js"></script>
     <script type="text/javascript" src="/Home/js/bootstrap.min.js"></script>    
     <script type="text/javascript" src="/Home/js/holder.min.js"></script>
-     <script>
-     	 
-     </script>
-
-
     @section('js')
+
+
     @show
 </body>
 </html>

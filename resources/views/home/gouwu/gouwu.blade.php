@@ -51,13 +51,6 @@
         })
 
     });
-
-
-
-
-
-
-       
 </script>
 @endsection
 
@@ -94,7 +87,7 @@
        	   	   	   </tr>
        	   	   	   <tr>
        	   	   	   	  <td>商品</td>
-       	   	   	   	  <td>商品名称</td>
+       	   	   	   	  <td></td>
        	   	   	   	  <td>单价</td>
        	   	   	   	  <td>数量</td>
        	   	   	   	  <td>操作</td>
@@ -105,32 +98,31 @@
        	   	   	   	  	 <img src="{{$v->pic}}" alt="" width="50" height="100">
        	   	   	   	  </td>
        	   	   	   	  <td style="text-align: left;">
-       	   	   	   	  	 <a href="" style="color: #000000;">&nbsp;&nbsp;
-                          {{$v->detail->title}}
-                         </a>
+       	   	   	   	  	 <a href="" style="color: #000000;">&nbsp;&nbsp;{{$v->detail->title}}</a>
        	   	   	   	  </td>
        	   	   	   	  <td>
-       	   	   	   	  	 ¥{{ $v->detail->price }}
+       	   	   	   	  	 ¥{{$v->detail['price']}}
        	   	   	   	  </td>
        	   	   	   	  <td>
-                         <input type="text" style="width:20%" name="data[{{$v->id}}][num]" value="{{$v->num}}">
+       	   	   	   	  	 <p style="margin-left: 35px;cursor: pointer;" id="jian">-</p>
+       	   	   	   	  	 <input type="text" value="1" id="shu">
+       	   	   	   	  	 <p id="jia" style="cursor: pointer;">+</p>
        	   	   	   	  </td>
        	   	   	   	  <td>
-       	   	   	   	  	<a href="/gwc" class="remove-item del" cid="{{$v->id}}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Remove from cart" style="color: #838383;">
+       	   	   	   	  	<a href="#" class="remove-item del" cid="{{$v->id}}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Remove from cart" style="color: #838383;">
        	   	   	   	  	  <i class="glyphicon glyphicon-remove"></i>
        	   	   	   	  	</a>
        	   	   	   	  </td>
        	   	   	   </tr>
                     @endforeach
+
+
+                    {{ csrf_field() }}
        	   	   	   <tr>
        	   	   	   	  <td colspan="6">
-                        <a href="/Homes" style="margin-left: 220px;">
        	   	   	   	  	  <button class="but" type="button">
        	   	   	   	  	  	   继续购物
        	   	   	   	  	  </button>
-                        </a>
-
-                          {{ csrf_field() }}
        	   	   	   	  	  <button class="but" type="submit" >
        	   	   	   	  	  	   立即结算
        	   	   	   	  	  </button>
